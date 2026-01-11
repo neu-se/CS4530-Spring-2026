@@ -434,7 +434,7 @@ Please check the list of common events and instances in which they are used [her
 
 ## React Hooks
 
-React hooks are built-in functions which allows us to use state and other lifecycle features. The most basic hooks used by React are useState() which adds a state variable to a React component and useEffect() which is the lifecycle hook for a component. State of component refers to the data it is holding at a particular moment in time.c
+React hooks are built-in functions which allows us to use state and other lifecycle features. The most basic hooks used by React are useState() which adds a state variable to a React component and useEffect() which is the lifecycle hook for a component. State of component refers to the data it is holding at a particular moment in time
 
 ### useState():
 
