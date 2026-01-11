@@ -11,7 +11,8 @@ nav_order: 8
 This tutorial covers the basic concepts of React. By the end of this tutorial, you will be able to create a new React app, understand the basic concepts of React such as states and props, understand React hooks for handling events.
 
 - [React Basics](#react-basics)
-- [Creating a new NextJs App](#creating-a-new-next-js-app)
+- [Creating a new React App with Vite](#creating-a-new-react-app)
+- [Running the Project Manually](#running-the-project-manually)
 - [Understanding a React App](#react-component)
   - [Components](#react-component)
   - [Template For Structure of Function Component](#template-for-structure-of-function-component)
@@ -27,50 +28,52 @@ This tutorial covers the basic concepts of React. By the end of this tutorial, y
   - [useEffect](#useeffect)
     - [Object Dependencies in useEffect](#object-dependencies-in-useeffect)
 
-## Creating a New Next Js App
+## Creating a New React App With Vite
 
-Let's use **npx** and **create-next-app** to create a new Next.Js project.
+We'll use **Vite** to create a new React project. Vite is a modern build tool that provides a faster and leaner development experience compared to traditional bundlers.
 
-- **npx** stands for Node Package Execute (Part of the npm package since version 5.2). It is a runner that can execute any package that you want from the npm registry without even installing that package. In this case npx tool temporarily installs the create-next-app npm package and uses it to create our project.
+- Please check the following reference to the Vite documentation: Vite Official Documentation(https://vite.dev/guide/)
+- Before beginning the installation, please ensure that your Node.js version is 22 or higher. Use node --version command to check.
 
-- Please check the following reference to the Next.Js boilerplate and getting started with framework
-  [Next.Js official documentation](https://nextjs.org/learn/react-foundations)
-
-- Before beginning the installation, please ensure that your Node.js version is 18 or higher, as Next.js is only supported on these versions. Use `node --version` command to check.
-
-1. We use the create-next-app npx package to create an application that creates a fully-featured TS package.
+1. Create a new Vite project with React and TypeScript:
 
    ```bash
-   npx create-next-app my-app
+   npm create vite@latest my-app -- --template react-ts
    ```
 
    - Note 1: This will create a new project directory called my-app under the current directory.
-   - Note 2: This will create a git repo in my-app, so you probably shouldn't do this inside a pre-existing git repository.
-   - Note 3: Create the project with the following details after executing the command
-   - Note 4: It will ask you bunch of questions. Follow the image below to answer the questions.
-     ![image](./assets/week3-react/start-details.png)
+   - Note 2: This will NOT create a git repo automatically, so you can safely run this inside a pre-existing git repository.
+   - Note 3: It will ask you some questions. Follow the prompts below:
+     - Use rolldown-vite (Experimental)?: No
+     - Install with npm and start now?: Yes
 
-2. Navigate to the project directory using the command:
+This will automatically install the required dependencies and start the development server.
+
+2. Navigate to http://localhost:5173/ to see the default React page.
+   - After a few seconds, a browser window opens, with our app running:
+     ![image](./assets/week3-react/start.png)
+
+## Running the Project Manually
+
+1. Navigate to the project directory:
+
    ```bash
    cd my-app
    ```
-3. To start the development server for React, run the command:
+
+2. Install dependencies (only needed if node_modules is missing):
 
    ```bash
-   npm run dev
+   npm install
    ```
 
-   - Note: Next.Js renders the content within the `app/page.tsx` file as the root component.
+3. Start the development server
 
-4. Navigate to http://localhost:3000/ to see the default React page.
-   - After a few seconds, a browser window opens, with our app running:
-     ![image](./assets/week3-react/start.png)
-5. [Chakra UI](https://chakra-ui.com) provides a comprehensive library of reusable React components for developing modern web applications. To install Chakra UI for Next.js, please enter the following command:
    ```bash
-   npm i --save @chakra-ui/react @chakra-ui/next-js
+    npm run dev
    ```
-   ![image](./assets/week3-react/chakra.png)
-   > The save flag is used to add the dependency in the package.json file.
+
+   After a few seconds, a browser window opens, with our app running
 
 <!--
 -   **create-react-app** is a command-line tool that we can use to quickly create a React and TypeScript app with lots of useful pieces.
@@ -112,7 +115,9 @@ pieces where each piece can be used in isolation.
 
 <a href="https://codesandbox.io/s/nervous-morse-o3pwqm?file=/src/tutorial/CreateFunctionComponent.tsx" target="_blank">View in sandbox</a>
 
-The simplest method to define a component is to write a function in JavaScript. These components are also widely referred to as functional stateless components, but in recent versions of React, they have the capabilities to contain state as well.
+The simplest method to define a component is to write a function in JavaScript.
+
+- Note: You may encounter "Class Components" in older React code. These are obsolete and should not be used in new code. Modern React uses function-based components exclusively.
 
 ```tsx
 import * as React from "react";
@@ -135,9 +140,9 @@ export default App;
 ### A Few Things to Note About React Components:
 
 - The root (App) component is the entry point for the React App and all other components are nested in it.
-- We create a functional component by defining a JavaScript function and passing the props type as a generic parameter.
+- We create a component by defining a JavaScript function and passing the props type as a generic parameter.
 - The import statement is used to import the public classes/functions from the `react` library.
-- A function can return a single top level element.
+- A component can return a single top level element.
   - div is the top level element in this case and other elements can be nested in it.
     - The attribute `className` is used to specify a CSS class name if CSS properties have been defined separately for a class.
     - `className` attribute is used to set the value of an element’s class attribute. Using this property, the user can set the class of an element to the desired class.
@@ -147,7 +152,7 @@ export default App;
 - Each instance of a component creates a new element independent of other instances of the component.
 - Each component has its own state, props, and lifecycle (which will be explored later in the tutorial).
 
-## Template For Structure of Function Component
+## Template For Structure of a Component
 
 <a href="https://codesandbox.io/s/nervous-morse-o3pwqm?file=/src/tutorial/TemplateForFunction.tsx" target="_blank">View in sandbox</a>
 
@@ -201,7 +206,7 @@ Header.defaultProps = {
 export default Header;
 ```
 
-- The above code snippet creates a new function component `Header` and prints the value of the `name` passed in the props.
+- The above code snippet creates a new component `Header` and prints the value of the `name` passed in the props.
 - It defines a defaultProps for the component `Header` where the default value for `name` is used in case the value for props for `name` is not passed in any instance of the component.
 
 - In App.tsx:
@@ -234,15 +239,13 @@ A few things to note from the above example:
 
 ## State
 
-State management is just a means of facilitating data sharing and communication among components. It creates a concrete data structure that you can read and write to reflect the state of your program.
+State is the **local memory** of a component. Unlike standard variables, which are reset every time a component executes or a component re-renders, state is preserved. It serves as the single source of truth for any data that might change during the application's lifecycle such as user input, toggle statuses, or fetched API data. When state is updated, it triggers the framework to re-evaluate the UI and reflect those changes automatically.
 
 ```tsx
 const [counter, setCounter] = useState(0);
 ```
 
-The above snippet shows creation of counter state with an initial value of 0. Using the [array destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) syntax we extract out the state variable and the function to update the counter value.
-
-In its most basic form, a State object is a JavaScript object that represents the part of a component that can change as a result of a user's action. States can also be thought of as a component's memory.
+The above snippet shows creation of counter state using the useState hook (explained in more detail below) with an initial value of 0. Using the [array destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) syntax we extract out the state variable and the function to update the counter value.
 
 State update calls are asynchronous. As one cannot expect to call the update state function on one line and expect the state to be updated on the next. The reason for this is that update state methods are more of a request than an immediate order to update state. So React schedules an update to a component’s state object. When state changes, the component responds by re-rendering. Also, multiple update requests may be batched into one for performance reasons.
 
@@ -306,15 +309,15 @@ interface CounterContentProps {
 }
 
 interface IncrementCounterButtonProps {
-  incrementCount(): void;
+  incrementCount: () => void;
 }
 
 interface DecrementCounterButtonProps {
-  decrementCount(): void;
+  decrementCount: () => void;
 }
 
 interface SetCounterButtonProps {
-  setCount(value: number): void;
+  setCount: (value: number) => void;
 }
 
 function CounterContent({ counter }: CounterContentProps) {
@@ -328,7 +331,7 @@ function CounterContent({ counter }: CounterContentProps) {
 function IncrementCounterButton({
   incrementCount,
 }: IncrementCounterButtonProps) {
-  return <button onClick={() => incrementCount()}>Increment Count</button>;
+  return <button onClick={incrementCount}>Increment Count</button>;
 }
 
 /**
@@ -338,7 +341,7 @@ function IncrementCounterButton({
 function DecrementCounterButton({
   decrementCount,
 }: DecrementCounterButtonProps) {
-  return <button onClick={() => decrementCount()}>Decrement Count</button>;
+  return <button onClick={decrementCount}>Decrement Count</button>;
 }
 
 function CustomCounterButton({ setCount }: SetCounterButtonProps) {
@@ -431,7 +434,7 @@ Please check the list of common events and instances in which they are used [her
 
 ## React Hooks
 
-React hooks are built-in functions which allows us to use state and other lifecycle features. The most basic hooks used by React are useState() which adds a state variable to a React component and useEffect() which is the lifecycle hook for a component. State of component refers to the data it is holding at a particular moment in time.
+React hooks are built-in functions which allows us to use state and other lifecycle features. The most basic hooks used by React are useState() which adds a state variable to a React component and useEffect() which is the lifecycle hook for a component. State of component refers to the data it is holding at a particular moment in time.c
 
 ### useState():
 
@@ -548,7 +551,7 @@ setList(newList);
 Now let's have a look at how to invoke the code to execute at a certain point in the component's lifecycle.
 Older versions of React consisted of different Lifecycle hooks that allowed a user to hook into various phases of component rendering such as componentDidMount, componentDidUpdate, etc. which have all been condensed into a single function called useEffect(). Let us observe how this hook behaves by printing out the count in the browser console.
 
-> The new functional component system in React (moving away from class based) added amazing syntactic sugar to the React ecosystem. Use of a hook to control component lifecycle is an example such as the `useEffect()` hook.
+> The new component system in React (moving away from class based to functional) added amazing syntactic sugar to the React ecosystem. Use of a hook to control component lifecycle is an example such as the `useEffect()` hook.
 
 1. As always, we will start by importing the function from the react library:
 
@@ -732,4 +735,4 @@ function Counter() {
 export default Counter;
 ```
 
-Feel free to explore additional React hooks, such as `useContext`, `useCallback`, `useMemo`, and `useReducer`, as these are essential tools for efficient React development. For more information, check [here](https://react.dev/reference/react/hooks).
+Feel free to explore additional React hooks, such as `useRef`, `useContext`, `useCallback`, `useMemo`, and `useReducer`, as these are essential tools for efficient React development. For more information, check [here](https://react.dev/reference/react/hooks).
