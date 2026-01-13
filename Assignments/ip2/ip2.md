@@ -189,9 +189,9 @@ The task is worth 22 points, two points for meeting each of the following condit
  8. If the game is not over, the player of the game should be able to "sweep" a grid position by clicking on it: clicking on the upper-right grid position of a 7x5 grid should submit the game move `[6,0]`.
  9. If the game is over (`view.state !== 'playing'`), the player of the game should see all grid positions with the `cursor: default` CSS property set, and clicking anywhere on the grid should never send a message or make a move.
  10. If the game is over, the player of the game should see the message "You won" or "You lost", as appropriate, below the game grid.
- 11. If the game is over, non-players should see "(DisplayName) won" or "(DisplayName) lost", as appropriate, below the game grid, where "(DisplayName)" is replaced by the player's display name.
+ 11. If the game is over, non-players should see "(DisplayName) won" or "(DisplayName) lost", as appropriate, below the game grid, where "(DisplayName)" is replaced by the player's display name. 
 
-It must be possible for a TA to effectively test a conditions of satisfaction in order to award points.
+It must be possible for a TA to effectively test a conditions of satisfaction in order to award points. The player name in the 10th and 11th conditions of satisfaction is not required to be as in Task 3.
 
 ### Task 5: Marking Mines
 
