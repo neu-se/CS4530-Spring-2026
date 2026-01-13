@@ -10,6 +10,7 @@ This tutorial covers the basic concepts of Socket.IO. By the end, you'll underst
 
 ## Contents
 - [What is Socket.IO](#what-is-socketio)
+  - [What problem does Socket.IO solve?](#what-problem-does-socketio-solve)
   - [How Does It Work?](#how-does-it-work)
   - [Socket.IO vs. REST APIs](#socketio-vs-rest-apis)
   - [Example Uses](#example-uses)
@@ -24,13 +25,25 @@ This tutorial covers the basic concepts of Socket.IO. By the end, you'll underst
 # What is Socket.IO?
 Socket.IO is a library that enables real‑time, bidirectional, persistent communication between client(s) and server(s). **Bidirectional** means both the client and server can send messages at any time. These features make Socket.IO ideal for live dashboards, chats, multiplayer games, and collaborative tools.
 
-## How Does It Work?
-Socket.IO follows the observer/listener pattern:
+## What problem does Socket.IO solve?
 
-- **Publisher** — where `.emit(...)` is called; it sends data on a channel (event name).
-- **Subscriber** — where `.on(...)` is used; it listens for events and runs a handler.
+With normal HTTP, communication is request–response. The client asks the server for data, the server responds, and the connection closes. If something changes on the server, the client won’t know unless it asks again.
+Socket.IO keeps a persistent connection open between the client and the server. This lets the server push updates to the client the moment something changes, without waiting for a new request.
+This is what makes real-time features possible, like live chat messages, shared cursors in a collaborative editor, multiplayer game updates, or dashboards that update instantly when new data arrives.
+
+## How Does It Work?
+Socket.IO uses a listener-based event model.
+
+When you call `.on(...)`, you are **registering a listener** for a specific event. That listener will run every time the event occurs.
+
+When you call `.emit(...)`, you are **sending an event** with some data. Any listeners registered for that event will be notified and receive the data.
+
+In practice, this means:
+- `.on(event, handler)` sets up code that waits for something to happen
+- `.emit(event, data)` triggers that event and passes data to all listeners
 
 Under the hood, Socket.IO uses [WebSockets](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) (with fallbacks) to maintain a persistent connection.
+If this feels familiar, it’s because Socket.IO follows the same idea as the observer/listener pattern, which we’ll revisit later in the course.
 
 ## Socket.IO vs. REST APIs
 
@@ -51,6 +64,19 @@ Socket.IO is great for any use case where real-time updates are essential, or wh
 2. **Multiplayer Games** – Real-time game state sharing with low latency is essential for smooth multiplayer gameplay. By emitting socket events with the updated game state, you can ensure that all connected player clients have the same synchronized copy of the game state to display.
 
 3. **Collaborative Tools** – For applications like collaborative text editors or whiteboards, sockets can help keep the state synchronized across clients. When a user makes a change, the change will be emitted to the server, which may internally update the "source of truth" (i.e. the most reliable, accurate, and centralized location for critical data) for the application. Then, the updated state would be emitted to all other connected clients, so that everyone sees the edits in real time.
+
+### Client vs Server: who does what?
+
+In a Socket.IO application, the client and server have different responsibilities.
+
+- The **client** emits events when a user does something, such as clicking a button, submitting a form, or typing a message.
+- The **server** listens for those events, decides what should happen next, and chooses what information to send back and to which clients.
+
+For example, in a chat app:
+- The client emits a `chat message` event when a user sends a message
+- The server receives it and broadcasts the message to other connected clients
+
+Keeping this separation clear will matter more as we introduce rooms, namespaces, and multiple connected users.
 
 # Using Socket.IO
 
@@ -262,6 +288,17 @@ io.on("connection", (socket) => {
   socket.emit("chat message", { user: "John", message: "Hello, World!" });
 </script>
 ```
+## Common Mistakes
+
+- **Static files not being served**  
+  Make sure your Express server is serving `index.html`. If the browser loads but the socket never connects, this is often the issue.
+
+- **Mismatched Socket.IO versions**  
+  The Socket.IO client and server must use compatible versions. Always install dependencies using the provided `package.json`.
+
+- **Using `io.emit` vs `socket.emit` incorrectly**  
+  - `socket.emit(...)` sends a message to a single connected client  
+  - `io.emit(...)` broadcasts a message to all connected clients
 
 ## Troubleshooting
 - **`ReferenceError: __dirname is not defined`** — You’re in ESM. Use the `fileURLToPath(import.meta.url)` pattern shown above.

@@ -20,6 +20,13 @@ The objectives of this assignment are to:
 - Learn how to write unit tests with Vitest
 - Translate high-level requirements into code
 
+## Changelog
+
+ - 2026-01-07: Clarified that all changes should be made to the `main` branch.
+ - 2026-01-09: Clarification in Task 3, part 2: instead of "modify the tests," say "improve existing tests and/or add new tests."
+ - 2026-01-10: Correction: `AuthRecord` is defined in `server/src/models.ts`, not in `server/src/models/auth.model.ts`.
+ - 2026-01-11: Changed _application tab_ to _"Network" tab (the precise name may depend on the browser)_ in the Recommendations section.
+
 ## 1. Getting Started
 
 If you were registered for the class before Wednesday, January 7, you should have an email from a TA with an invitation to our organization. Be sure to check your spam/junk folder. The first step is to accept the invitation. If you cannot find the invitation, if you registered for the class late, or have any other issue that keeps you from getting started, please create a Piazza post to contact us and we will try to help.
@@ -134,7 +141,7 @@ You can test the server by going to the `server` directory and running `npm run 
 
 ## 2. Recommendations When Working on the Project
 
-1. Open the client application in a browser and interact with it. While interacting, monitor the application tab in the browser’s developer tools. The application tab will give you information about the HTTP requests the client sends to the server. The HTTP requests will contain URIs in their headers. You can use this information to understand the endpoints in the server.
+1. Open the client application in a browser and interact with it. While interacting, monitor the "Network" tab (the precise name may depend on the browser) in your browser’s developer tools. This tab will give you information about the HTTP requests the client sends to the server. The HTTP requests will contain URIs in their headers. You can use this information to understand the endpoints in the server.
 2. Make sure VS Code is set up as described in the development environment tutorial, with ESLint, Typescript, and Prettier installed. Our ESLint setup encodes very specific style rules, and if you do not have VSCode lint feedback enabled you will have to deal with an avalanche of errors when you first lint your code.
 3. Do not wait until the last minute to run `npm run lint` and `npm run build` to check for linter and typescript errors!
 4. Follow the [debugging policy]({{ site.baseurl }}{% link debugging.md %}) to help in the debugging process.
@@ -142,7 +149,7 @@ You can test the server by going to the `server` directory and running `npm run 
 
 ## 3. Project Submission
 
-You will submit your code by pushing the final version into your repository (add/commit/push). Be sure to check if the correct version is submitted before the deadline.
+You will submit your code by pushing the final version into your repository (add/commit/push). In this assignment, you should only be making, committing, and pushing changes to the `main` branch of your repository. Be sure to check if the correct version is submitted before the deadline.
 
 On Gradescope, you will submit a plain `.txt` file containing two things:
 
@@ -221,7 +228,7 @@ The first and most glaring is that some of the functions, despite claiming to re
 
  1. Investigate the five User REST API endpoints listed in the README, the User controller in `server/src/controllers/user.controller.ts`, and the User service in `server/src/services/user.service.ts`, to find at least one way of exposing passwords through the API. In the written part of your submission, include a cURL command that result in the User API returning passwords.
 
- 2. It’s quite embarrassing that these bugs exist despite the user service having 100% test coverage! Here's your chance to do test-driven development. **First**, modify the tests so that they actually fail (as they should!) on the current implementation. The User record’s `userId` (a random id, not the username) and the `password` should never be exposed through REST API endpoints, and the tests should account for this requirement. **Second**, modify the user service so that it passes the new tests.
+ 2. It’s quite embarrassing that these bugs exist despite the user service having 100% test coverage! Here's your chance to do test-driven development. **First**, improve existing tests and/or add new tests so that the test suite actually fails (as it should!) on the current implementation. The User record’s `userId` (a random id, not the username) and the `password` should never be exposed through REST API endpoints, and the tests should account for this requirement. **Second**, modify the user service so that it passes the new tests.
 
  3. In the written part of your submission, briefly explain why TypeScript allowed a SafeUserInfo-returning service function to include a password field despite SafeUserInfo having no password field.
 
@@ -236,7 +243,7 @@ There are two connected issues with the User model:
 1. There’s a frequent use of for-loops to loop through all the usernames to find a record that matches a specific username. 
 2. Storing authentication information like a password alongside user profile information like a display name is not a great design: it can make accidental leaks like the ones we've encountered more likely!
 
-These aren’t totally connected problems, but we can solve them together. The file `server/src/services/user.service.ts` contains an unused `storedAuths` object that you will use to maintain a mapping from valid **usernames** to the user IDs that let you look up profile information (like the display name) for that user. The AuthRecord defined in `server/src/models/auth.model.ts` also contains a password.
+These aren’t totally connected problems, but we can solve them together. The file `server/src/services/user.service.ts` contains an unused `storedAuths` object that you will use to maintain a mapping from valid **usernames** to the user IDs that let you look up profile information (like the display name) for that user. The `AuthRecord` type defined in `server/src/models.ts` also contains a password.
 
 Whenever you create a user, you’ll continue to create a new and random user ID, and add to `storedUsers` an entry that maps from the user ID to the user’s record. You should modify `UserRecord` to no longer contain a password, and ensure that the stored record does not contain a password. Additionally, when you create a user, you’ll add an entry to `storedAuths` that maps the username to the `UserRecord`. By using stored auth, you can find the user record associated with a username in two steps: find the user ID using `storedAuths`, and then find the user’s record with that ID in `storedUsers`.
 
