@@ -8,6 +8,10 @@ nav_exclude: true
 
 This activity is intended to supplement the CS4530 lecture on test-driven development. You will need to have already completed the development environment setup for the class.
 
+**Changelog**
+
+ - Changed "Document these as comments" to "Document these (in the same format as before)" in Step 7.
+
 ### Steps
 1. Get the starter code by cloning the [`transcript-service-m02` repository from GitHub](https://github.com/neu-se/transcript-service-m02)
 2. Run `npm install` inside the directory that is created when you unzip the download.
@@ -39,7 +43,7 @@ This activity is intended to supplement the CS4530 lecture on test-driven develo
 
 6. Write down two testable behaviors for the `addGrade` function corresponding to the condition of satisfaction that “the user can add a new grade for an existing student.” These should be written as `it("<testable beahvior>", () => {})` in `src/transcript.service.spec.ts`. 
 
-7. Come up with at least two ways in which the `addGrade` function isn't completely specified by the conditions of satisfaction given in lecture. Document these as comments in `src/transcript.service.spec.ts`. **These tests will fail, because `addGrade` is not implemented. You are not required to implement or submit `addGrade`.**
+7. Come up with at least two ways in which the `addGrade` function isn't completely specified by the conditions of satisfaction given in lecture. Document these (in the same format as before) in `src/transcript.service.spec.ts`. **These tests will fail, because `addGrade` is not implemented. You are not required to implement or submit `addGrade`.**
 
 8. Add Vitest tests to your testable behaviors in `src/transcript.service.spec.ts`. (There should be at least four new tests for `addGrade` at this point.)
 
