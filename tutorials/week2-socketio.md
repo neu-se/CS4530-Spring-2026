@@ -15,7 +15,7 @@ This tutorial covers the basic concepts of Socket.IO. By the end, you'll underst
   - [Example Uses](#example-uses)
 - [Using Socket.IO](#using-socketio)
   - [Starter Files (Express 5 + TS ESM)](#starter-files-express-5--ts-esm)
-  - [Set Up a New Project](#set-up-a-new-project)
+  - [Setting Up a New Project](#setting-up-a-new-project)
   - [Emitting & Receiving Socket Events](#emitting-and-receiving-socket-events)
   - [Putting It All Together](#putting-it-all-together)
   - [Troubleshooting](#troubleshooting)
@@ -30,7 +30,7 @@ Socket.IO follows the observer/listener pattern:
 - **Publisher** — where `.emit(...)` is called; it sends data on a channel (event name).
 - **Subscriber** — where `.on(...)` is used; it listens for events and runs a handler.
 
-Under the hood, Socket.IO uses WebSockets (with fallbacks) to maintain a persistent connection.
+Under the hood, Socket.IO uses [WebSockets](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) (with fallbacks) to maintain a persistent connection.
 
 ## Socket.IO vs. REST APIs
 
@@ -46,11 +46,11 @@ Under the hood, Socket.IO uses WebSockets (with fallbacks) to maintain a persist
 
 Socket.IO is great for any use case where real-time updates are essential, or when the client and server need continuous communication. A few examples are:
 
-1. **Chat Room** – This is a simple use case outlined in the documentation (linked below). Users need to send and receive messages in real time (instantly). With Socket.IO, the user can emit a message to the server, which then broadcasts it to the other connected users. If you were to use a REST API here, there would be a lot of overhead and latency in sending/receiving messages due to the need for constant requests to the API.
+1. **Chat Room** – This is a simple use case outlined in the documentation (linked [below](#useful-resources)). Users need to send and receive messages in real time, instantly. With Socket.IO, the user can emit a message to the server, which then broadcasts it to the other connected users. If you were to use a REST API here, there would be a lot of overhead and latency in sending/receiving messages due to the need for constant requests to the API.
 
 2. **Multiplayer Games** – Real-time game state sharing with low latency is essential for smooth multiplayer gameplay. By emitting socket events with the updated game state, you can ensure that all connected player clients have the same synchronized copy of the game state to display.
 
-3. **Collaborative Tools** – For applications like collaborative text editors or whiteboards, sockets can help keep the state synchronized across clients. When a user makes a change, the change will be emitted to the server, which may internally update the "source of truth" for the application. Then, the updated state would be emitted to all other connected clients, so that everyone sees the edits in real time.
+3. **Collaborative Tools** – For applications like collaborative text editors or whiteboards, sockets can help keep the state synchronized across clients. When a user makes a change, the change will be emitted to the server, which may internally update the "source of truth" (i.e. the most reliable, accurate, and centralized location for critical data) for the application. Then, the updated state would be emitted to all other connected clients, so that everyone sees the edits in real time.
 
 # Using Socket.IO
 
@@ -134,6 +134,7 @@ Create the four files below in your project root:
 
 ### `server.ts`
 > **Important:** In ESM, `__dirname` is not defined. Use `import.meta.url` to derive it.
+
 ```ts
 import express from "express";
 import type { Request, Response } from "express";
@@ -167,7 +168,7 @@ server.listen(PORT, () => {
 });
 ```
 
-## Set Up a New Project
+## Setting Up a New Project
 1. **Create a project and add the files**
    ```bash
    mkdir socketio-tutorial && cd socketio-tutorial
@@ -181,7 +182,7 @@ server.listen(PORT, () => {
    ```bash
    npm run dev
    ```
-4. Open `http://localhost:3000` and check your browser console for the connection logs.
+4. Open `http://localhost:3000` to see a page with a 'Hello Socket.IO!' message. You can check your terminal for the connection logs. Opening and closing the tab/browser will show connection and disconnection logs respectively.
 
 ## Emitting and Receiving Socket Events
 
@@ -269,5 +270,6 @@ io.on("connection", (socket) => {
 
 # Useful Resources
 - [Socket.IO Introduction (Documentation)](https://socket.io/docs/)
-- [Socket.IO Chat App Tutorial (Documentation)](https://socket.io/docs/v4/tutorial/chat/)
+- [Socket.IO Chat App Tutorial (Documentation)](https://socket.io/docs/v4/tutorial/introduction)
 - [Learn Socket.io In 30 Minutes – Web Dev Simplified](https://www.youtube.com/watch?v=ZKEqqIO7n-k)
+- [How to test Socket.io](https://socket.io/docs/v3/testing/)
