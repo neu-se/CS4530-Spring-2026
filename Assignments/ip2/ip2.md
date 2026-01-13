@@ -4,7 +4,7 @@ title: "Individual Project 2"
 permalink: /assignments/ip2
 parent: Assignments
 nav_order: 2
-due_date: "Wednesday Febraury 4, 2026 11:00am (EST)"
+due_date: "Wednesday February 4, 2026 11:00am (EST)"
 submission_notes: Submit through Github Classroom (Commit your work in main branch) and link on Gradescope
 ---
 
@@ -90,7 +90,7 @@ The application should work as before, but any changes you make in the applicati
 3. Do not wait until the last minute to run `npm run lint` and `npm run build` to check for linter and typescript errors!
 4. Follow the [debugging policy]({{ site.baseurl }}{% link debugging.md %}) to help in the debugging process.
 5. Frequently add and commit changes with git. This saves your changes and makes it easy to go back to a state where most tasks were complete. 
-6. Task 6 is more challenging than the other tasks, but is only worth 20% of credit. Don't 
+6. Task 6 is more challenging than the other tasks, but is only worth 20% of credit. Don't wait until the last minute to attempt this task if you intend to complete all parts of the assignment.
 
 ## 3. Project Submission
 
@@ -179,19 +179,19 @@ In Mine Finder, your game starts with a 6x6 or 7x5 grid containing six randomly-
 The backend logic for Mine Finder is implemented, and you can read the description of types in `shared/src/games/minefinder.ts`, the implementation in `server/src/games/minefinder.ts`, and the tests in `server/tests/games/minefinder.spec.ts`. The frontend implementation in `client/src/games/MineFinderGame.tsx` is the only part that is completely missing, and you will implement the game's frontend in React for this task.
 
 The task is worth 22 points, two points for meeting each of the following conditions of satisfaction:
- - Unswept grid positions should contain a question mark, unless the game has been won (`view.state === 'won'`), in which case they should contain a 🎉 emoji.
- - Swept grid positions with no neighboring bombs should appear empty.
- - Swept grid positions with neighboring bombs should contain the number of neighboring bombs (unless the grid position itself contains a bomb themselves).
- - Swept grid positions revealing a bomb should contain a 💥 emoji.
- - Unswept grid positions should have the `cursor: default` CSS property set.
- - Non-players should always see all grid positions with the `cursor: default` CSS property set, and clicking anywhere on the grid should never send a message or make a move.
- - If the game is not over (`view.state === 'playing'`), the player of the game should see unswept grid positions with the `cursor: pointer` CSS property set.
- - If the game is not over, the player of the game should be able to "sweep" a grid position by clicking on it: clicking on the upper-right grid position of a 7x5 grid should make the move `[6,0]`.
- - If the game is over (`view.state !== 'playing'`), the player of the game should see all grid positions with the `cursor: default` CSS property set, and clicking anywhere on the grid should never send a message or make a move.
- - If the game is over, the player of the game should see the message "You won" or "You lost", as appropriate, below the game grid.
- - If the game is over, non-players should see "(DisplayName) won" or "(DisplayName) lost", as appropriate, below the game grid, where "(DisplayName)" is replaced by the player's display name.
+ 1. Unswept grid positions should contain a question mark, unless the game has been won (`view.state === 'won'`), in which case they should contain a 🎉 emoji. (Mines are not revealed on loss.)
+ 2. Swept grid positions with no neighboring mines should appear empty.
+ 3. Swept grid positions with neighboring mines should contain the number of neighboring mines (unless the grid position itself contains a mines themselves).
+ 4. Swept grid positions revealing a mines should contain a 💥 emoji.
+ 5. Swept grid positions should have the `cursor: default` CSS property set.
+ 6. Non-players should always see all grid positions with the `cursor: default` CSS property set, and clicking anywhere on the grid should never send a message or make a move.
+ 7. If the game is not over (`view.state === 'playing'`), the player of the game should see **unswept** grid positions with the `cursor: pointer` CSS property set.
+ 8. If the game is not over, the player of the game should be able to "sweep" a grid position by clicking on it: clicking on the upper-right grid position of a 7x5 grid should submit the game move `[6,0]`.
+ 9. If the game is over (`view.state !== 'playing'`), the player of the game should see all grid positions with the `cursor: default` CSS property set, and clicking anywhere on the grid should never send a message or make a move.
+ 10. If the game is over, the player of the game should see the message "You won" or "You lost", as appropriate, below the game grid.
+ 11. If the game is over, non-players should see "(DisplayName) won" or "(DisplayName) lost", as appropriate, below the game grid, where "(DisplayName)" is replaced by the player's display name.
 
-It must be possible to test the conditions of satisfaction in order to award points.
+It must be possible for a TA to effectively test a conditions of satisfaction in order to award points.
 
 ### Task 5: Marking Mines
 
@@ -199,7 +199,7 @@ For this task, you will **not** change the Mine Finder logic on the server or an
 
 It's very helpful to be able to flag a grid position as a known mine while playing Mine Finder. Without giving the backend any support for flagging grid positions, you can use React state to record and add flags. Storing flags in React state attached to the `MineFinder` React component has some drawbacks: only the player can see flags, and if a player navigates away and returns, all their flags will be gone. That is fine for the purposes of this task.
 
-When a player _right_-clicks on a grid position with a `❓` in it, that question mark should be replaced with a flag `⛳`. Left-clicking a flagged grid position should have no effect — a flag should keep you from accidentally setting off a bomb. Right-clicking a grid position with a flag should unflag the grid position, returning it to a `❓` and making it clickable again.
+When a player _right_-clicks on a grid position with a `❓` in it, that question mark should be replaced with a flag `⛳`. Left-clicking a flagged grid position should have no effect — a flag should keep you from accidentally setting off a mine. Right-clicking a grid position with a flag should unflag the grid position, returning it to a `❓` and making it clickable again.
 
 You can capture right clicks by adding an [`onContextMenu`](https://react.dev/reference/react-dom/components/common#common-props) property alongside the `onClick` handler you added in the last part.
 
