@@ -174,8 +174,7 @@ This task is worth 15 points: one point for each of the three changes in each of
 
 The backend has been implemented for Mine Finder, a game with a strong but legally-permissible resemblance to Microsoft's [Minesweeper](https://apps.microsoft.com/detail/9wzdncrfhwcn?hl=en-US&gl=US) game.
 
-![image]({{site.baseurl}}{% link /Assignments/ip2/before.png %})
-![image]({{site.baseurl}}{% link /Assignments/ip2/after.png %})
+![image]({{site.baseurl}}{% link /Assignments/ip2/beforeafter.png %})
 
 In Mine Finder, your game starts with a 6x6 or 7x5 grid containing six randomly-placed mines. Clicking on a grid position sweeps it, revealing how many of the eight adjacent grid positions contain mines — or exploding and ending the game if there is a mine in that grid position! When a grid position is revealed to have zero mines, all eight adjacent grid positions are automatically swept.
 
@@ -195,7 +194,7 @@ The task is worth 22 points, two points for meeting each of the following condit
 10. If the game is over, the player of the game should see the message "You won" or "You lost", as appropriate, below the game grid.
 11. If the game is over, non-players should see "(DisplayName) won" or "(DisplayName) lost", as appropriate, below the game grid, where "(DisplayName)" is replaced by the player's display name.
 
-It must be possible for a TA to effectively test a conditions of satisfaction in order to award points. The player name in the 10th and 11th conditions of satisfaction is not required to be as in Task 3.
+Your implementation does not need to look like the example image above. It must be possible for a TA to effectively test a conditions of satisfaction in order to award points. The player name in the 10th and 11th conditions of satisfaction is not required to be as in Task 3.
 
 ### Task 5: Marking Mines
 
