@@ -184,8 +184,8 @@ The task is worth 22 points, two points for meeting each of the following condit
 
 1.  Unswept grid positions should contain a question mark `❓`, unless the game has been won (`view.state === 'won'`), in which case they should contain a `🎉` emoji. (Mines are not revealed on loss.)
 2.  Swept grid positions with no neighboring mines should appear empty.
-3.  Swept grid positions with neighboring mines should contain the number of neighboring mines (unless the grid position itself contains a mines themselves).
-4.  Swept grid positions revealing a mines should contain a `💥` emoji.
+3.  Swept grid positions with neighboring mines should contain the number of neighboring mines (unless the grid position itself contains a mine).
+4.  Swept grid positions revealing a mine should contain a `💥` emoji.
 5.  Swept grid positions should have the `cursor: default` CSS property set.
 6.  Non-players should always see all grid positions with the `cursor: default` CSS property set, and clicking anywhere on the grid should never send a message or make a move.
 7.  If the game is not over (`view.state === 'playing'`), the player of the game should see **unswept** grid positions with the `cursor: pointer` CSS property set.
