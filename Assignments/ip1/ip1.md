@@ -28,6 +28,7 @@ The objectives of this assignment are to:
  - 2026-01-11: Changed _application tab_ to _"Network" tab (the precise name may depend on the browser)_ in the Recommendations section.
  - 2026-01-13: Added "and" to the sentence "ESLint _warnings_ do not cause CI to fail and will not automatically lead to a deduction"
  - 2016-01-13: Corrected `UserRecord` to `AuthRecord` in the sentence "Additionally, when you create a user, you’ll add an entry to `storedAuths` that maps the username to the `AuthRecord`."
+ - 2016-01-14: Corrected `getUserByUser()` to `getUserByUsername()` in Part 5.
 
 ## 1. Getting Started
 
@@ -270,7 +271,7 @@ The purpose of this part of the assignment is to get your fingers comfortable wi
 You now have two different types of code mixed up in `user.service.ts` — code primarily concerned with authentication, and code primarily concerned with the user’s personal data. In this part, your goal is to move the following elements from `user.service.ts` to a new file, `auth.service.ts`:
 - `storedAuths` (which should not be exported from `auth.service.ts`)
 - `resetStoredAuth()`
-- `getUserByUser()`
+- `getUserByUsername()`
 - `checkAuth()`
 - `enforceAuth()`
 
