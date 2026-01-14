@@ -26,6 +26,7 @@ The objectives of this assignment are to:
  - 2026-01-09: Clarification in Task 3, part 2: instead of "modify the tests," say "improve existing tests and/or add new tests."
  - 2026-01-10: Correction: `AuthRecord` is defined in `server/src/models.ts`, not in `server/src/models/auth.model.ts`.
  - 2026-01-11: Changed _application tab_ to _"Network" tab (the precise name may depend on the browser)_ in the Recommendations section.
+ - 2026-01-13: Added "and" to the sentence "ESLint _warnings_ do not cause CI to fail and will not automatically lead to a deduction"
 
 ## 1. Getting Started
 
@@ -186,7 +187,7 @@ The Actions tab on GitHub has the results of previous runs.
 
 ![image]({{site.baseurl}}{% link /Assignments/ip1/ActionsTab.png %})
 
-**Up to 25% of your total grade on the assignment may be deducted for CI failures (5% for prettier failures, 10% for TypeScript failures, and 10% for ESLint failures). In severe cases we may decline to grade your assignment entirely. Give yourself sufficient time to find and fix any errors.** ESLint _warnings_ do not cause CI to fail will not automatically lead to a deduction, but it is bad practice to have lots of console statements in your code, and this can lead to a point deduction if it makes it hard for a TA to understand your code.
+**Up to 25% of your total grade on the assignment may be deducted for CI failures (5% for prettier failures, 10% for TypeScript failures, and 10% for ESLint failures). In severe cases we may decline to grade your assignment entirely. Give yourself sufficient time to find and fix any errors.** ESLint _warnings_ do not cause CI to fail and will not automatically lead to a deduction, but it is bad practice to have lots of console statements in your code, and this can lead to a point deduction if it makes it hard for a TA to understand your code.
 
 ## 4. Implementation Tasks
 
