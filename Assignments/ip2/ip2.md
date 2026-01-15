@@ -65,7 +65,8 @@ Mongo offers several methods of interacting with your Mongo databases.
 Create a file called `server/.env` — the dot before the "env" is important! Include the following text:
 
 ```
-MONGODB_STR=mongodb://127.0.0.1:27017
+MONGO_STR=mongodb://127.0.0.1:27017
+MONGO_DB_NAME=GameNiteLocalDev
 ```
 
 This tells your server how to connect to the local MongoDB instance that you got running in the previous step. Now, you can start the application as before: in one terminal, run:
@@ -93,7 +94,7 @@ The application should work as before, but any changes you make in the applicati
 
 ## 3. Project Submission
 
-You will submit your code by pushing the final version into your repository (add/commit/push).**All commits must be visible on the main branch on GitHub classroom to receive credit.** Be sure to check if the correct version is submitted before the deadline.
+You will submit your code by pushing the final version into your repository (add/commit/push). **All commits must be visible on the main branch on GitHub classroom to receive credit.** Be sure to check if the correct version is submitted before the deadline.
 
 On Gradescope, you will submit a plain `.txt` file containing two things:
 
@@ -110,11 +111,12 @@ Grades will be assigned on Gradescope and synced to the Canvas Gradebook.
 
 ### TypeScript ESLint, Vitest, and Configuration Files
 
-The GitHub project contains a number of configuration files you **may not modify**: `package.json`, `package-lock.json`, `.prettierrc`, `tsconfig.json`, `vitest.config.mjs`, and `vite.config.mjs` are configuration files, as is everything in the `.github` directory. If you change any of these files, take care to change them back; the list of changes in the feedback PR should not show any changes to these files. You also may not include `eslint-disable` commands to disable ESLint's checks in your final submission.
+The GitHub project contains a number of configuration files you **may not modify**. The files `package.json`, `.prettierrc`, `tsconfig.json`, `vitest.config.mjs`, and `vite.config.mjs` are examples of configuration files, as is everything in the `.github` directory. If you change any of these files, take care to change them back; the list of changes in the feedback PR should not show any changes to these files. You also may not include `eslint-disable` commands to disable ESLint's checks in your final submission.
 
 The code you submit must pass GitHub's automatic checks, which mostly just amount to the TypeScript typechecker, the ESLint linter, and the tests. You can run these yourself like this:
 
 ```
+ip1-me $> npm run prettier --workspaces
 ip1-me $> npm run check --workspaces
 ip1-me $> npm run lint --workspaces
 ip1-me $> npm run test --workspaces
@@ -164,10 +166,11 @@ The code you changed in Task 1 was only one place where user display names were 
 For this task, you'll make three changes to all display name locations:
 
 - Consistently refer to the current logged-in user by the second-person pronoun "you," instead of by their display name. (The exception is the "signed in as (DisplayName)" message in the header — leave that alone.)
-- Create a consistent visual style for distinguishing references to "you," the current logged-in user, and references to other users.
 - Consistently link other users' usernames to their profile. References to the current user ("you") should not link to the current user's profile.
 
-This task is worth 15 points: one point for each of the three changes in each of the five places where display names occur. You should make this task easier on yourself by thinking about how to organizing your code in a way that minimizes duplication, and unnecessary duplication may lead to a deduction of up to 5 points.
+This task is worth 15 points: 
+- 1 point for each of the 2 changes in each of the 5 places where display names occur.
+- 5 points for style and organizing your code in a way that minimizes duplication.
 
 ### Task 4: Mine Finder
 
@@ -191,9 +194,9 @@ The task is worth 22 points, two points for meeting each of the following condit
 8.  If the game is not over, the player of the game should be able to "sweep" a grid position by clicking on it: clicking on the upper-right grid position of a 7x5 grid should submit the game move `[6,0]`.
 9.  If the game is over (`view.state !== 'playing'`), the player of the game should see all grid positions with the `cursor: default` CSS property set, and clicking anywhere on the grid should never send a message or make a move.
 10. If the game is over, the player of the game should see the message "You won" or "You lost", as appropriate, below the game grid.
-11. If the game is over, non-players should see "(DisplayName) won" or "(DisplayName) lost", as appropriate, below the game grid, where "(DisplayName)" is replaced by the player's display name.
+11. If the game is over, non-players should see "(DisplayName) won" or "(DisplayName) lost", as appropriate, below the game grid, where "(DisplayName)" is replaced by the player's display name. The display name need not link to the player's profile.
 
-Your implementation does not need to look like the example image above. It must be possible for a TA to effectively test a conditions of satisfaction in order to award points. The player name in the 10th and 11th conditions of satisfaction is not required to be as in Task 3.
+Your implementation does not need to look like the example image above. It must be possible for a TA to effectively test a conditions of satisfaction in order to award points. 
 
 ### Task 5: Marking Mines
 
