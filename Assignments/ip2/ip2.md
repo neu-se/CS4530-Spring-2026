@@ -14,7 +14,6 @@ The objectives of this assignment are to:
 
 - Investigate and understand a large, existing codebase
 - Implement interactive web applications with the React library
-- (Optional). Learn to comprehend and work with larger scope tests.
 
 ## Changelog
 
