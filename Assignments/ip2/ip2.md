@@ -176,9 +176,9 @@ The backend has been implemented for Mine Finder, a game with a strong but legal
 
 ![image]({{site.baseurl}}{% link /Assignments/ip2/beforeafter.png %})
 
-In Mine Finder, your game starts with a 6x6 or 7x5 grid containing six randomly-placed mines. Clicking on a grid position sweeps it, revealing how many of the eight adjacent grid positions contain mines — or exploding and ending the game if there is a mine in that grid position! When a grid position is revealed to have zero mines, all eight adjacent grid positions are automatically swept.
+In Mine Finder, your game starts with a 6x6 or 7x5 grid containing five randomly-placed mines. Clicking on a grid position sweeps it, revealing how many of the eight adjacent grid positions contain mines — or exploding and ending the game if there is a mine in that grid position! When a grid position is revealed to have zero mines, all eight adjacent grid positions are automatically swept.
 
-The backend logic for Mine Finder is implemented, and you can read the description of types in `shared/src/games/minefinder.ts`, the implementation in `server/src/games/minefinder.ts`, and the tests in `server/tests/games/minefinder.spec.ts`. The frontend implementation in `client/src/games/MineFinderGame.tsx` is the only part that is completely missing, and you will implement the game's frontend in React for this task.
+The backend logic for Mine Finder is implemented, and you can read the description of types in `shared/src/games/minefinder.types.ts`, the implementation in `server/src/games/minefinder.ts`, and the tests in `server/tests/games/minefinder.spec.ts`. The frontend implementation in `client/src/games/MineFinderGame.tsx` is the only part that is completely missing, and you will implement the game's frontend in React for this task.
 
 The task is worth 22 points, two points for meeting each of the following conditions of satisfaction:
 
