@@ -29,6 +29,7 @@ The objectives of this assignment are to:
  - 2026-01-13: Added "and" to the sentence "ESLint _warnings_ do not cause CI to fail and will not automatically lead to a deduction"
  - 2016-01-13: Corrected `UserRecord` to `AuthRecord` in the sentence "Additionally, when you create a user, you’ll add an entry to `storedAuths` that maps the username to the `AuthRecord`."
  - 2016-01-14: Corrected `getUserByUser()` to `getUserByUsername()` in Part 5.
+ - 2016-01-14: Replaced submission instructions from .txt file to pdf file.
 
 ## 1. Getting Started
 
@@ -154,7 +155,7 @@ You can test the server by going to the `server` directory and running `npm run 
 
 You will submit your code by pushing the final version into your repository (add/commit/push). In this assignment, you should only be making, committing, and pushing changes to the `main` branch of your repository. Be sure to check if the correct version is submitted before the deadline.
 
-On Gradescope, you will submit a plain `.txt` file containing two things:
+On Gradescope, you will submit a .pdf file containing two things:
 
  1. The link to your project's GitHub repo (e.g. `https://github.com/neu-cs4530/ip1-robsimmons`)
  2. The written responses and cURL commands requested in Task 3.
