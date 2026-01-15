@@ -22,7 +22,7 @@ The objectives of this assignment are to:
 
 ## 1. Getting Started
 
-Start by accepting our [GitHub Classroom Invitation] TODO TODO XXX TODO. It will create a Github repository for you which will include the starter code for this assignment. Run `npm install` in the root directory to fetch all dependencies for the `client`, `server`, and `shared` folders.
+Start by accepting our [GitHub Classroom Invitation](https://classroom.github.com/a/2qFol7Uh). It will create a Github repository for you which will include the starter code for this assignment. Run `npm install` in the root directory to fetch all dependencies for the `client`, `server`, and `shared` folders.
 
 ### 1.1 Optional but Highly Recommended: MongoDB
 
