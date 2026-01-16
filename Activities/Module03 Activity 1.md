@@ -16,7 +16,7 @@ You’ll hand in your assignment as a single TypeScript file `handin.ts` as requ
 
 ### Changelog
 
- - 2026-01-15: The server and `server.ts` file have been changed slightly; the previous version was not able to create 500 responses due to an exception being thrown as had been intended. The `handout.ts` file also clarifies Task 2, removing a confusion point about 400-status responses.
+ - 2026-01-15: The `server.ts` file has been changed slightly; the previous version was not able to create 500 responses as intended. The `handout.ts` file also clarifies the objective of Task 2.
 
 ### Grading Criteria: 10pts
 
