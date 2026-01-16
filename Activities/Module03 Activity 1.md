@@ -14,6 +14,10 @@ In this activity, you will understanding the server by reading the woefully unco
 
 You’ll hand in your assignment as a single TypeScript file `handin.ts` as required by your instructor. The template is [here](https://github.com/neu-se/name-seeing-server/blob/main/handin.ts). If you go to <https://github.com/neu-se/name-seeing-server>, find the green "Use this template" button, and select "Open in a codespace," you can edit the `handin.ts` in your browser.
 
+### Changelog
+
+ - 2026-01-15: The `server.ts` file has been changed slightly; the previous version was not able to create 500 responses as intended. The `handout.ts` file also clarifies the objective of Task 2.
+
 ### Grading Criteria: 10pts
 
 - Task 1 cURL commands (5 points)
