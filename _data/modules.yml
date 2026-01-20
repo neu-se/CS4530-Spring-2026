@@ -14,11 +14,11 @@ mod2b:
   name: Test-Driven Development
   page: /modules/2-requirements-to-tests
 mod3:
-  name: Test Adequacy
-  page: 
+  name: When Have I Written Enough Tests?
+  page: /modules/3-test-adequacy
 mod4:
   name: Design Patterns for Web Applications
-  page: 
+  page: /modules/4-web-apps
 mod5:
   name: React Part 1 (Introduction)
   page: /modules/5-react

@@ -25,6 +25,12 @@ The objectives of this assignment are to:
  - 2026-01-07: Clarified that all changes should be made to the `main` branch.
  - 2026-01-09: Clarification in Task 3, part 2: instead of "modify the tests," say "improve existing tests and/or add new tests."
  - 2026-01-10: Correction: `AuthRecord` is defined in `server/src/models.ts`, not in `server/src/models/auth.model.ts`.
+ - 2026-01-11: Changed _application tab_ to _"Network" tab (the precise name may depend on the browser)_ in the Recommendations section.
+ - 2026-01-13: Added "and" to the sentence "ESLint _warnings_ do not cause CI to fail and will not automatically lead to a deduction"
+ - 2026-01-13: Corrected `UserRecord` to `AuthRecord` in the sentence "Additionally, when you create a user, you’ll add an entry to `storedAuths` that maps the username to the `AuthRecord`."
+ - 2026-01-14: Corrected `getUserByUser()` to `getUserByUsername()` in Part 5.
+ - 2026-01-14: Replaced submission instructions from .txt file to pdf file.
+ - 2026-01-18: Mentioned reference implementation, clarified that playerIndex=0 is "Player #1" on the frontend, removed mention of mutant-tester.
 
 ## 1. Getting Started
 
@@ -140,7 +146,7 @@ You can test the server by going to the `server` directory and running `npm run 
 
 ## 2. Recommendations When Working on the Project
 
-1. Open the client application in a browser and interact with it. While interacting, monitor the application tab in the browser’s developer tools. The application tab will give you information about the HTTP requests the client sends to the server. The HTTP requests will contain URIs in their headers. You can use this information to understand the endpoints in the server.
+1. Open the client application in a browser and interact with it. While interacting, monitor the "Network" tab (the precise name may depend on the browser) in your browser’s developer tools. This tab will give you information about the HTTP requests the client sends to the server. The HTTP requests will contain URIs in their headers. You can use this information to understand the endpoints in the server.
 2. Make sure VS Code is set up as described in the development environment tutorial, with ESLint, Typescript, and Prettier installed. Our ESLint setup encodes very specific style rules, and if you do not have VSCode lint feedback enabled you will have to deal with an avalanche of errors when you first lint your code.
 3. Do not wait until the last minute to run `npm run lint` and `npm run build` to check for linter and typescript errors!
 4. Follow the [debugging policy]({{ site.baseurl }}{% link debugging.md %}) to help in the debugging process.
@@ -150,7 +156,7 @@ You can test the server by going to the `server` directory and running `npm run 
 
 You will submit your code by pushing the final version into your repository (add/commit/push). In this assignment, you should only be making, committing, and pushing changes to the `main` branch of your repository. Be sure to check if the correct version is submitted before the deadline.
 
-On Gradescope, you will submit a plain `.txt` file containing two things:
+On Gradescope, you will submit a .pdf file containing two things:
 
  1. The link to your project's GitHub repo (e.g. `https://github.com/neu-cs4530/ip1-robsimmons`)
  2. The written responses and cURL commands requested in Task 3.
@@ -185,7 +191,7 @@ The Actions tab on GitHub has the results of previous runs.
 
 ![image]({{site.baseurl}}{% link /Assignments/ip1/ActionsTab.png %})
 
-**Up to 25% of your total grade on the assignment may be deducted for CI failures (5% for prettier failures, 10% for TypeScript failures, and 10% for ESLint failures). In severe cases we may decline to grade your assignment entirely. Give yourself sufficient time to find and fix any errors.** ESLint _warnings_ do not cause CI to fail will not automatically lead to a deduction, but it is bad practice to have lots of console statements in your code, and this can lead to a point deduction if it makes it hard for a TA to understand your code.
+**Up to 25% of your total grade on the assignment may be deducted for CI failures (5% for prettier failures, 10% for TypeScript failures, and 10% for ESLint failures). In severe cases we may decline to grade your assignment entirely. Give yourself sufficient time to find and fix any errors.** ESLint _warnings_ do not cause CI to fail and will not automatically lead to a deduction, but it is bad practice to have lots of console statements in your code, and this can lead to a point deduction if it makes it hard for a TA to understand your code.
 
 ## 4. Implementation Tasks
 
@@ -198,6 +204,8 @@ Places to look for guidance:
  - The type specification for a game implementation in `server/src/games/gameLogic.ts`, explains what each unimplemented function does.
  - The types of Tic-Tac-Toe in `shared/src/games/ticTacToe.ts`, explain in detail how the game is intended to work.
  - The implementations of Nim and Guessing Game in the directory `server/src/games`, which may be a helpful basis for comparison.
+
+**[Update 2026-01-19]** A reference implementation is available at <https://gamenite.onrender.com/>, you'll need to create an account (or two) to use this reference implementation. Note that `shared/src/games/ticTacToe.ts` refers to the players by their `playerIndex`: the user that initiates the game is given index 0, and the second player has index 1. The frontend refers to these as "Player #1" and "Player #2", respectively.
 
 This task is worth 25 points: 
  - 15 points will be assigned automatically based on passing our test suite
@@ -217,7 +225,7 @@ This task is worth 20 points:
  - 6 points for achieving full branch coverage for `ticTacToe.ts` (3 points for 90%+ branch coverage)
  - 4 points for your tests working against some of our custom "mutants" — your tests should not be overspecified (they should pass valid implementations of `ticTacToe.ts` that may be slightly different than your own), and they should correctly catch and fail implementations of Tic Tac Toe that have bugs.
 
-Watch out on Piazza — we will try to set up an autograder that optionally lets you test your tests against our mutants Tic Tac Toe implementations closer to the assignment deadline. We'll also allow you to test your own Tic Tac Toe implementations, and reserve the right to give bonus points to anyone who can show a valid Tic Tac Toe implementation that fails our tests.
+~~Watch out on Piazza — we will try to set up an autograder that optionally lets you test your tests against our mutants Tic Tac Toe implementations closer to the assignment deadline. We'll also allow you to test your own Tic Tac Toe implementations, and reserve the right to give bonus points to anyone who can show a valid Tic Tac Toe implementation that fails our tests.~~ **[Update 2026-01-19]** we will not be able to provide this before the deadline.
 
 ### Task 3: Exposing Errors in the User Service
 
@@ -244,7 +252,7 @@ There are two connected issues with the User model:
 
 These aren’t totally connected problems, but we can solve them together. The file `server/src/services/user.service.ts` contains an unused `storedAuths` object that you will use to maintain a mapping from valid **usernames** to the user IDs that let you look up profile information (like the display name) for that user. The `AuthRecord` type defined in `server/src/models.ts` also contains a password.
 
-Whenever you create a user, you’ll continue to create a new and random user ID, and add to `storedUsers` an entry that maps from the user ID to the user’s record. You should modify `UserRecord` to no longer contain a password, and ensure that the stored record does not contain a password. Additionally, when you create a user, you’ll add an entry to `storedAuths` that maps the username to the `UserRecord`. By using stored auth, you can find the user record associated with a username in two steps: find the user ID using `storedAuths`, and then find the user’s record with that ID in `storedUsers`.
+Whenever you create a user, you’ll continue to create a new and random user ID, and add to `storedUsers` an entry that maps from the user ID to the user’s record. You should modify `UserRecord` to no longer contain a password, and ensure that the stored record does not contain a password. Additionally, when you create a user, you’ll add an entry to `storedAuths` that maps the username to the `AuthRecord`. By using stored auth records, you can find the user record associated with a username in two steps: find the user ID using `storedAuths`, and then find the user’s record with that ID in `storedUsers`.
 
 To complete this part, you should:
 - Remove the `password` field from `UserRecord`, and instead
@@ -267,7 +275,7 @@ The purpose of this part of the assignment is to get your fingers comfortable wi
 You now have two different types of code mixed up in `user.service.ts` — code primarily concerned with authentication, and code primarily concerned with the user’s personal data. In this part, your goal is to move the following elements from `user.service.ts` to a new file, `auth.service.ts`:
 - `storedAuths` (which should not be exported from `auth.service.ts`)
 - `resetStoredAuth()`
-- `getUserByUser()`
+- `getUserByUsername()`
 - `checkAuth()`
 - `enforceAuth()`
 
