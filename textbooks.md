@@ -18,6 +18,8 @@ This class is a survey of many sub-areas of software engineering, and an unfortu
 An overview of software architectural patterns and their role in successful software projects.
 - ["Refactoring: Improving the Design of Existing Code" By Martin Fowler](https://learning.oreilly.com/library/view/refactoring-improving-the/9780134757681/)<br />
 The definitive list of "code smells" that should be avoiding in programming, matched up with "refactoring" techniques to improve that code
+- _Design Patterns: Elements of Reusable Object-Oriented Software_ (1994)  This book is quite dated, but it is a foundational text for object-oriented design.  It is available from many sources.  You could look it up.
+- [Freeman & Robson _Head First Design Patterns, 2nd Edition_](https://www.oreilly.com/library/view/head-first-design/9781492077992/) This should be available free to you with your student O'Reilly subscription.
 - ["Learn React with TypeScript 3" by Carl Rippon](https://learning.oreilly.com/library/view/learn-react-with/9781789610253/)<br />A solid reference for React, describing how to get started, plus more advanced features like React's Router and testing using Jest
 - ["Programming TypeScript" by Boris Cherny](https://learning.oreilly.com/library/view/programming-typescript/9781492037644/)<br />A useful introduction to TypeScript, written assuming familiarity with programming in languages like Java, C# or python.
 
