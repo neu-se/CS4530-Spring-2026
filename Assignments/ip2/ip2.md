@@ -174,11 +174,13 @@ This task is worth 15 points:
 
 ### Task 4: Mine Finder
 
-The backend has been implemented for Mine Finder, a game with a strong but legally-permissible resemblance to Microsoft's [Minesweeper](https://apps.microsoft.com/detail/9wzdncrfhwcn?hl=en-US&gl=US) game.
+The backend has been implemented for Mine Finder, a game with a strong but legally-permissible resemblance to Microsoft's [Minesweeper](https://apps.microsoft.com/detail/9wzdncrfhwcn?hl=en-US&gl=US) game. 
 
 ![image]({{site.baseurl}}{% link /Assignments/ip2/beforeafter.png %})
 
-In Mine Finder, your game starts with a 6x6 or 7x5 grid containing five randomly-placed mines. Clicking on a grid position sweeps it, revealing how many of the eight adjacent grid positions contain mines — or exploding and ending the game if there is a mine in that grid position! When a grid position is revealed to have zero mines, all eight adjacent grid positions are automatically swept.
+(You do **not** need to use CSS to match the exact style shown here, you just need show a grid that allows the game to be played or watched successfully. The only required CSS properties are described in the conditions of satisfaction below.)
+
+In Mine Finder, your game starts with a 6x6 or 5x7 grid containing five randomly-placed mines. Clicking on a grid position sweeps it, revealing how many of the eight adjacent grid positions contain mines — or exploding and ending the game if there is a mine in that grid position! When a grid position is revealed to have zero mines, all eight adjacent grid positions are automatically swept.
 
 The backend logic for Mine Finder is implemented, and you can read the description of types in `shared/src/games/minefinder.types.ts`, the implementation in `server/src/games/minefinder.ts`, and the tests in `server/tests/games/minefinder.spec.ts`. The frontend implementation in `client/src/games/MineFinderGame.tsx` is the only part that is completely missing, and you will implement the game's frontend in React for this task.
 
@@ -191,7 +193,7 @@ The task is worth 22 points, two points for meeting each of the following condit
 5.  Swept grid positions should have the `cursor: default` CSS property set.
 6.  Non-players should always see all grid positions with the `cursor: default` CSS property set, and clicking anywhere on the grid should never send a message or make a move.
 7.  If the game is not over (`view.state === 'playing'`), the player of the game should see **unswept** grid positions with the `cursor: pointer` CSS property set.
-8.  If the game is not over, the player of the game should be able to "sweep" a grid position by clicking on it: clicking on the upper-right grid position of a 7x5 grid should submit the game move `[6,0]`.
+8.  If the game is not over, the player of the game should be able to "sweep" a grid position by clicking on it: clicking on the upper-right grid position of a 5x7 grid should submit the game move `[6,0]`.
 9.  If the game is over (`view.state !== 'playing'`), the player of the game should see all grid positions with the `cursor: default` CSS property set, and clicking anywhere on the grid should never send a message or make a move.
 10. If the game is over, the player of the game should see the message "You won" or "You lost", as appropriate, below the game grid.
 11. If the game is over, non-players should see "(DisplayName) won" or "(DisplayName) lost", as appropriate, below the game grid, where "(DisplayName)" is replaced by the player's display name. The display name need not link to the player's profile.
@@ -206,7 +208,9 @@ It's very helpful to be able to flag a grid position as a known mine while playi
 
 When a player _right_-clicks on a grid position with a `❓` in it, that question mark should be replaced with a flag `⛳`. Left-clicking a flagged grid position should have no effect — a flag should keep you from accidentally setting off a mine. Right-clicking a grid position with a flag should unflag the grid position, returning it to a `❓` and making it clickable again.
 
-You can capture right clicks by adding an [`onContextMenu`](https://react.dev/reference/react-dom/components/common#common-props) property alongside the `onClick` handler you added in the last part.
+Winning the game should cause all remaining cells to display `🎉` regardless of whether they had previously been flagged.
+
+You can capture right clicks by adding an [`onContextMenu`](https://react.dev/reference/react-dom/components/common#common-props) property alongside the `onClick` handler you added in the last part. Because the default behavior of a right-click is to open a context menu, you'll need to call `preventDefault` on the event (this was demonstrated in lecture for preventing a button click from submitting a form).
 
 This task is worth 8 points, 4 points from testing the implementation and 4 points from verifying the correct use of React state.
 
@@ -218,15 +222,17 @@ GameNite's user researchers come to you with two different user stories they dis
 
 > As an expert mine finder, I want access to more challenging puzzles, so that I can show off my advanced logical skills.
 
-In this task, you'll meet the needs of these users by modifying the Mine Finder game to allow for an initial difficulty selection. This task will require changes to all the parts of your project: the server, the client, and the shared code.
+In this task, you'll meet the needs of these users by modifying the Mine Finder game to allow for an initial difficulty selection. This task will require substantial changes to all the parts of your project: the server, the client, the shared code and Zod validation logic for moves, and the tests.
 
 When a new single-player game of Mine Finder begins, the user should be shown a [drop down menu](https://react.dev/reference/react-dom/components/select) with three choices, "Easy", "Standard", and "Hard", and the "Standard" button should be selected by default. There should be a submit button that sends a move that is just the string "easy", "standard", or "hard". Sending that move should trigger the backend's Mine Finder logic to generate a board and start a game.
 
-You can decide what "easy" and "difficult" actually mean, within the following constraints:
+You can decide what "easy" and "difficult" actually mean, within reason and the following constraints:
 
-- An "Easy" difficulty game must have no more than 36 positions arranged in a rectangular grid, and at most 5 mines. Exposing _one_ mine in an "easy" game shouldn't be an automatic loss: players only lose when two mines are exposed.
-- The "Standard" difficulty game should be exactly the previous version of the game.
-- A "Hard" difficulty game must have at least than 40 positions arranged in a rectangular grid, and more than 1/6 of the positions should be mines.
+- An "Easy" difficulty game must have no more than 36 positions arranged in a rectangular grid, and at most 5 mines. Exposing _one_ mine in an "easy" game shouldn't be an automatic loss: players only lose when two mines are exposed. 
+- The "Standard" difficulty game should work like the version of the game you implemented in the previous tasks: a randomly chosen 6x6 or 5x7 grid with 5 mines.
+- A "Hard" difficulty game must have at least 40 grid positions arranged in a rectangular grid, and more than 1/6 of the positions should be mines.
+
+While playing, the difficulty level should be visible somewhere for both the player and for spectators.
 
 **Hint:** you will likely want to transform both the `MineFinderState` and `MineFinderView` types so that the game can exist in different states: not started, and started. In the starter code, `MineFinderState` looks like this:
 
@@ -255,14 +261,14 @@ export type MineFinderState =
     };
 ```
 
-You are not required to use precisely this type; part of the task is figuring out what your `MineFinderState` type needs to be.
+You are not required to use precisely this type; part of the task is figuring out what your `MineFinderState` type needs to be. Part of the challenge of this assignment is developing reasonable solutions to behaviors we haven't specified: for example, what do you think spectators should see while the player is choosing a difficulty? This should be reasonable and not obviously broken, but the details are up to you.
 
 This task is worth 20 points:
 
 - 4 points for implementing difficulty selection
 - 4 points for implementing hard mode
 - 4 points for implementing easy mode
-- 4 points for fixing the tests and having >=95% line and branch coverage for `shared/src/games/minefinder.ts`
+- 4 points for fixing existing tests and having >=95% line and branch coverage for `shared/src/games/minefinder.ts`, adding new tests as appropriate
 - 4 points for [code style]({{ site.baseurl }}{% link style.md %}) and appropriate documentation of helper functions.
 
 ## 5. Grading Summary
