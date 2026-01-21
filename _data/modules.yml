@@ -30,7 +30,7 @@ mod7:
   page: 
 mod8:
   name: Writing Maintainable Code
-  page: 
+  page: /modules/8-code-level-design
 mod9:
   name: Concurrency Patterns
   page: 
