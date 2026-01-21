@@ -33,7 +33,7 @@ mod8:
   page: 
 mod9:
   name: Concurrency Patterns
-  page: 
+  page: /modules/9-concurrency-patterns-in-typescript
 mod10:
   name: Tests with Larger Scope
   page: 
