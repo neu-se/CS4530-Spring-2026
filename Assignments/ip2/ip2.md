@@ -44,7 +44,6 @@ Mongo offers several methods of interacting with your Mongo databases.
   For Windows, install MongoDB Compass using the instructions above.
 
   For Mac:
-
   - Download the dmg file from [here](https://www.mongodb.com/try/download/compass). Once the application starts:
     1.  Click on "Add new connection" in the left sidebar.
     2.  Make sure the URI field contains `mongodb://localhost:27017`
@@ -53,11 +52,9 @@ Mongo offers several methods of interacting with your Mongo databases.
 - Mongo shell (_mongosh_) provides a command-line interface that can be used to interact with databases in MongoDB.
 
   For Windows:
-
   - Download it [here](https://www.mongodb.com/try/download/shell) using the msi package. You can also use _mongosh_ to see if the MongoDB server is running. Try the MongoDB Community Edition and the command `show dbs`; you should see a list of existing databases in your local instance.
 
   For Mac:
-
   - Mongo shell is automatically installed with MongoDB through the Mac installation instructions. To use it, make sure MongoDB is running as a macOS service, then type `mongosh` into the terminal.
 
 ### 1.2 Setting Up the Server To Use MongoDB
@@ -146,7 +143,7 @@ This task is worth 10 points, based on checking that chat navigation works as ex
 
 Change `client/src/pages/Profile.tsx` so that, if you are logged in as `user0` and navigate to `/profile/user1`, you see a page that allows you to see _but not edit_ that user’s username, display name, and when their account was created.
 
-You may want to split this file into two or three new files, since the route to profile pages is now being used for two different purposes: viewing your own profile, and editing other profiles.
+You may want to split this file into two or three new files, since the route to profile pages is now being used for two different purposes: viewing your own profile, and editing other profiles. Check `client/src/services/userService.ts` for a useful helper function.
 
 This task is worth 25 points:
 
@@ -168,13 +165,14 @@ For this task, you'll make three changes to all display name locations:
 - Consistently refer to the current logged-in user by the second-person pronoun "you," instead of by their display name. (The exception is the "signed in as (DisplayName)" message in the header — leave that alone.)
 - Consistently link other users' usernames to their profile. References to the current user ("you") should not link to the current user's profile.
 
-This task is worth 15 points: 
+This task is worth 15 points:
+
 - 1 point for each of the 2 changes in each of the 5 places where display names occur.
 - 5 points for style and organizing your code in a way that minimizes duplication.
 
 ### Task 4: Mine Finder
 
-The backend has been implemented for Mine Finder, a game with a strong but legally-permissible resemblance to Microsoft's [Minesweeper](https://apps.microsoft.com/detail/9wzdncrfhwcn?hl=en-US&gl=US) game. 
+The backend has been implemented for Mine Finder, a game with a strong but legally-permissible resemblance to Microsoft's [Minesweeper](https://apps.microsoft.com/detail/9wzdncrfhwcn?hl=en-US&gl=US) game.
 
 ![image]({{site.baseurl}}{% link /Assignments/ip2/beforeafter.png %})
 
@@ -198,7 +196,7 @@ The task is worth 22 points, two points for meeting each of the following condit
 10. If the game is over, the player of the game should see the message "You won" or "You lost", as appropriate, below the game grid.
 11. If the game is over, non-players should see "(DisplayName) won" or "(DisplayName) lost", as appropriate, below the game grid, where "(DisplayName)" is replaced by the player's display name. The display name need not link to the player's profile.
 
-Your implementation does not need to look like the example image above. It must be possible for a TA to effectively test a conditions of satisfaction in order to award points. 
+Your implementation does not need to look like the example image above. It must be possible for a TA to effectively test a conditions of satisfaction in order to award points.
 
 ### Task 5: Marking Mines
 
@@ -228,7 +226,7 @@ When a new single-player game of Mine Finder begins, the user should be shown a 
 
 You can decide what "easy" and "difficult" actually mean, within reason and the following constraints:
 
-- An "Easy" difficulty game must have no more than 36 positions arranged in a rectangular grid, and at most 5 mines. Exposing _one_ mine in an "easy" game shouldn't be an automatic loss: players only lose when two mines are exposed. 
+- An "Easy" difficulty game must have no more than 36 positions arranged in a rectangular grid, and at most 5 mines. Exposing _one_ mine in an "easy" game shouldn't be an automatic loss: players only lose when two mines are exposed.
 - The "Standard" difficulty game should work like the version of the game you implemented in the previous tasks: a randomly chosen 6x6 or 5x7 grid with 5 mines.
 - A "Hard" difficulty game must have at least 40 grid positions arranged in a rectangular grid, and more than 1/6 of the positions should be mines.
 
