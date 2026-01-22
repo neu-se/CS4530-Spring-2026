@@ -25,9 +25,9 @@ Start by accepting our [GitHub Classroom Invitation](https://classroom.github.co
 
 ### 1.1 Optional but Highly Recommended: MongoDB
 
-It can be quite a bit easier to work on the application if restarting the server doesn't reset the entire application to an initial state.
+It's much easier to work on the application if restarting the server doesn't reset the entire application to an initial state.
 
-Your starter code uses a proper repository layer, which connects to MongoDB through an adapter library called [Keyv] TODO TODO XXX TODO TUTORIAL. You can install MongoDB on your local machine.
+Your starter code uses a proper repository layer, which connects to MongoDB through an adapter library called [Keyv](https://keyv.org/docs/keyv/). You can install MongoDB on your local machine.
 
 1. Follow the [instructions in the official MongoDB documentation](https://www.mongodb.com/docs/manual/administration/install-community/) to install the free community edition.
 2. Choose 'Install on Linux', 'Install on macOS', or 'Install on Windows', depending on your system. (the following steps are for Windows)
@@ -83,11 +83,10 @@ The application should work as before, but any changes you make in the applicati
 ## 2. Recommendations When Working on the Project
 
 1. Have the frontend and backend running, and have the project open in your browser, while you are working. It's very useful to have the website update as you make changes.
-2. Use Git effectively: the first three tasks are cumulative, as are the last three tasks, and if you run into trouble with Task 5, you will want to be able to backtrack to a working implementation of Task 4.
-3. Do not wait until the last minute to run `npm run lint` and `npm run build` to check for linter and typescript errors!
+2. Frequently add and commit changes with git. This saves your changes and makes it easy to go back to a state where most tasks were complete. The first three tasks are cumulative, as are the last three tasks, and if you run into trouble with Task 5, you will want to be able to backtrack to a working implementation of Task 4.
+3. Do not wait until the last minute to run `npm run lint` and `npm run check` to check for linter and typescript errors!
 4. Follow the [debugging policy]({{ site.baseurl }}{% link debugging.md %}) to help in the debugging process.
-5. Frequently add and commit changes with git. This saves your changes and makes it easy to go back to a state where most tasks were complete.
-6. Task 6 is more challenging than the other tasks, but is only worth 20% of credit. Don't wait until the last minute to attempt this task if you intend to complete all parts of the assignment.
+5. Task 6 is more challenging than the other tasks, but is only worth 20% of credit. Don't wait until the last minute to attempt this task if you intend to complete all parts of the assignment.
 
 ## 3. Project Submission
 
@@ -265,7 +264,7 @@ This task is worth 20 points:
 
 - 4 points for implementing difficulty selection
 - 4 points for implementing hard mode
-- 4 points for implementing easy mode
+- 4 points for implementing easy mode (ironically, because you are allowed to explode one mine and still win the game, easy mode is harder to implement than hard mode)
 - 4 points for fixing existing tests and having >=95% line and branch coverage for `shared/src/games/minefinder.ts`, adding new tests as appropriate
 - 4 points for [code style]({{ site.baseurl }}{% link style.md %}) and appropriate documentation of helper functions.
 
