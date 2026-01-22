@@ -208,7 +208,7 @@ When a player _right_-clicks on a grid position with a `❓` in it, that questio
 
 Winning the game should cause all remaining cells to display `🎉` regardless of whether they had previously been flagged.
 
-You can capture right clicks by adding an [`onContextMenu`](https://react.dev/reference/react-dom/components/common#common-props) property alongside the `onClick` handler you added in the last part. Because the default behavior of a right-click is to open a context menu, you'll need to call `preventDefault` on the event (this was demonstrated in lecture for preventing a button click from submitting a form).
+You can capture right clicks by adding an [`onContextMenu`](https://react.dev/reference/react-dom/components/common#common-props) property alongside the `onClick` handler you added in the last part. Because the default behavior of a right-click is to open a context menu, you'll need to call `preventDefault` on the event (this was demonstrated in lecture for preventing a button click from submitting a form). Here's a very simple example of using `preventDefault` with `onContextMenu`: <https://codepen.io/Ishika-Reddy/pen/XJKgWqK>.
 
 This task is worth 8 points, 4 points from testing the implementation and 4 points from verifying the correct use of React state.
 
