@@ -17,7 +17,7 @@ The objectives of this assignment are to:
 
 ## Changelog
 
-- NA
+- 2026-01-22: Correction to submission instructions, only the URL of your GitHub repository is needed.
 
 ## 1. Getting Started
 
@@ -92,10 +92,7 @@ The application should work as before, but any changes you make in the applicati
 
 You will submit your code by pushing the final version into your repository (add/commit/push). **All commits must be visible on the main branch on GitHub classroom to receive credit.** Be sure to check if the correct version is submitted before the deadline.
 
-On Gradescope, you will submit a `.pdf` file containing two things:
-
-1.  The link to your project's GitHub repo (e.g. `https://github.com/neu-cs4530/ip2-robsimmons`)
-2.  The written responses and cURL commands requested in Task 3.
+On Gradescope, you will submit a plain `.txt` file containing a link to your project's GitHub repo (e.g. `https://github.com/neu-cs4530/ip2-robsimmons`).
 
 We will grade your code on GitHub by using the "Feedback" PR that is automatically created when the assignment is. The Feedback PR can be found under the "Pull requests" menu, like this:
 
