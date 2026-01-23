@@ -12,7 +12,7 @@ For technical questions related to the codebase, please check piazza first (or p
 ## Office Hours 
 All TA office hours will be held virtually. We will explore the options of holding in-person office hours too, subject to interest from students/TAs and availability of a room. Instructor office hours may be held in-person or remotely.  
 
-TA Office Hours are hosted on Microsoft Teams, using the [Khoury Office Hours app](https://officehours.khoury.northeastern.edu/). Please see the user guide for information on how to log in and ask questions.
+TA Office Hours are hosted on Microsoft Teams, using the [Khoury Office Hours app](https://officehours.khoury.northeastern.edu/). Please see the user guide for information on how to log in and ask questions. Please note that VPN is now required to access office hours app when off campus (starting Jan 2nd). 
 
 **We usually do not hold office hours during school holidays (Spring Break, MLK Day, President's Day, Indigenous Peoples' Day, Veteran's Day and Thanksgiving Break)**
 

@@ -14,17 +14,17 @@ mod2b:
   name: Test-Driven Development
   page: /modules/2-requirements-to-tests
 mod3:
-  name: Test Adequacy
-  page: 
+  name: When Have I Written Enough Tests?
+  page: /modules/3-test-adequacy
 mod4:
   name: Design Patterns for Web Applications
-  page: 
+  page: /modules/4-web-apps
 mod5:
   name: React Part 1 (Introduction)
-  page: 
+  page: /modules/5-react
 mod6:
   name: React Part 2 (Hooks)
-  page: 
+  page: /modules/6-patterns-of-react
 mod7:
   name: Software Processes & Agile
   page: 
@@ -96,7 +96,7 @@ ip1:
 ip2:
   name: Individual Project 2 
   type: deadline
-  page: 
+  page: /assignments/ip2
 ip3:
   name: Individual Project 3 
   type: deadline
