@@ -27,9 +27,10 @@ The objectives of this assignment are to:
  - 2026-01-10: Correction: `AuthRecord` is defined in `server/src/models.ts`, not in `server/src/models/auth.model.ts`.
  - 2026-01-11: Changed _application tab_ to _"Network" tab (the precise name may depend on the browser)_ in the Recommendations section.
  - 2026-01-13: Added "and" to the sentence "ESLint _warnings_ do not cause CI to fail and will not automatically lead to a deduction"
- - 2016-01-13: Corrected `UserRecord` to `AuthRecord` in the sentence "Additionally, when you create a user, you’ll add an entry to `storedAuths` that maps the username to the `AuthRecord`."
- - 2016-01-14: Corrected `getUserByUser()` to `getUserByUsername()` in Part 5.
- - 2016-01-14: Replaced submission instructions from .txt file to pdf file.
+ - 2026-01-13: Corrected `UserRecord` to `AuthRecord` in the sentence "Additionally, when you create a user, you’ll add an entry to `storedAuths` that maps the username to the `AuthRecord`."
+ - 2026-01-14: Corrected `getUserByUser()` to `getUserByUsername()` in Part 5.
+ - 2026-01-14: Replaced submission instructions from .txt file to pdf file.
+ - 2026-01-18: Mentioned reference implementation, clarified that playerIndex=0 is "Player #1" on the frontend, removed mention of mutant-tester.
 
 ## 1. Getting Started
 
@@ -204,6 +205,8 @@ Places to look for guidance:
  - The types of Tic-Tac-Toe in `shared/src/games/ticTacToe.ts`, explain in detail how the game is intended to work.
  - The implementations of Nim and Guessing Game in the directory `server/src/games`, which may be a helpful basis for comparison.
 
+**[Update 2026-01-19]** A reference implementation is available at <https://gamenite.onrender.com/>, you'll need to create an account (or two) to use this reference implementation. Note that `shared/src/games/ticTacToe.ts` refers to the players by their `playerIndex`: the user that initiates the game is given index 0, and the second player has index 1. The frontend refers to these as "Player #1" and "Player #2", respectively.
+
 This task is worth 25 points: 
  - 15 points will be assigned automatically based on passing our test suite
  - 10 points will be assigned by TAs manually checking for issues with [code style]({{ site.baseurl }}{% link style.md %}). Take care to document any helper functions you include.
@@ -222,7 +225,7 @@ This task is worth 20 points:
  - 6 points for achieving full branch coverage for `ticTacToe.ts` (3 points for 90%+ branch coverage)
  - 4 points for your tests working against some of our custom "mutants" — your tests should not be overspecified (they should pass valid implementations of `ticTacToe.ts` that may be slightly different than your own), and they should correctly catch and fail implementations of Tic Tac Toe that have bugs.
 
-Watch out on Piazza — we will try to set up an autograder that optionally lets you test your tests against our mutants Tic Tac Toe implementations closer to the assignment deadline. We'll also allow you to test your own Tic Tac Toe implementations, and reserve the right to give bonus points to anyone who can show a valid Tic Tac Toe implementation that fails our tests.
+~~Watch out on Piazza — we will try to set up an autograder that optionally lets you test your tests against our mutants Tic Tac Toe implementations closer to the assignment deadline. We'll also allow you to test your own Tic Tac Toe implementations, and reserve the right to give bonus points to anyone who can show a valid Tic Tac Toe implementation that fails our tests.~~ **[Update 2026-01-19]** we will not be able to provide this before the deadline.
 
 ### Task 3: Exposing Errors in the User Service
 
