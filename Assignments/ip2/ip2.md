@@ -18,6 +18,7 @@ The objectives of this assignment are to:
 ## Changelog
 
 - 2026-01-22: Correction to submission instructions, only the URL of your GitHub repository is needed.
+- 2026-01-26: Corrections: there's no "(Display name) left chat" message, and there are only two things to change in Task 3, not three.
 
 ## 1. Getting Started
 
@@ -150,13 +151,13 @@ This task is worth 25 points:
 
 The code you changed in Task 1 was only one place where user display names were referenced. Here are some others:
 
-- The "(DisplayName) entered chat/left chat" messages in chat
+- The "(DisplayName) entered chat" messages in chat
 - The "Player #2 is (DisplayName)" messages in the game panel
 - "Posted by (DisplayName)" in forum messages
 - "Reply by (DisplayName)" in forum comments
 - "(Display name) created 1 day ago" on the home page and the game list and forum list pages
 
-For this task, you'll make three changes to all display name locations:
+For this task, you'll make ~~three~~**two** changes to all display name locations:
 
 - Consistently refer to the current logged-in user by the second-person pronoun "you," instead of by their display name. (The exception is the "signed in as (DisplayName)" message in the header — leave that alone.)
 - Consistently link other users' usernames to their profile. References to the current user ("you") should not link to the current user's profile.
