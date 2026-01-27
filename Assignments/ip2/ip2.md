@@ -19,6 +19,7 @@ The objectives of this assignment are to:
 
 - 2026-01-22: Correction to submission instructions, only the URL of your GitHub repository is needed.
 - 2026-01-26: Corrections: there's no "(Display name) left chat" message, and there are only two things to change in Task 3, not three.
+- 2026-01-27: Correction: the upper-right corner of a 5x7 grid was described previously as `[6,0]`, and is now described correctly as `[0,6]`.
 
 ## 1. Getting Started
 
@@ -188,7 +189,7 @@ The task is worth 22 points, two points for meeting each of the following condit
 5.  Swept grid positions should have the `cursor: default` CSS property set.
 6.  Non-players should always see all grid positions with the `cursor: default` CSS property set, and clicking anywhere on the grid should never send a message or make a move.
 7.  If the game is not over (`view.state === 'playing'`), the player of the game should see **unswept** grid positions with the `cursor: pointer` CSS property set.
-8.  If the game is not over, the player of the game should be able to "sweep" a grid position by clicking on it: clicking on the upper-right grid position of a 5x7 grid should submit the game move `[6,0]`.
+8.  If the game is not over, the player of the game should be able to "sweep" a grid position by clicking on it: clicking on the upper-right grid position of a 5x7 grid should submit the game move `[0,6]` (moves are described by row first, column second).
 9.  If the game is over (`view.state !== 'playing'`), the player of the game should see all grid positions with the `cursor: default` CSS property set, and clicking anywhere on the grid should never send a message or make a move.
 10. If the game is over, the player of the game should see the message "You won" or "You lost", as appropriate, below the game grid.
 11. If the game is over, non-players should see "(DisplayName) won" or "(DisplayName) lost", as appropriate, below the game grid, where "(DisplayName)" is replaced by the player's display name. The display name need not link to the player's profile.
