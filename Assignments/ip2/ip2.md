@@ -20,6 +20,7 @@ The objectives of this assignment are to:
 - 2026-01-22: Correction to submission instructions, only the URL of your GitHub repository is needed.
 - 2026-01-26: Corrections: there's no "(Display name) left chat" message, and there are only two things to change in Task 3, not three.
 - 2026-01-27: Correction: the upper-right corner of a 5x7 grid was described previously as `[6,0]`, and is now described correctly as `[0,6]`.
+- 2026-01-28: Correction: in task 2, "view your own profile and editing other people's profiles" was exactly backwards. You edit your own profile and view other people's profiles.
 
 ## 1. Getting Started
 
@@ -141,7 +142,7 @@ This task is worth 10 points, based on checking that chat navigation works as ex
 
 Change `client/src/pages/Profile.tsx` so that, if you are logged in as `user0` and navigate to `/profile/user1`, you see a page that allows you to see _but not edit_ that user’s username, display name, and when their account was created.
 
-You may want to split this file into two or three new files, since the route to profile pages is now being used for two different purposes: viewing your own profile, and editing other profiles. Check `client/src/services/userService.ts` for a useful helper function.
+You may want to split this file into two or three new files, since the route to profile pages is now being used for two different purposes: viewing and editing your own profile, and viewing other profiles. Check `client/src/services/userService.ts` for a useful helper function.
 
 This task is worth 25 points:
 
