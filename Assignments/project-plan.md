@@ -62,7 +62,7 @@ Your project plan should begin with a 1-3 paragraph introductory problem stateme
 
 When you review your project plan with course staff, you will be expected to have an even shorter "elevator pitch" version of this problem statement: if you had 30 seconds on an elevator with the CEO of GameNite, or with a potential investor, how would describe your overall plan as one clear theme? Catchy slogans (like GameNite's pitch of being "twitch for correspondence chess") aren't necessary, but can be a useful tool.
 
-## User Stories and Conditions of Satisfaction (max 6 pages)
+## User Stories and Conditions of Satisfaction (max 5 pages)
 
 Given the problem statement, develop 4-6 user stories to describe your proposed features(s). User stories are high-level requirements specified in the following format 
 
