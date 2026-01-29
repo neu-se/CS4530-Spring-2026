@@ -23,7 +23,7 @@ Examples of features that students have proposed include:
 
 - Introduce Markdown or images into forum threads
 - Introduce more social features, such as friend requests and private direct messaging
-- Provide users with more personalization features, including customizable profiles or user icons 
+- Provide users with more personalization features, including customizable profiles or user icons
 - Create hidden or invite-only games
 - Introduce leaderboards for site-wide activity or for game-specific participation
 - Augment or replace the forum and threads with user-moderated communities that users can join
@@ -64,11 +64,11 @@ When you review your project plan with course staff, you will be expected to hav
 
 ## User Stories and Conditions of Satisfaction (max 5 pages)
 
-Given the problem statement, develop 4-6 user stories to describe your proposed features(s). User stories are high-level requirements specified in the following format 
+Given the problem statement, develop 4-6 user stories to describe your proposed features(s). User stories are high-level requirements specified in the following format
 
- - _As a < stakeholder's role >,_
- - _I want < some capability >,_
- - _so that I can < get some benefit >._"
+- _As a < stakeholder's role >,_
+- _I want < some capability >,_
+- _so that I can < get some benefit >._"
 
 The user stories must be numbered (1,2,3,4...). Every team member should be able to distill every user story into just a few words, and explain how they connect to the overall problem statement of your group.
 
@@ -90,9 +90,9 @@ Remember that features are not capabilities or benefits, and that working with u
 
 Given the project concept that you have chosen and the functionality that you expect to implement to satisfy your user stories, define a breakdown of the work that will be necessary to complete the project. The revised project plan will likely contain a significantly revised work breakdown. For the preliminary project plan, your work breakdown needs to clearly answer the following questions:
 
- - How will your make sure your group is doing software engineering in a collaborative way?
- - How will you schedule tasks in such a way that you don't get surprised by unexpectedly difficult tasks at the last minute?
- - How will you deliver incremental value so that you're able to demo essential aspects of all your user stories by the end of Sprint 2?
+- How will your make sure your group is doing software engineering in a collaborative way?
+- How will you schedule tasks in such a way that you don't get surprised by unexpectedly difficult tasks at the last minute?
+- How will you deliver incremental value so that you're able to demo essential aspects of all your user stories by the end of Sprint 2?
 
 Your work breakdown does not need to cover all your user stories, but should fully cover at least the three you think you are most likely to select.
 
@@ -103,7 +103,7 @@ It is hard to say (generically) how many work items are necessary.
 Each task on the work breakdown should be assigned — on a preliminary basis! — to exactly one team member as the primary responsible party. This team member should provide a "T-Shirt" estimate for how long it will take (along with a justification for that estimate).
 Consider the dependencies between tasks: perhaps an API needs to be designed and specified before implementation can begin; perhaps your development environment needs to be configured before anything else can proceed.
 
-Assign tasks to sprints considering these dependencies. Given the preliminary nature of your plan, we do not expect that you will know all of the details about precisely how to implement your feature such that you could break it down into tasks that you feel could be implemented in a day or two. Large tasks (those which you can not provide a responsible estimate for) must be accompanied by smaller “research” tasks that can be performed early on in the project. You may wish to provide deadlines by which the task must either be refined into smaller tasks (based on new knowledge gathered), or reworked/abandoned. 
+Assign tasks to sprints considering these dependencies. Given the preliminary nature of your plan, we do not expect that you will know all of the details about precisely how to implement your feature such that you could break it down into tasks that you feel could be implemented in a day or two. Large tasks (those which you can not provide a responsible estimate for) must be accompanied by smaller “research” tasks that can be performed early on in the project. You may wish to provide deadlines by which the task must either be refined into smaller tasks (based on new knowledge gathered), or reworked/abandoned.
 
 It will be helpful for all concerned if your Project Plan lists the major unknowns or things that you expect to need help with, because this will help the TA provide more useful feedback for you. If you are uncertain that some tasks will be feasible, then be sure to include evaluation tasks earlier-on in the project that will allow for "go/no-go" decisions to move forward on a task or drop it.
 
