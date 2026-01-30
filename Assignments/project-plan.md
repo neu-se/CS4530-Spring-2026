@@ -78,6 +78,10 @@ With feedback from course staff, you will revise your user stories and pick exac
 
 We suggest that you should have no less than 10-12 conditions of satisfaction (per user story), and your essential COS be twice the number of desirable COS. You should also include a few extension COS in case you need to negotiate a replacement feature or if you can complete extra work. Your problem statement and description of user stories and conditions of satisfaction should be between 4-6 pages.
 
+Your user stories and conditions of satisfaction should be laid out in a **table** for easy reference
+
+Use the INVEST+E criteria to evaluate your user stories.
+
 ### Roles
 
 For the purpose of this project, a role specifies a set of connected needs and desires inhabited by people who are not directly involved in the project’s implementation. People can inhabit a role from time to time (“card game enthusiast,” “forum moderator,” “site administrator,” “advertiser,” “subway commuter,” “parent of a college student”) or more permanently (“mobility impaired person,” “colorblind person”).
