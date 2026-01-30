@@ -138,7 +138,7 @@ await expect(page2.getByRole('button', { name: 'Take one' })).toBeEnabled();  //
 await page1.getByPlaceholder('Send a message to chat').click();
 ```
 
-The rule of tumb is: when auto-wait isn't enough, use `await expect(...)` assertions, because these consistently retry until the condition is met or timeout. 
+The rule of thumb is: when auto-wait isn't enough, use `await expect(...)` assertions, because these consistently retry until the condition is met or timeout. 
 
 ## Assertions
 
