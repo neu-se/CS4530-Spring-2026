@@ -32,14 +32,11 @@ type UserHashtable = { [key: string]: UserRecord };
 
 const users: UserHashtable = {};
 console.log(users["alice"]); // undefined
-users["alice"] = { displayName: "Alice the Okay", profile: "Hi! I'm new here" };
+users["alice"] = { displayName: "Alice the Okay", profile: "New here" };
 users["bob"] = { displayName: "Bobbo", profile: null };
 
 users["alice"] = { ...users["alice"], displayName: "Alice the Great" };
-users["bob"] = {
-  ...users["bob"],
-  profile: "I'm Bob and I'm not here to make friends",
-};
+users["bob"] = { ...users["bob"], profile: "Not here to make friends"};
 
 console.log(users["alice"].displayName); // 'Alice the Great'
 console.log(users["bob"].displayName); // 'Bobbo'
@@ -50,17 +47,11 @@ In the mid-2010s, JavaScript introduced a Map type which provided a slightly dif
 ```ts
 const users = new Map<string, UserRecord>();
 console.log(users.get("alice")); // undefined
-users.set("alice", {
-  displayName: "Alice the Okay",
-  profile: "Hi! I'm new here",
-});
+users.set("alice", { displayName: "Alice the Okay", profile: "New here" });
 users.set("bob", { displayName: "Bobbo", profile: null });
 
 users.set("alice", { ...users.get("alice")!, displayName: "Alice the Great" });
-users.set("bob", {
-  ...users.get("bob")!,
-  profile: "I'm Bob and I'm not here to make friends",
-});
+users.set("bob", { ...users.get("bob")!, profile: "Not here to make friends" });
 
 console.log(users.get("alice")!.displayName); // 'Alice the Great'
 console.log(users.get("bob")!.displayName); // 'Bobbo'
@@ -77,10 +68,7 @@ import { Keyv } from "keyv";
 
 const users = new Keyv<UserRecord>();
 console.log(await users.get("alice")); // undefined
-await users.set("alice", {
-  displayName: "Alice the Okay",
-  profile: "Hi! I'm new here",
-});
+await users.set("alice", { displayName: "Alice the Okay", profile: "New here" });
 await users.set("bob", { displayName: "Bobbo", profile: null });
 
 await users.set("alice", {
@@ -89,7 +77,7 @@ await users.set("alice", {
 });
 await users.set("bob", {
   ...(await users.get("bob"))!,
-  profile: "I'm not here to make friends",
+  profile: "Not here to make friends",
 });
 
 console.log((await users.get("alice"))!.displayName); // 'Alice the Great'
@@ -107,11 +95,8 @@ import { Keyv } from "keyv";
 import { KeyvMongo } from "@keyv/mongo";
 
 const users = new Keyv<UserRecord>(new KeyvMongo("mongodb://localhost:27017"));
-console.log(await users.get("alice")); // undefined OR { displayName: 'Alice the Great', profile: "Hi! I'm new here" }
-await users.set("alice", {
-  displayName: "Alice the Okay",
-  profile: "Hi! I'm new here",
-});
+console.log(await users.get("alice")); // undefined OR { displayName: 'Alice the Great', profile: "New here" }
+await users.set("alice", { displayName: "Alice the Okay", profile: "New here" });
 await users.set("bob", { displayName: "Bobbo", profile: null });
 
 await users.set("alice", {
@@ -120,7 +105,7 @@ await users.set("alice", {
 });
 await users.set("bob", {
   ...(await users.get("bob"))!,
-  profile: "I'm not here to make friends",
+  profile: "Not here to make friends",
 });
 
 console.log((await users.get("alice"))!.displayName); // 'Alice the Great'
