@@ -21,6 +21,7 @@ The objectives of this assignment are to:
 - 2026-01-26: Corrections: there's no "(Display name) left chat" message, and there are only two things to change in Task 3, not three.
 - 2026-01-27: Correction: the upper-right corner of a 5x7 grid was described previously as `[6,0]`, and is now described correctly as `[0,6]`.
 - 2026-01-28: Correction: in task 2, "view your own profile and editing other people's profiles" was exactly backwards. You edit your own profile and view other people's profiles.
+- 2026-01-31: Clarification to task 5: added the text "and the code you authored in Task 4." You are expected to only change code you wrote in Task 4, but if you added additional files in Task 4, you can certainly modify them in Task 5.
 
 ## 1. Getting Started
 
@@ -199,7 +200,7 @@ Your implementation does not need to look like the example image above. It must 
 
 ### Task 5: Marking Mines
 
-For this task, you will **not** change the Mine Finder logic on the server or anything else outside of `MineFinderGame.tsx`; the goal is to use React state to implement a feature.
+For this task, you will **not** change the Mine Finder logic on the server or anything else outside of `MineFinderGame.tsx` and the code you authored in Task 4; the goal is to use React state to implement a feature.
 
 It's very helpful to be able to flag a grid position as a known mine while playing Mine Finder. Without giving the backend any support for flagging grid positions, you can use React state to record and add flags. Storing flags in React state attached to the `MineFinder` React component has some drawbacks: only the player can see flags, and if a player navigates away and returns, all their flags will be gone. That is fine for the purposes of this task.
 
