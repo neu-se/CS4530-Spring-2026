@@ -80,7 +80,7 @@ User story: _As someone who leaves Game Nite open in the background while I'm at
 
 For this task, you will extend the websocket interface of Game Nite in order to alert users to the presence of new games. 
 
-![image]({{site.baseurl}}{% link /Assignments/ip3/threenew.png %} =300x)
+![image]({{site.baseurl}}{% link /Assignments/ip3/threenew.png %})
 
 These essential conditions of satisfaction form the minimum viable product:
 
@@ -111,7 +111,7 @@ User story: _As someone who likes reviewing game strategy, I want to be look bac
 
 For this task, you will change your backend in order to record a history of the moves played in a game, and display the record of moves in a human-readable way in the frontend.
 
-![image]({{site.baseurl}}{% link /Assignments/ip3/movelog.png %} =300x)
+![image]({{site.baseurl}}{% link /Assignments/ip3/movelog.png %})
 
 These essential conditions of satisfaction form the minimum viable product:
 
