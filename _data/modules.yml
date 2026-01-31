@@ -39,7 +39,7 @@ mod10:
   page: 
 mod11:
   name: Application Level Patterns
-  page: 
+  page: /modules/11-app-patterns
 mod12:
   name: Continuous Development
   page: 
