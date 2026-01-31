@@ -72,7 +72,7 @@ Given the problem statement, develop 4-6 user stories to describe your proposed 
 
 The user stories must be numbered (1,2,3,4...). Every team member should be able to distill every user story into just a few words, and explain how they connect to the overall problem statement of your group.
 
-Each user story should include numbered conditions of satisfaction. (The conditions of satisfaction for user story #1 should be numbered 1.1, 1.2, 1.3, etc.) Please make sure that your conditions of satisfaction cover all the common cases, describe any unusual special cases, and can be turned into testable behaviors. Each user story and condition of satisfaction must have a priority (**E**ssential, **D**esirable, or e**X**tension). The set of Essential items constitutes the “Minimum Viable Product” for your user story.
+Each user story should include numbered conditions of satisfaction. (The conditions of satisfaction for user story #1 should be numbered 1.1, 1.2, 1.3, etc.) Please make sure that your conditions of satisfaction cover all the common cases, describe any unusual special cases, and can be turned into testable behaviors. Each condition of satisfaction must have a priority (**E**ssential, **D**esirable, or e**X**tension). The set of Essential items constitutes the “Minimum Viable Product” for your user story.
 
 With feedback from course staff, you will revise your user stories and pick exactly three user stories that will form the core of your project. Half of the credit for implementing your project comes from delivering the minimum viable product for these three user stories.
 
@@ -161,7 +161,7 @@ The project plan will account for 10% of your project grade, and will be graded 
   - Each user story fits the problem statement.
   - Each user story has the appropriate structure.
   - Each user story includes conditions of satisfaction that cover the "normal" expected behavior of the feature, and any important error cases.
-  - Each condition of satisfaction can be turned into testable behavior.
+  - Each condition of satisfaction can be turned into one or more testable behaviors. (You don't have to enumerate testable behaviors.)
   - Each condition of satisfaction is marked with a priority (essential, desirable, extension).
   - Each user story must include one or more conditions of satisfaction marked as essential, desirable, and extension.
   - User stories and conditions of satisfaction satisfy the INVEST+E criteria for good user stories (construed quite broadly).
