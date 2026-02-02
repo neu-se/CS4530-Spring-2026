@@ -21,16 +21,16 @@ mod4:
   page: /modules/4-web-apps
 mod5:
   name: React Part 1 (Introduction)
-  page: 
+  page: /modules/5-react
 mod6:
   name: React Part 2 (Hooks)
-  page: 
+  page: /modules/6-patterns-of-react
 mod7:
   name: Software Processes & Agile
-  page: 
+  page: /modules/7-software-process
 mod8:
   name: Writing Maintainable Code
-  page: 
+  page: /modules/8-code-level-design
 mod9:
   name: Concurrency Patterns
   page: 
@@ -96,7 +96,7 @@ ip1:
 ip2:
   name: Individual Project 2 
   type: deadline
-  page: 
+  page: /assignments/ip2
 ip3:
   name: Individual Project 3 
   type: deadline
