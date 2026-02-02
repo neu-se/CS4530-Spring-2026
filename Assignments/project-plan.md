@@ -78,9 +78,14 @@ With feedback from course staff, you will revise your user stories and pick exac
 
 We suggest that you should have no less than 10-12 conditions of satisfaction (per user story), and your essential COS be twice the number of desirable COS. You should also include a few extension COS in case you need to negotiate a replacement feature or if you can complete extra work. Your problem statement and description of user stories and conditions of satisfaction should be between 4-6 pages.
 
-Your user stories and conditions of satisfaction should be laid out in a **table** for easy reference
+Your user stories and conditions of satisfaction should be laid out in a **table** for easy reference. 
 
 Use the INVEST+E criteria to evaluate your user stories.
+
+**For section 4 (online section) only**: Each team should prepare a slide deck as follows:
+* A title slide showing the overall title of the project and the names of the team members
+* Another slide showing the user stories and their priority (mvp/backlog)
+* For each of the user stories, one slide's worth of essential COSs.
 
 ### Roles
 
