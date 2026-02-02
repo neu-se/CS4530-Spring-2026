@@ -81,6 +81,8 @@ teamMeetings:
   name: Team Meetings
 oteamMeetings:
   name: Team Meetings (Optional)
+teamMeetingsPlan:
+  name: Team Meetings (Discuss project plan/revisions)
 extendedOfficeHours:
   name: Work Session / Extended Office Hours
 present:
@@ -107,7 +109,7 @@ tp1:
 tp2:
   name: Preliminary Project Plan
   type: deadline
-  page: 
+  page: /assignments/project-plan
 tp3:
   name: Revised Project Plan
   type: deadline
