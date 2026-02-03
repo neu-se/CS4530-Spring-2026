@@ -22,6 +22,7 @@ The objectives of this assignment are to:
 - 2026-01-27: Correction: the upper-right corner of a 5x7 grid was described previously as `[6,0]`, and is now described correctly as `[0,6]`.
 - 2026-01-28: Correction: in task 2, "view your own profile and editing other people's profiles" was exactly backwards. You edit your own profile and view other people's profiles.
 - 2026-01-31: Clarification to task 5: added the text "and the code you authored in Task 4." You are expected to only change code you wrote in Task 4, but if you added additional files in Task 4, you can certainly modify them in Task 5.
+- 2026-02-03: Clarification to task 5: 4 of the 8 points will be assigned based on **us** testing your implementation. You're not required to write tests for your React code for this assignment.
 
 ## 1. Getting Started
 
@@ -210,7 +211,7 @@ Winning the game should cause all remaining cells to display `🎉` regardless o
 
 You can capture right clicks by adding an [`onContextMenu`](https://react.dev/reference/react-dom/components/common#common-props) property alongside the `onClick` handler you added in the last part. Because the default behavior of a right-click is to open a context menu, you'll need to call `preventDefault` on the event (this was demonstrated in lecture for preventing a button click from submitting a form). Here's a very simple example of using `preventDefault` with `onContextMenu`: <https://codepen.io/Ishika-Reddy/pen/XJKgWqK>.
 
-This task is worth 8 points, 4 points from testing the implementation and 4 points from verifying the correct use of React state.
+This task is worth 8 points. 4 points will be assigned based on our manual testing of your implementation, and 4 points will be assigned by looking at your code and verifying that you are using React state appropriately.
 
 ### Task 6: Mine Difficulty
 
