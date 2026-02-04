@@ -58,19 +58,31 @@ This short code demonstrates several types of Playwright actions:
 
 ## Locating Elements on a Page
 
-A lot of the challenge of browser UI testing in general is locating elements on a web page. Ideally, tests should interact with web pages the way a human user does. ***XXX TODO: Say something about ARIA roles, accessibility, and how relying on ARIA roles actually makes this easier. "The UI is intentionally accessible so tests can be robust" doesn't communicate anything helpful. Playwright seems like it's based on a philosophy that writing good tests should push you towards making websites that are more accessible e.g. to people using screen readers or interacting with webpages without a mouse.***
+A lot of the challenge of browser UI testing in general is locating elements on a web page. Ideally, tests should interact with web pages the way a human user does—by looking for buttons, clicking on labeled fields, and reading visible text.
 
-- Inputs use labels, so tests use `getByLabel`.
-- Buttons are targeted by role and name, so tests use `getByRole("button", { name: "..." })`.
-- Lists use ARIA roles like `role="listitem"` so tests can filter and click reliably.
+This is where **accessibility** comes in. [ARIA (Accessible Rich Internet Applications)](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA) is a set of attributes that make web content more accessible to people using assistive technologies like screen readers. The key insight is: **if a website is accessible to screen readers, it's also accessible to automated tests.**
 
-If a test is hard to write, prefer adding or improving ARIA labels/roles in the component instead of using fragile selectors. XXX TODO: fragile selectors is probably new jargon for students
+Playwright's locator methods are designed around this principle:
+
+- `getByRole()` finds elements by their ARIA role (button, link, textbox, etc.)
+- `getByLabel()` finds form inputs by their associated label text
+- `getByText()` finds elements by their visible text content
+
+This creates a virtuous cycle: writing good Playwright tests pushes you toward building more accessible websites, and accessible websites are easier to test.
+
+**Rule of thumb:** If a test is hard to write, improve the component's accessibility (add labels, use semantic HTML) rather than resorting to fragile selectors.
 
 ### Discovering Selectors
 
 **Option 1: Playwright UI mode (recommended)**
 
-Run `npm run playwright`, then use the "Pick locator" tool (target icon) to click on any element. Playwright suggests the best selector automatically.
+Run `npm run playwright` to open the interactive test runner. After running a test, you can click on any action step to see the page state at that moment:
+
+![Playwright UI Overview](./assets/week5-ui-testing/playwright-ui-overview.png)
+
+Use the "Pick locator" tool to click on any element. Playwright will suggest the best selector automatically. In this example, clicking on the Username field shows `getByRole('textbox', { name: 'Username' })`:
+
+![Playwright Pick Locator](./assets/week5-ui-testing/playwright-pick-locator.png)
 
 **Option 2: Browser DevTools**
 
@@ -86,7 +98,30 @@ Run `npm run playwright`, then use the "Pick locator" tool (target icon) to clic
 | `role="listitem"` | `getByRole('listitem')` |
 | Visible text "signed in as..." | `getByText('signed in as...')` |
 
-XXX TODO: one of the reasons we need an introduction to ARIA with links to more information is to get across the idea that things like `<button>` inherently have the aria role button even if that's not explicitly assigned.
+You don't need an explicit `role` attribute in the HTML for `getByRole()` to work. A `<button>` element is found by `getByRole('button')` because of its implicit role.
+
+### Implicit ARIA Roles
+
+Here's something that often surprises developers: many HTML elements have **implicit ARIA roles** built in. You don't need to add `role="button"` to a `<button>` element—it already has that role by default.
+
+| HTML Element | Implicit ARIA Role |
+|--------------|-------------------|
+| `<button>` | `button` |
+| `<a href="...">` | `link` |
+| `<input type="text">` | `textbox` |
+| `<input type="checkbox">` | `checkbox` |
+| `<h1>` through `<h6>` | `heading` |
+| `<ul>`, `<ol>` | `list` |
+| `<li>` | `listitem` |
+
+So when you write `page.getByRole('button', { name: 'Log In' })`, Playwright will find any `<button>` element with that accessible name—no explicit `role` attribute needed.
+
+See [MDN's ARIA roles reference](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles) for a complete list, or [Playwright's Locate by role guide](https://playwright.dev/docs/locators#locate-by-role) for testing-specific examples.
+
+### Why Avoid "Fragile Selectors"?
+
+There are other ways of locating objects on a page, and online sources or ChatGPT will probably give you code that uses .locator method a lot. Playwright suggests against this and we do too, as it describes [here](https://playwright.dev/docs/locators#locate-by-css-or-xpath) .
+
 
 ### Filtering and Chaining
 
@@ -101,9 +136,26 @@ See [Playwright Locators docs](https://playwright.dev/docs/locators) for more fi
 
 ## Interacting With Elements on a Page
 
-***XXX TODO: put the thing about `{ exact: true }` in here somewhere. I removed the "**Use `{ exact: true }` for Password field.** Otherwise it matches "Show Password" checkbox. " advice from the gamenite-specific advice because we're going for something more general: lots of interactions only work when .***
-
 One of the things that Playwright does quite well is handle interactions with page elements. If an action can't be taken right away, Playwright will generally wait until the action becomes available. A few cases need explicit waits, and this is one of the trickier parts of Playwright—it works so well most of the time that the exceptions can be surprising.
+
+### String Matching and `{ exact: true }`
+
+By default, Playwright's locators use **substring matching**. This is usually convenient, but can cause problems when multiple elements contain similar text:
+
+```ts
+// If the page has both "Password" and "Show Password" labels:
+page.getByLabel('Password')  // ❌ Might match either element!
+
+// Use exact matching to be precise:
+page.getByLabel('Password', { exact: true })  // ✅ Only matches "Password" exactly
+```
+
+Use `{ exact: true }` when:
+- A shorter label is a substring of a longer one (like "Password" vs "Confirm Password")
+- You need to distinguish between similar elements
+- You want the test to fail if the exact text changes
+
+### Auto-Waiting for Actions
 
 Clicking and filling elements will automatically wait for the element to be visible and actionable:
 
@@ -138,21 +190,24 @@ await expect(page2.getByRole('button', { name: 'Take one' })).toBeEnabled();  //
 await page1.getByPlaceholder('Send a message to chat').click();
 ```
 
-The rule of thumb is: when auto-wait isn't enough, use `await expect(...)` assertions, because these consistently retry until the condition is met or timeout. 
+The rule of thumb is: when auto-wait isn't enough, use `await expect(...)` assertions, because these consistently retry until the condition is met or timeout. See [Auto-retrying assertions](https://playwright.dev/docs/test-assertions#auto-retrying-assertions) in the Playwright docs for more details.
 
 ## Assertions
 
-XXX TODO some kind of introduction
+Assertions in Playwright work differently than you might expect from vitest. Instead of checking a condition once and immediately passing or failing, Playwright assertions **automatically retry** until the condition is met or a timeout is reached.
 
-Here are some useful assertions. XXX TODO link to more
+This is essential for testing dynamic web applications where elements might take time to appear, update, or become interactive. You don't need to add manual delays or polling—just write what you expect, and Playwright handles the waiting.
 
 ```ts
+// These assertions will retry until they pass (or timeout after ~5 seconds by default)
 await expect(element).toBeVisible();
 await expect(element).toBeEnabled();
 await expect(element).toHaveText('expected');
 await expect(element).toBeDisabled();
 await expect(element).not.toBeVisible();
 ```
+
+See the [Playwright Assertions documentation](https://playwright.dev/docs/test-assertions) for a complete list of available matchers.
 
 ## Debugging Failed Tests
 
@@ -248,7 +303,48 @@ Sometimes the test is correct but the UI has a bug. Before spending hours on the
 
 ## GameNite-Specific Tips
 
-XXX TODO: maybe transfer something about `createAndLoadGame` and other `testutils.ts` helper functions here. 
+### Test Utilities
+
+The file `client/tests/end-to-end/testutils.ts` provides helper functions to reduce boilerplate in tests:
+
+**`logInUser(page, username, password)`** - Logs in an existing user and waits for the redirect to complete:
+
+```ts
+import { logInUser } from './testutils.ts';
+
+await logInUser(page, 'user2', 'pwd2222');
+// User is now logged in and on the home page
+```
+
+**`createAndLoadGame(page1, page2, gameId, gameStartsAutomatically, doAssess)`** - Sets up a complete two-player game session:
+
+```ts
+import { createAndLoadGame } from './testutils.ts';
+
+// In beforeEach:
+await createAndLoadGame(page1, page2, 'nim', true, false);
+// Both players are now in a started game, ready for gameplay tests
+```
+
+Parameters:
+- `page1`, `page2`: Two separate browser pages (from different browser contexts)
+- `gameId`: The game type (`'nim'`, `'guess'`, etc.)
+- `gameStartsAutomatically`: `true` if the game starts when 2 players join (like Nim), `false` if a "Start Game" button must be clicked
+- `doAssess`: `true` adds extra assertions during setup (useful for testing the setup flow itself)
+
+The helper creates a random new user for `page1` to avoid test collisions, while `page2` uses the seeded `user2` account.
+
+### Seed Users
+
+The server seeds these test users on startup:
+
+| Username | Password | Display Name |
+|----------|----------|---------------|
+| `user0` | `pwd0000` | The Knight Of Games |
+| `user1` | `pwd1111` | Yāo |
+| `user2` | `pwd2222` | Sénior Dos |
+| `user3` | `pwd3333` | Frau Drei |
+
 
 - **Always `waitForURL` after login/navigation.** The redirect happens async.
 - **Create random usernames in tests.** Avoids collisions: `'user' + Math.floor(Math.random() * 1_000_000)` helps avoid “User already exists” when the test creates accounts.
