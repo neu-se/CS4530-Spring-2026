@@ -70,43 +70,6 @@ Playwright's locator methods are designed around this principle:
 
 This creates a virtuous cycle: writing good Playwright tests pushes you toward building more accessible websites, and accessible websites are easier to test.
 
-### Implicit ARIA Roles
-
-Here's something that often surprises developers: many HTML elements have **implicit ARIA roles** built in. You don't need to add `role="button"` to a `<button>` element—it already has that role by default.
-
-| HTML Element | Implicit ARIA Role |
-|--------------|-------------------|
-| `<button>` | `button` |
-| `<a href="...">` | `link` |
-| `<input type="text">` | `textbox` |
-| `<input type="checkbox">` | `checkbox` |
-| `<h1>` through `<h6>` | `heading` |
-| `<ul>`, `<ol>` | `list` |
-| `<li>` | `listitem` |
-
-So when you write `page.getByRole('button', { name: 'Log In' })`, Playwright will find any `<button>` element with that accessible name—no explicit `role` attribute needed.
-
-See [MDN's ARIA roles reference](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles) for a complete list, or [Playwright's Locate by role guide](https://playwright.dev/docs/locators#locate-by-role) for testing-specific examples.
-
-### Why Avoid "Fragile Selectors"?
-
-A **fragile selector** is one that breaks easily when the UI changes. For example:
-
-```ts
-// ❌ Fragile: depends on exact DOM structure and CSS classes
-page.locator('div.form-container > div:nth-child(2) > input.login-field')
-
-// ✅ Robust: uses the label text that users actually see
-page.getByLabel('Username')
-```
-
-The fragile selector breaks if someone:
-- Wraps the input in an extra `<div>`
-- Renames the CSS class
-- Reorders the form fields
-
-The robust selector only breaks if the actual label text changes—which is exactly when you'd *want* the test to break, because it means the user experience changed.
-
 **Rule of thumb:** If a test is hard to write, improve the component's accessibility (add labels, use semantic HTML) rather than resorting to fragile selectors.
 
 ### Discovering Selectors
@@ -135,7 +98,30 @@ Use the "Pick locator" tool to click on any element. Playwright will suggest the
 | `role="listitem"` | `getByRole('listitem')` |
 | Visible text "signed in as..." | `getByText('signed in as...')` |
 
-Remember: you don't need an explicit `role` attribute in the HTML for `getByRole()` to work. A `<button>` element is found by `getByRole('button')` because of its implicit role.
+You don't need an explicit `role` attribute in the HTML for `getByRole()` to work. A `<button>` element is found by `getByRole('button')` because of its implicit role.
+
+### Implicit ARIA Roles
+
+Here's something that often surprises developers: many HTML elements have **implicit ARIA roles** built in. You don't need to add `role="button"` to a `<button>` element—it already has that role by default.
+
+| HTML Element | Implicit ARIA Role |
+|--------------|-------------------|
+| `<button>` | `button` |
+| `<a href="...">` | `link` |
+| `<input type="text">` | `textbox` |
+| `<input type="checkbox">` | `checkbox` |
+| `<h1>` through `<h6>` | `heading` |
+| `<ul>`, `<ol>` | `list` |
+| `<li>` | `listitem` |
+
+So when you write `page.getByRole('button', { name: 'Log In' })`, Playwright will find any `<button>` element with that accessible name—no explicit `role` attribute needed.
+
+See [MDN's ARIA roles reference](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles) for a complete list, or [Playwright's Locate by role guide](https://playwright.dev/docs/locators#locate-by-role) for testing-specific examples.
+
+### Why Avoid "Fragile Selectors"?
+
+There are other ways of locating objects on a page, and online sources or ChatGPT will probably give you code that uses .locator method a lot. Playwright suggests against this and we do too, as it describes [here] (https://playwright.dev/docs/locators#locate-by-css-or-xpath) .
+
 
 ### Filtering and Chaining
 
@@ -208,7 +194,7 @@ The rule of thumb is: when auto-wait isn't enough, use `await expect(...)` asser
 
 ## Assertions
 
-Assertions in Playwright work differently than you might expect from other testing frameworks. Instead of checking a condition once and immediately passing or failing, Playwright assertions **automatically retry** until the condition is met or a timeout is reached.
+Assertions in Playwright work differently than you might expect from vitest. Instead of checking a condition once and immediately passing or failing, Playwright assertions **automatically retry** until the condition is met or a timeout is reached.
 
 This is essential for testing dynamic web applications where elements might take time to appear, update, or become interactive. You don't need to add manual delays or polling—just write what you expect, and Playwright handles the waiting.
 
