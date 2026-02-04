@@ -25,7 +25,7 @@ Matrix multiplication is a common operation in many fields, including computer g
 
 The conventional way to multiply two matrices is a purely sequential algorithm. However, matrix multiplication can be parallelized because the computation of each element in the resulting matrix is independent of the others. This makes it a good candidate for exploring asynchronous programming.
 
-We start with a version that does all the multiplication locally.  However, for the purposes of this activity, we have created a scenario where each multiplication operation is performed by an external service, using the `remoteProduct` function. 
+We start with a version that does all the multiplication locally.  However, for the purposes of this activity, we have created a scenario where each multiplication operation is performed by a simulated remote service, using the `remoteProduct` function. 
 
 
 You will find two different implementations of matrix multiplication in the starter code:
