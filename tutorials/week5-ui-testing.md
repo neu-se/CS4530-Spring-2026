@@ -1,12 +1,10 @@
 ---
 layout: page
-title: UI Testing
+title: UI Testing with Playwright
 permalink: /tutorials/week5-uitesting
 parent: Tutorials
 nav_order: 9
 ---
-
-# Testing User Interfaces on the Web
 
 Testing web applications has always been tricky: web applications run inside of the browser, and browsers are complicated pieces of software. Many pieces of software have been created to provide a test double for the browser and the browser's DOM (Document Object Model). However, the current trend in the mid-2020s is to directly run tests in the browser, and [Playwright](https://playwright.dev/docs/intro) is a popular tool that facilitates running these tests.
 
@@ -16,8 +14,10 @@ This guide isn't intended to replace the [Playwright docs](https://playwright.de
 
 In our course projects, Playwright tests can be run in two ways:
 
- - `npm run test` runs the tests automatically (this is called "headless mode" for obscure reasons). When tests finish, Playwright generates an HTML report in a `playwright-report` directory.
- - `npm run playwright` runs the tests in an interactive UI mode.
+ - `npm run test` in the `client` directory runs the tests automatically (this is called "headless mode" for obscure reasons). When tests finish, Playwright generates an HTML report in a `playwright-report` directory.
+ - `npm run playwright` in the `client` directory runs the tests in an interactive UI mode.
+
+When Playwright runs, it will check whether you are already running the development Express server (`npm run dev -w=server` in the root directory or `npm run dev` in the `server` directory) and the development Vite frontend server (`npm run dev -w=client` in the root directory or `npm run dev` in the `client` directory). If it's not, Playwright will start them. But if you are running the Express server yourself, you can see the server responding to Playwright's actions.
 
 Playwright's UI is extremely useful. You can use it to help you:
 - **Write new tests:** Watch mode re-runs tests as you edit
@@ -60,17 +60,17 @@ This short code demonstrates several types of Playwright actions:
 
 A lot of the challenge of browser UI testing in general is locating elements on a web page. Ideally, tests should interact with web pages the way a human user does—by looking for buttons, clicking on labeled fields, and reading visible text.
 
-This is where **accessibility** comes in. [ARIA (Accessible Rich Internet Applications)](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA) is a set of attributes that make web content more accessible to people using assistive technologies like screen readers. The key insight is: **if a website is accessible to screen readers, it's also accessible to automated tests.**
+This is where **accessibility** comes in. [ARIA (Accessible Rich Internet Applications)](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA) is a set of attributes that make web content more accessible to people using assistive technologies like screen readers. The key insight is: **if a website is accessible to screen readers, it's more likely to be accessible to automated tests.**
 
 Playwright's locator methods are designed around this principle:
 
 - `getByRole()` finds elements by their ARIA role (button, link, textbox, etc.)
-- `getByLabel()` finds form inputs by their associated label text
+- `getByLabel()` finds form inputs by their associated label text; associating form input fields with a label is a good accessibility practice
 - `getByText()` finds elements by their visible text content
 
 This creates a virtuous cycle: writing good Playwright tests pushes you toward building more accessible websites, and accessible websites are easier to test.
 
-**Rule of thumb:** If a test is hard to write, improve the component's accessibility (add labels, use semantic HTML) rather than resorting to fragile selectors.
+**Rule of thumb:** If a test is hard to write, your first impulse should be to improve the component's accessibility (add labels, use semantic HTML).
 
 ### Discovering Selectors
 
@@ -98,11 +98,11 @@ Use the "Pick locator" tool to click on any element. Playwright will suggest the
 | `role="listitem"` | `getByRole('listitem')` |
 | Visible text "signed in as..." | `getByText('signed in as...')` |
 
-You don't need an explicit `role` attribute in the HTML for `getByRole()` to work. A `<button>` element is found by `getByRole('button')` because of its implicit role.
-
 ### Implicit ARIA Roles
 
-Here's something that often surprises developers: many HTML elements have **implicit ARIA roles** built in. You don't need to add `role="button"` to a `<button>` element—it already has that role by default.
+You don't need an explicit `role` attribute in the HTML for `getByRole()` to work. A `<button>` element is found by `getByRole('button')` because of its implicit role, so when you write `page.getByRole('button', { name: 'Log In' })`, Playwright will find any `<button>` element with that accessible name. No explicit `role` attribute is necessary.
+
+Here are some other examples:
 
 | HTML Element | Implicit ARIA Role |
 |--------------|-------------------|
@@ -114,14 +114,11 @@ Here's something that often surprises developers: many HTML elements have **impl
 | `<ul>`, `<ol>` | `list` |
 | `<li>` | `listitem` |
 
-So when you write `page.getByRole('button', { name: 'Log In' })`, Playwright will find any `<button>` element with that accessible name—no explicit `role` attribute needed.
-
 See [MDN's ARIA roles reference](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles) for a complete list, or [Playwright's Locate by role guide](https://playwright.dev/docs/locators#locate-by-role) for testing-specific examples.
 
-### Why Avoid "Fragile Selectors"?
+### Avoiding CSS or XPATH Selectors
 
-There are other ways of locating objects on a page, and online sources or ChatGPT will probably give you code that uses .locator method a lot. Playwright suggests against this and we do too, as it describes [here](https://playwright.dev/docs/locators#locate-by-css-or-xpath) .
-
+There are other ways of locating objects on a page; online sources or ChatGPT will probably give you code that uses `.locator` method a lot. Playwright's docs suggest against this and we do too, as it describes [in the docs on `.locator`](https://playwright.dev/docs/locators#locate-by-css-or-xpath) .
 
 ### Filtering and Chaining
 
