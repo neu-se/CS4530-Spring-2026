@@ -120,7 +120,7 @@ See [MDN's ARIA roles reference](https://developer.mozilla.org/en-US/docs/Web/Ac
 
 ### Why Avoid "Fragile Selectors"?
 
-There are other ways of locating objects on a page, and online sources or ChatGPT will probably give you code that uses .locator method a lot. Playwright suggests against this and we do too, as it describes [here] (https://playwright.dev/docs/locators#locate-by-css-or-xpath) .
+There are other ways of locating objects on a page, and online sources or ChatGPT will probably give you code that uses .locator method a lot. Playwright suggests against this and we do too, as it describes [here](https://playwright.dev/docs/locators#locate-by-css-or-xpath) .
 
 
 ### Filtering and Chaining
