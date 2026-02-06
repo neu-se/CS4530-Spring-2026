@@ -3,7 +3,7 @@ layout: assignment
 title: "Individual Project 3"
 permalink: /assignments/ip3
 parent: Assignments
-nav_order: 2
+nav_order: 3
 due_date: "Wednesday February 18, 2026 11:00am (EST)"
 submission_notes: Submit through Github Classroom (Commit your work in main branch) and link on Gradescope
 ---
