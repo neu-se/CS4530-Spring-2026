@@ -28,7 +28,7 @@ In keeping with the last objective, **you may use code generation (i.e. "AI") to
 
 ## 1. Getting Started
 
-Start by accepting our [GitHub Classroom Invitation] XXX COMING SOON. It will create a Github repository for you which will include the starter code for this assignment. Run `npm install` in the root directory to fetch all dependencies for the `client`, `server`, and `shared` folders.
+Start by accepting our [GitHub Classroom Invitation](https://classroom.github.com/a/8PZMd8H6). It will create a Github repository for you which will include the starter code for this assignment. Run `npm install` in the root directory to fetch all dependencies for the `client`, `server`, and `shared` folders.
 
 ## 2. Recommendations When Working on the Project
 
