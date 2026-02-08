@@ -20,11 +20,11 @@ The objectives of this assignment are to:
 In keeping with the last objective, **you may use code generation (i.e. "AI") tools in this assignment, with two caveats:**
 
 - You are responsible for every line of code in your final submission. If we ask you questions about your submitted code and you are unable to explain why decisions were made because you accepted the LLM's suggestions without understanding them, **you will receive a failing grade on this assignment**.
-- The PDF you hand in on Gradescope should discuss, that documents which LLM tools, how you used them, and whether you think the experience saved you time overall. (How much time did you spend on the assignment? How much time did the use of tools cost, or save? Did you go down any blind alleys or wild-goose chases due to your use of the tools you used?) This can be brief, do not use text-generation to generate this text. (Your internal process of reflection and writing is the point)
+- The PDF you hand in on Gradescope should document which LLM tools you used, how you used them, and whether you think the experience saved you time overall. (How much time did you spend on the assignment? How much time did the use of tools cost, or save? Did you go down any blind alleys or wild-goose chases due to your use of the tools you used?) This can be brief. Do not use text-generation to generate this text; your internal process of reflection and writing is the point.
 
 ## Changelog
 
-- NA
+- 2026-02-08: Fixed typos in LLM discussion description.
 
 ## 1. Getting Started
 
@@ -44,8 +44,8 @@ You will submit your code by pushing the final version into your repository (add
 On Gradescope, you will submit a plain `.pdf` file containing three things:
 
 1. A link to your project's GitHub repo (e.g. `https://github.com/neu-cs4530/ip3-robsimmons`) 
-2. The short reflection on your (optional) use of LLM tools as described in the project introduction
-3. A more specifically testable version of Condition of Satisfaction 2.5 that matches your implementation.
+2. The short reflection on your (optional) use of LLM tools, as described in the project introduction
+3. A more specifically testable version of Condition of Satisfaction 2.5, which matches your implementation
 
 Grades will be assigned on Gradescope and synced to the Canvas Gradebook.
 
