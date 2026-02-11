@@ -17,79 +17,84 @@ If you are unsure of how to address any of these concerns or if you have address
 We list page *maximums* for each section as general guidance of what we are willing to grade. Please do not feel compelled to use all of the pages provided, and remember that a diagram or table can be as expressive (or more) as a comparable amount of text.
 
 ## Revised Problem Statement, User Stories and Conditions of Satisfaction (max 6 pages)
-Your project plan should begin with a 1-3 paragraph introductory problem statement: what problem in StackOverflow do your (proposed) features solve? Provide a clear description of the feature(s) you are proposing. Include an analysis of the stakeholders, the values, and any value tensions. 
+Your project plan should begin with a 1-3 paragraph introductory problem statement: what problem in GameNite do your (proposed) features solve? Provide a clear description of the feature(s) you are proposing. Include an analysis of the stakeholders, the values, and any value tensions. 
 
-Given the problem statement, develop 3 user stories to describe your proposed features(s) and 1-2 user stories for value tensions (or additional features). User stories are high-level requirements specified in the following format "As a < stakeholder >, I want < some goal > so that < some reason >". Similarly value tensions can be written in the following format "As a < stakeholder >, I would not like to see < some goal > because < some negative consequence or reason > ".
+Given the problem statement, develop 4-6 user stories to describe your proposed features(s). User stories are high-level requirements specified in the following format
 
-For example, if you are proposing a feature to post anonymously then you must clearly describe the rationale for choosing this feature, who would be the stakeholders affected by such a feature and discuss the value tensions this feature resolves. You should use the VSD analysis process to inform your analysis.
+- _As a < stakeholder's role >,_
+- _I want < some capability >,_
+- _so that I can < get some benefit >._"
 
-Each user story should include conditions of satisfaction. The conditions of satisfaction are < list of common cases and special cases that must work >. 
+The user stories must be numbered (1,2,3,4...). Every team member should be able to distill every user story into just a few words, and explain how they connect to the overall problem statement of your group.
 
-The user stories and conditions of satisfaction must capture **all** stakeholders and values described in the problem statement. 
+Each user story should include numbered conditions of satisfaction. (The conditions of satisfaction for user story #1 should be numbered 1.1, 1.2, 1.3, etc.) Please make sure that your conditions of satisfaction cover all the common cases, describe any unusual special cases, and can be turned into testable behaviors. Each condition of satisfaction must have a priority (**E**ssential, **D**esirable, or e**X**tension). The set of Essential items constitutes the “Minimum Viable Product” for your user story.
 
-Please make sure that your conditions of satisfaction cover all the common cases and can be turned into testable behaviors.
+Your project plan must include at least 3 required user stories (essential or desirable) and atleast 1 extension. 
 
-If it would be useful to include illustrations or examples to clarify your user stories and conditions of satisfaction, please do so.
+We suggest that you should have no less than 10-12 conditions of satisfaction (per user story), and your essential COS be twice the number of desirable COS. You should also include a few extension COS in case you need to negotiate a replacement feature or if you can complete extra work. Your problem statement and description of user stories and conditions of satisfaction should be between 4-6 pages.
 
-Each user story and condition of satisfaction must have a priority (Essential, Desirable, or Extension). The set of Essential items will constitute the "Minimum Viable Product". 
+Your user stories and conditions of satisfaction should be laid out in a **table** for easy reference. 
 
-Some of the suggested projects above are primarily about some non-functional quality of the code base. However, even non-functional requirements have stakeholders and offer value. Your user stories should clearly identify the stakeholders and values even for such requirements. For e.g., "As a frontend developer integrating with our REST APIs, I want machine-readable API specifications (like OpenAPI/Swagger) that are automatically validated against the actual implementation, so that I can trust the documentation is accurate and generate reliable client code without wasting time on integration bugs caused by outdated specs".
-
-Your project plan must include at least 3 essential or desirable user stories and atleast 1 extension. We suggest that you should have no less than 10-12 conditions of satisfaction and your essential COS be twice the number of desirable COS. You should also include a few extension COS in case you need to negotiate a replacement feature or if you can complete extra work. Your problem statement and description of user stories and conditions of satisfaction should be between 4-6 pages. 
-
-The user stories must be numbered (1,2,3,4) and the conditions of satisfaction must likewise be numbered (1.1, 1.2, 1.3) and laid out in a table for easy reference. 
-
-Use the INVEST+E criteria to evaluate your user stories. 
+Use the INVEST+E criteria to evaluate your user stories.
 
 This revised project plan should be a standalone document (it is OK to copy/paste from the preliminary plan in this case).
 
-## Revised Work Breakdown (max 10 pages)
-Given the project concept that you have chosen and the functionality that you expect to implement to satisfy your user stories, define a breakdown of the work that will be necessary to complete the project. This breakdown is required for all essential, desirable and optional tasks. 
+### Roles
 
-A work breakdown includes all of the tasks necessary to accomplish the project, and will be an artifact that we will refer back to throughout the project to evaluate whether you are making satisfactory progress.
+For the purpose of this project, a role specifies a set of connected needs and desires inhabited by people who are not directly involved in the project’s implementation. People can inhabit a role from time to time (“card game enthusiast,” “forum moderator,” “site administrator,” “advertiser,” “subway commuter,” “parent of a college student”) or more permanently (“mobility impaired person,” “colorblind person”).
+
+### Capabilities, Benefits, and Features
+
+Remember that features are not capabilities or benefits, and that working with user stories should prompt you to revisit the features you plan to implement. Your problem statement may (and probably should) discuss features that you want to implement, and your conditions of satisfaction will definitely need to discuss some specifics of features.
+
+
+## Revised Work Breakdown (max 10 pages)
+Given the project concept that you have chosen and the functionality that you expect to implement to satisfy your user stories, define a breakdown of the work that will be necessary to complete the project. This breakdown is required for all essential, desirable and optional tasks for 3 user stories that were chosen. For the revised project plan, your work breakdown needs to clearly answer the following questions:
+- How will your make sure your group is doing software engineering in a collaborative way?
+- How will you schedule tasks in such a way that you don't get surprised by unexpectedly difficult tasks at the last minute?
+- How will you deliver incremental value so that you're able to demo essential aspects of all your user stories by the end of Sprint 2?
+ 
+The work breakdown includes all of the tasks necessary to accomplish the project, and will be an artifact that we will refer back to throughout the project to evaluate whether you are making satisfactory progress.
 Consider all of the kinds of tasks that your team will need to perform, including knowledge acquisition, design, implementation, testing and documentation tasks.
 It is hard to say (generically) how many work items are necessary.
 
-Each task on the work breakdown should be assigned to exactly one team member (as primary responsible party), who should provide a "T-Shirt" estimate for how long it will take (along with a justification for that estimate). Feel free to assign a second person as secondary responsible party (if you plan to use pair programming) but make clear who has primary responsibility.
-
+Each task on the work breakdown should be assigned — on a preliminary basis! — to exactly one team member as the primary responsible party. This team member should provide a "T-Shirt" estimate for how long it will take (along with a justification for that estimate).
 Consider the dependencies between tasks: perhaps an API needs to be designed and specified before implementation can begin; perhaps your development environment needs to be configured before anything else can proceed.
-Assign tasks to sprints considering these dependencies.
 
-Given the preliminary nature of your plan, we do not expect that you will know all of the details about precisely how to implement your feature such that you could break it down into tasks that you feel could be implemented in a day or two. Large tasks (those which you can not provide a responsible estimate for) must be accompanied by smaller “research” tasks that can be performed early on in the project. You may wish to provide deadlines by which the task must either be refined into smaller tasks (based on new knowledge gathered), or reworked/abandoned.
+Assign tasks to sprints considering these dependencies. Given the preliminary nature of your plan, we do not expect that you will know all of the details about precisely how to implement your feature such that you could break it down into tasks that you feel could be implemented in a day or two. Large tasks (those which you can not provide a responsible estimate for) must be accompanied by smaller “research” tasks that can be performed early on in the project. You may wish to provide deadlines by which the task must either be refined into smaller tasks (based on new knowledge gathered), or reworked/abandoned.
+
+It will be helpful for all concerned if your Project Plan lists the major unknowns or things that you expect to need help with, because this will help the TA provide more useful feedback for you. If you are uncertain that some tasks will be feasible, then be sure to include evaluation tasks earlier-on in the project that will allow for "go/no-go" decisions to move forward on a task or drop it.
 
 For example: Consider if you were proposing the "job advertisement" feature, without the experience of having completed it. It might be difficult to consider how to break down a task like "Implement the frontend components for ad video playback" into something that you could commit to doing within a day or two. Given that this is a task that can be delayed until the end of the project (no other tasks depend on it), it would be wise to consider having some tasks early on in the project, such as: "Find react components that embed video ads," and "Implement simple video player that does not synchronize playback." Completing these smaller tasks early would let you both demonstrate that some forward progress is being made, and also allow you to create a much more responsible estimate for how that last, otherwise insurmountably large task would take.
 
-**Do not wait for your TA feedback to begin this work.** You probably know more about the details of your project then they do. It will be helpful for all concerned if your Project Plan lists the major unknowns or things that you expect to need help with-- this will help the TA provide more useful feedback for you
-
-Be realistic, and leave time for contingencies (including the time around the midterm exam).
-Remember that you will need to have a demo prepared of your feature by project deadline - just 5 weeks from the due date of this assignment.
-
-If you are uncertain that some tasks will be feasible, then be sure to include evaluation tasks earlier-on in the project that will allow for "go/no-go" decisions to move forward on a task or drop it.
+Be realistic, and leave time for contingencies (including spring break and the time around the midterm exam in week 9).
+Remember that you will need to have a demo prepared of your feature by project deadline - less than two months from the due date of this assignment.
 
 We understand that it is quite difficult to estimate the technical complexity of a new project (as you are doing in the case of this course).
-
+We will provide you with feedback on this preliminary project plan, which you will use to produce a revised project plan (due 2 weeks later).
 Throughout the project period, teams will meet regularly with their dedicated TA Mentor, who will help track progress on a week-to-week basis and help to determine when adjustments to the project scope are needed.
 
 Each work item should contain the following information:
-* Task to be performed
-* User story (or stories) that this task relates to
-* Team member {primarily} responsible for completing the task
-* T-shirt size estimate of how long will be needed to complete the task, using the following buckets:
-    * Small: Can likely be completed by one team member in one sitting of less than 3-4 hours
-    * Medium: Likely to require involvement of multiple team members, over the course of 1-2 days
-    * Large: Currently unable to provide a responsible estimate. 
-* A brief (1-2 sentence max) justification of how you reached the size estimate of the task 
-* Milestone for delivering the task, chosen from one of the following:
-  * Sprint 0: Feb 14-Feb 27
-  * Sprint 1: Feb 28-Mar 13 (Sprint 1 is just a single week once we account for spring break)
-  * Sprint 2: Mar 14-Mar 27
-  * Sprint 3: Mar 28-Apr 10
+
+- Task to be performed
+- User story (or stories) that this task relates to
+- Team member {primarily} responsible for completing the task
+- T-shirt size estimate of how long will be needed to complete the task, using the following buckets:
+  - Small: Can likely be completed by one team member in one sitting of less than 3-4 hours
+  - Medium: Likely to require involvement of multiple team members, over the course of 1-2 days
+  - Large: Currently unable to provide a responsible estimate.
+- A brief (1-2 sentence max) justification of how you reached the size estimate of the task
+- Milestone for delivering the task, chosen from one of the following:
+  - Sprint 0: Feb 14-Feb 27
+  - Sprint 1: Feb 28-Mar 13 (Sprint 1 is just a single week once we account for spring break)
+  - Sprint 2: Mar 14-Mar 27
+  - Sprint 3: Mar 28-Apr 10
 
 Your work breakdown may take the format of a simple textual list or a table. Pay attention to dependencies between different tasks and schedule them accordingly.
 
-All teams will be required to use github projects to track their progress. We will provides further instructions later.
+**Do not wait for your TA feedback to begin work.** You probably know more about the details of your project then they do.
 
-**Mandatory update for all teams:** Include in your work breakdown research tasks to perform threat assessment for your proposed feature(s) and {possibly} implement some mitigation stretegies. Also, be sure to include work related to the considerations for value sensitive design.
+All teams will be required to use project tracking software to track their progress. We will provides further instructions later.
 
 **Mandatory update for all teams:** Even if your work breakdown is entirely unchanged compared to the preliminary plan, please be certain to include updates on all "sprint 0" tasks (those which were scheduled to be completed before the due date of this revised plan). Many teams included research/learning tasks in the first week to help inform the rest of the work breakdown: you should be certain to revise your work breakdown based on what you have learned so far.
 
