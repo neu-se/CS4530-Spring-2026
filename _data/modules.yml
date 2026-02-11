@@ -33,10 +33,10 @@ mod8:
   page: /modules/8-code-level-design
 mod9:
   name: Concurrency Patterns
-  page: 
+  page: /modules/9-concurrency-patterns-in-typescript
 mod10:
   name: Tests with Larger Scope
-  page: 
+  page: /modules/10-larger-tests
 mod11:
   name: Application Level Patterns
   page: 
@@ -81,6 +81,8 @@ teamMeetings:
   name: Team Meetings
 oteamMeetings:
   name: Team Meetings (Optional)
+teamMeetingsPlan:
+  name: Team Meetings (Discuss project plan/revisions)
 extendedOfficeHours:
   name: Work Session / Extended Office Hours
 present:
@@ -107,7 +109,7 @@ tp1:
 tp2:
   name: Preliminary Project Plan
   type: deadline
-  page: 
+  page: /assignments/project-plan
 tp3:
   name: Revised Project Plan
   type: deadline
