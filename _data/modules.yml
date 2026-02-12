@@ -102,7 +102,7 @@ ip2:
 ip3:
   name: Individual Project 3 
   type: deadline
-  page: 
+  page: /assignments/ip3
 tp1:
   name: Project Formation
   type: deadline
