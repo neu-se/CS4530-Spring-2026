@@ -47,9 +47,9 @@ Remember that features are not capabilities or benefits, and that working with u
 
 
 ## Revised Work Breakdown (max 10 pages)
-Given the project concept that you have chosen and the functionality that you expect to implement to satisfy your user stories, define a breakdown of the work that will be necessary to complete the project. This breakdown is required for all essential, desirable and optional tasks for 3 user stories that were chosen. For the revised project plan, your work breakdown needs to clearly answer the following questions:
+Given the project concept that you have chosen and the functionality that you expect to implement to satisfy your user stories, define a breakdown of the work that will be necessary to complete the project. This breakdown is required for all essential, desirable and extension tasks for 3 user stories that were chosen. For the revised project plan, your work breakdown needs to clearly answer the following questions:
 
-- How will your make sure your group is doing software engineering in a collaborative way?
+- How will you make sure your group is doing software engineering in a collaborative way?
 - How will you schedule tasks in such a way that you don't get surprised by unexpectedly difficult tasks at the last minute?
 - How will you deliver incremental value so that you're able to demo essential aspects of all your user stories by the end of Sprint 2?
  
@@ -57,10 +57,9 @@ The work breakdown includes all of the tasks necessary to accomplish the project
 Consider all of the kinds of tasks that your team will need to perform, including knowledge acquisition, design, implementation, testing and documentation tasks.
 It is hard to say (generically) how many work items are necessary.
 
-Each task on the work breakdown should be assigned to exactly one team member as the primary responsible party, and should come with "T-Shirt" estimate for how long it will take, along with a justification for that estimate.
-Consider the dependencies between tasks: perhaps an API needs to be designed and specified before implementation can begin; perhaps your development environment needs to be configured before anything else can proceed.
+Each task on the work breakdown should be assigned to exactly one team member as the primary responsible party, and should come with "T-Shirt" estimate for how long it will take, along with a justification for that estimate. Consider the dependencies between tasks: perhaps an API needs to be designed and specified before implementation can begin; perhaps your development environment needs to be configured before anything else can proceed. 
 
-Assign tasks to sprints considering these dependencies. Even at this stage, we do not expect that you will know all of the details about precisely how to implement your feature such that you could break it down into tasks that you feel could be implemented in a day or two, though it should be clearer now than it was for the preliminary project plan. Large tasks (those which you can not provide a responsible estimate for) must be accompanied by smaller “research” tasks that can be performed early on in the project. You may wish to provide deadlines by which the task must either be refined into smaller tasks (based on new knowledge gathered), or reworked/abandoned.
+Assign tasks to sprints considering these dependencies. Even at this stage, we do not expect that you will know all of the details about precisely how to implement your feature such that you could break it down into tasks that you feel could be implemented in a day or two, though it should be clearer now than it was for the preliminary project plan. Large tasks (those which you can not provide a responsible estimate for) must be accompanied by smaller “research” tasks that can be performed early on in the project. You may wish to provide deadlines by which the task must either be refined into smaller tasks (based on new knowledge gathered), or reworked/abandoned. Teams should try to keep the number of large tasks to minimum (if not zero).
 
 It will be helpful for all concerned if your Project Plan lists the major unknowns or things that you expect to need help with, because this will help the TA provide more useful feedback for you. If you are uncertain that some tasks will be feasible, then be sure to include evaluation tasks earlier-on in the project that will allow for "go/no-go" decisions to move forward on a task or drop it.
 
@@ -69,7 +68,7 @@ For example: Consider if you were proposing the "job advertisement" feature, wit
 Be realistic, and leave time for contingencies (including spring break and the time around the midterm exam in week 9).
 Remember that you will need to have a demo prepared of your feature by project deadline - less than two months from the due date of this assignment.
 
-Throughout the project period, teams will meet regularly with their dedicated TA Mentor, who will help track progress on a week-to-week basis and help to determine when adjustments to the project scope are needed.
+Throughout the project period, teams will meet regularly with their dedicated TA Mentor, who will help track progress on a week-to-week basis and help to determine when adjustments to the project plan are needed.
 
 Each work item should contain the following information:
 
@@ -143,9 +142,9 @@ However, we believe that this list is exhaustive (we do not expect other kinds o
 
 #### Assignment of tasks (10 points):
 Receive full marks if:
-* Each element on the work breakdown is assigned to one team member
+* Each element on the work breakdown is assigned to one team member (as primary responsible party)
 * Each team member is assigned work that includes development / coding, even if working with pair programming 
-* Each user story has tasks associated assigned to at least two group members
+* Each user story has tasks assigned to at least two group members
 * Each group member has tasks associated with at least two user stories (this requirement can be waived at a TA's discretion if discussed in advance).
 * The distribution of tasks of each size are roughly similar between the whole team (no single person is assigned significantly more or fewer tasks of one size)
 * Any deficiencies or concerns noted by your TA mentor on your preliminary plan are addressed
@@ -167,6 +166,6 @@ Receive full marks if:
 * There are no obvious constraint violations (tasks that logically must happen before others should be scheduled before them)
 * There are no "Large" tasks scheduled in sprint 1.
 * Tasks scheduled to be completed before the deadline of this assignment have an update as to their status, and the work breakdown is updated to reflect the result of these tasks.
-* Progress on every user story is planned in every main sprint (sprint 1, sprint 2, and sprint 3).
+* Progress on every user story is planned in every sprint (sprint 1, sprint 2, and sprint 3).
 * The minimum viable product is scheduled to be completed before Sprint 3, or there is an explanation given for why this is not feasible in a specific instance.
 * Any deficiencies or concerns noted by your TA mentor on your preliminary plan are addressed
