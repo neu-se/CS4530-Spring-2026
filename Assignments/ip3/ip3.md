@@ -25,6 +25,9 @@ In keeping with the last objective, **you may use code generation (i.e. "AI") to
 ## Changelog
 
 - 2026-02-08: Fixed typos in LLM discussion description.
+- 2026-02-16: Correction: replaced "new games page" with "list-of-games page" in 1.4
+- 2026-02-16: Clarification: replaced "the user first navigates" with "the user navigates"
+- 2026-02-16: Clarification: replaced "Navigating to" with "Navigating to or otherwise refreshing" in 1.9
 
 ## 1. Getting Started
 
@@ -91,15 +94,15 @@ These essential conditions of satisfaction form the minimum viable product:
  - 1.1: When a user creates a new game, any users watching the Game Nite home page will immediately see the new game inserted to the top of the list of games. 
  - 1.2: A new game appearing on the home page does not cause currently-visible games to be removed. This means that new games may cause more than four games to be visible on the home page. 
  - 1.3: When a user creates a new game, any users watching the "All games" page at `/games` see the new game inserted.
- - 1.4: On both the home page and new games page, new games that have been added since page load have some attention-getting designation as new games. ("New!")
- - 1.5: When the user first navigates to the home page or new games page, there are no games with the attention-getting new-game decoration.
+ - 1.4: On both the home page and list-of-games page, new games that have been added since page load have some attention-getting designation as new games. ("New!")
+ - 1.5: When the user navigates to the home page or new games page, there are no games with the attention-getting new-game decoration.
  
 For full credit, you should also implement these desirable conditions of satisfaction:
 
  - 1.6: Every browser session has a notional concept of "unviewed new games." If this count is non-zero, the "Games" sidebar item includes the count, for example by reading "Games (2 new!)"
  - 1.7: When a user starts a new game, their own count of unviewed new games does not increase.
  - 1.8: When the user is on the home page or the "All games" page, the count always stays zero.
- - 1.9: Navigating to the home page or the "All games" page resets the count.
+ - 1.9: Navigating to or otherwise refreshing the home page or the "All games" page resets the count.
  - 1.10: When a user is *not* on the home page or "All games" page and another user starts a game, the count of unviewed new games increases.
 
 Here is a scenario describing how these desirable conditions work:
