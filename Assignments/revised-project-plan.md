@@ -100,6 +100,10 @@ All teams will be required to use project tracking software to track their progr
 
 Your revised project plan should be submitted as a single PDF on Canvas under the assignment "Revised Project Plan." (with team number in file name, e.g., Revised project plan - Team 101). Each team submits a single document. Make sure that your team number is also added to the title of the document.
 
+
+## Changelog
+ - 2026-02-18: Removed Threat Assessment from Coverage of Tasks.
+
 ## Grading
 The revised project plan will account for 10% of your project grade, and will be graded out of 100 points. The grading of the revised project plan is further broken down as follows:
 
@@ -131,7 +135,6 @@ Your work breakdown will be evaluated holistically on the following rubric:
 Receive full marks if the work breakdown includes all (reasonably expected) tasks to implement your feature(s), considering these kinds of tasks: 
   * Background research 
   * Design of interfaces and data types
-  * Threat Assessment
   * Deployment of third-party services
   * Implementation
   * Testing
