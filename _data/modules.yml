@@ -39,10 +39,10 @@ mod10:
   page: /modules/10-larger-tests
 mod11:
   name: Application Level Patterns
-  page: 
+  page: /modules/11-app-patterns
 mod12:
   name: Continuous Development
-  page: 
+  page: /modules/12-continuous-development
 mod13:
   name: Security
   page: 
@@ -102,7 +102,7 @@ ip2:
 ip3:
   name: Individual Project 3 
   type: deadline
-  page: 
+  page: /assignments/ip3
 tp1:
   name: Project Formation
   type: deadline
@@ -113,7 +113,7 @@ tp2:
 tp3:
   name: Revised Project Plan
   type: deadline
-  page: 
+  page: /assignments/revised-project-plan
 tp4:
   name: Project Final Deliverable
   type: deadline
