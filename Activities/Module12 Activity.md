@@ -22,9 +22,9 @@ There are three pre-requisites for this activity.
 
 Your team's deployment must take place within a private GitHub repository in our GitHub Classroom. To create your repository, each member of your team should follow these instructions (please review the instructions carefully first):
 
-1. Sign in to GitHub.com, and then use [our invitation] (XXX TODO ADD GITHUB CLASSROOM LINK) to create a repository with the GameNite codebase. Check to see if one of your groupmates has already created a group - if so, select it to join it. Otherwise, create a repo using the following format fall25-project-group-xyy where you should enter your group number (e.g. "Group-XYY") as the name where X is your section number and YY is your group number.
+1. Sign in to GitHub.com, and then use [our invitation] (XXX TODO ADD GITHUB CLASSROOM LINK) to create a repository with the GameNite codebase. Check to see if one of your groupmates has already created a group - if so, select it to join it. Otherwise, create a repo using the following format spring26-project-group-xyy where you should enter your group number (e.g. "Group-XYY") as the name where X is your section number and YY is your group number.
 
-2. Check your email for the invitation to join the repo. After that, refresh the page, and it will show a link to your new repository, for example: https://github.com/neu-cs4530/fall25-project-group-xyy. Click the link to navigate to your new repository. This is the repository you will use for the project.
+2. Check your email for the invitation to join the repo. After that, refresh the page, and it will show a link to your new repository, for example: https://github.com/neu-cs4530/spring26-project-group-xyy. Click the link to navigate to your new repository. This is the repository you will use for the project.
 
 This repository will be private, and visible only to your team and the course staff. After the semester ends, you are welcome to make it public - you have complete administrative control of the repository.
 
@@ -55,15 +55,15 @@ You will first create the MongoDB database, and then setup the continuous deploy
 3. Click on the "Create" button on the center of the screen. (If you don't see a "Create" button, make sure you are in the "Project Overview" section on the left navigation)
 4. In the configuration options:
    1. Choose the "Free" tier.
-   2. For the Name, provide a name such as "db-cs4530-fall25-XYY" (where XYY is your group number).
+   2. For the Name, provide a name such as "db-cs4530-spring26-XYY" (where XYY is your group number).
    3. Keep the Provider and Region the default values.
 5. Click on "Create Deployment".
 6. You will be prompted about connecting to your database.
    1. Copy the username and password that is automatically generated. You will need this later (you can also create more users after the database has been created).
    2. Click on "Create Database User".
    3. Click the "Close" button.
-7. Wait for your database cluster to complete creation. Once complete, click on the "Database & Network Access" option in the left navigation, and then click on "IP Access List" under "Network Access"
-8. Your current public IP address will be automatically present. Click the "EDIT" button, and then click "ALLOW ACCESS FROM ANYWHERE". Click the "Confirm" button.
+7. Wait for your database cluster to complete creation. Once complete, click on the "Database & Network Access" option in the left navigation (you may have to expand the "Security" section to see this), and then click on "IP Access List" under "Network Access"
+8. Your current public IP address will be automatically present. Click the "EDIT" button, and then click "ALLOW ACCESS FROM ANYWHERE". (If you don't see this button, you can paste `0.0.0.0/0` as a new Access List Entry.) Click the "Confirm" button.
 9. Click on the "Clusters" option in the left navigation. Then, click on the "Connect" button.
    1. Click on "Compass".
    2. Note the "connection string" — you will need to use your connection string in a later step. Make sure to replace `<db_password>` with the actual database password from step 6.
@@ -87,7 +87,7 @@ Note: The .env file is not required for the Render.com setup. The above instruct
 ### Setup your Server
 
 1. Open the [Render Dashboard](https://dashboard.render.com/).
-2. Click on "Create new project", and create a new project with a name such as "cs4530-f25-XYY" (where XYY is your group number).
+2. Click on "Create new project", and create a new project with a name such as "cs4530-s26-XYY" (where XYY is your group number).
 3. From the top menu, click on the "+ New" button and click on "Web Service".
    1. For the Source Code, choose your project repository. In case you do not see your project repository, go to your GitHub account and authorize access to your project repository.
    2. For the Name, you can EITHER choose an unique name OR use the default.
