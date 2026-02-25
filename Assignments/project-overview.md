@@ -30,7 +30,7 @@ Your overall project grade (which will account for 40% of your final grade in th
   * This includes the Preliminary Project Plan and the Revised Project Plan.
 * Process (20%)
   * This includes: use of a structured development process, including regular git commits, pull requests, code reviews, timely completion of progress reports and individual/team surveys, and weekly meetings with TA Mentor.
-  * This also includes appropriate division of labor within the project (i.e., roughly equal). For full credit, each member of the team must have at least 2 commits during the each sprint (even when using pair programming).
+  * This also includes appropriate division of labor within the project (i.e., roughly equal). For full credit, each member of the team must have at least 2 commits during the each sprint (i.e., sprints 1,2 & 3) even when using pair programming.
 * Product (40%)
   * 20% Successful delivery of your Minimum Viable Product as defined in your project plan
   * 10% Desirable delivered features
