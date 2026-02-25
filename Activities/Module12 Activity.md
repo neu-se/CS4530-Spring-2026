@@ -59,7 +59,7 @@ You will first create the MongoDB database, and then setup the continuous deploy
    3. Keep the Provider and Region the default values.
 5. Click on "Create Deployment".
 6. You will be prompted about connecting to your database.
-   1. Copy the username and password that is automatically generated. You will need this later (you can also create more users after the database has been created).
+   1. **Copy and save the username and password that is automatically generated, as it is shown only once and cannot be retrieved later.** You'll use this username and password in a later step. (If necessary, you can create new users users after the database has been created.)
    2. Click on "Create Database User".
    3. Click the "Close" button.
 7. Wait for your database cluster to complete creation. Once complete, click on the "Database & Network Access" option in the left navigation (you may have to expand the "Security" section to see this), and then click on "IP Access List" under "Network Access"
