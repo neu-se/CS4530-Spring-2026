@@ -45,7 +45,7 @@ mod12:
   page: /modules/12-continuous-development
 mod13:
   name: Security
-  page: 
+  page: /modules/13-security
 mod14:
   name: Principles for Cloud Deployment
   page: 
