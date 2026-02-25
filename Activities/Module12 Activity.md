@@ -22,7 +22,7 @@ There are three pre-requisites for this activity.
 
 Your team's deployment must take place within a private GitHub repository in our GitHub Classroom. To create your repository, each member of your team should follow these instructions (please review the instructions carefully first):
 
-1. Sign in to GitHub.com, and then use [our invitation] (XXX TODO ADD GITHUB CLASSROOM LINK) to create a repository with the GameNite codebase. Check to see if one of your groupmates has already created a group - if so, select it to join it. Otherwise, create a repo using the following format spring26-project-group-xyy where you should enter your group number (e.g. "Group-XYY") as the name where X is your section number and YY is your group number.
+1. Sign in to GitHub.com, and then use [our invitation](https://classroom.github.com/a/DUL-UO34) to create a repository with the GameNite codebase. Check to see if one of your groupmates has already created a group - if so, select it to join it. Otherwise, create a repo using the following format spring26-project-group-xyy where you should enter your group number (e.g. "Group-XYY") as the name where X is your section number and YY is your group number.
 
 2. Check your email for the invitation to join the repo. After that, refresh the page, and it will show a link to your new repository, for example: https://github.com/neu-cs4530/spring26-project-group-xyy. Click the link to navigate to your new repository. This is the repository you will use for the project.
 
