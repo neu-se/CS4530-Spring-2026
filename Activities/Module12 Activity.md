@@ -74,7 +74,7 @@ For simplicity, and since you're not handling sensitive data, the Network Access
 You can optionally connect your locally deployed server to the cloud-hosted MongoDB database, which can be useful when developing a feature and testing it before deployment. To do this, update the `.env` created as [part of the IP2 setup](https://neu-se.github.io/CS4530-Spring-2026/assignments/ip2#12-setting-up-the-server-to-use-mongodb).
 
 ```
-MONGODB_STR=<add your connection string here>
+MONGO_STR=<add your connection string here>
 MONGO_DB_NAME=GameNiteDev
 ```
 
