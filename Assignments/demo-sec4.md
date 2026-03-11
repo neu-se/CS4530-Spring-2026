@@ -21,7 +21,7 @@ Your presentation should include the following:
 * A live demonstration of your project, including all of the screenshots from your poster.
 * A summary of the technology stack and overall design decisions (this may also be taken from your poster)
 * Short summary of overall contribution by each member 
-* A summary of challenges were faced and how you overcame them (alternatively, how the project you delivered differed from the one you proposed).
+* A summary of challenges that were faced and how you overcame them (alternatively, how the project you delivered differed from the one you proposed).
 
 You should submit a copy of your pptx or pdf of your slides on Canvas.
 
