@@ -6,7 +6,7 @@ parent: Assignments
 nav_order: 6
 ---
 # Project: Final Deliverable **Due Friday 4/10/2026 6pm (EST)**{: .label .label-red }
-The final project deliverable is the implementation, available in github and deployed on render.com, and the documentation turned in to Canvas. It also includes poster and/or demos. 
+The final project deliverable is the implementation, available in github and deployed on Render.com, and the documentation turned in to Canvas. It also includes poster and/or demos. 
 
 ## Project Implementation and Documentation
 Your final team deliverable will be a "release" of your new feature on GitHub (with tests), and will be accompanied by a demo. You will submit the link of your hosted app on Canvas.
@@ -14,7 +14,7 @@ Your final team deliverable will be a "release" of your new feature on GitHub (w
 ### Contents
 
 Your final team deliverable will include:
-* The implementation of your new features, deployed to Render.com / Heroku 
+* The implementation of your new features, deployed to Render.com or a similar service (e.g. Heroku)
 * Automated tests for your new features
 * A continuous integration (CI) pipeline
 * Project Plan as GitHub Projects
@@ -28,7 +28,7 @@ Accompanying the final team deliverable will be an *individual reflection*, whic
 **All filed submitted on Canvas must be renamed to include your group number in the file name.** 
 
 #### Code, documentation and Link
- All apps will be deployed on Render/Heroku (instructions for CI/CD pipeline setup are provided separately). After you have pushed all of your code (and documentation) to your team's GitHub repository, create [a release](https://docs.github.com/en/free-pro-team@latest/github/administering-a-repository/managing-releases-in-a-repository) on GitHub, and apply the tag version `final-submission`. After your release is created, you'll find that there is now a `.zip` that can be downloaded from GitHub that contains a snapshot of your entire repository. Download this zip file, unpack it, and follow the instructions that you provided in your README to double-check that the course staff will be able to run your project (this step is handy to make sure that you didn't forget to include some key files in git). If needed, you can delete the release, make some changes, and re-release up until the deadline. **Rename your zip file to include your group number in the file name. Submit this zip file to Canvas** under the assignment "Project: Code Submission" along with **the link of your hosted app** (in comments or a text file). Submit your report separately to Canvas, under the assignment "Project: Report".
+ All apps will be deployed on Render.com or a similar service (instructions for CI/CD pipeline setup are provided separately). After you have pushed all of your code (and documentation) to your team's GitHub repository, create [a release](https://docs.github.com/en/free-pro-team@latest/github/administering-a-repository/managing-releases-in-a-repository) on GitHub, and apply the tag version `final-submission`. After your release is created, you'll find that there is now a `.zip` that can be downloaded from GitHub that contains a snapshot of your entire repository. Download this zip file, unpack it, and follow the instructions that you provided in your README to double-check that the course staff will be able to run your project (this step is handy to make sure that you didn't forget to include some key files in git). If needed, you can delete the release, make some changes, and re-release up until the deadline. **Rename your zip file to include your group number in the file name. Submit this zip file to Canvas** under the assignment "Project: Code Submission" along with **the link of your hosted app** (in comments or a text file). Submit your report separately to Canvas, under the assignment "Project: Report".
 
 #### Continuous Integration Pipeline
 
