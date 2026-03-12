@@ -6,7 +6,7 @@ parent: Assignments
 nav_order: 6
 ---
 # Project: Final Deliverable **Due Friday 4/10/2026 6pm (EST)**{: .label .label-red }
-The final project deliverable is the implementation, available in github and deployed on Render.com, and the documentation turned in to Canvas. It also includes poster and/or demos. 
+The final project deliverable is the implementation, available in github and deployed on Render.com, and the documentation turned in to Canvas. It also includes poster/flier and/or demos. 
 
 ## Project Implementation and Documentation
 Your final team deliverable will be a "release" of your new feature on GitHub (with tests), and will be accompanied by a demo. You will submit the link of your hosted app on Canvas.
@@ -19,7 +19,7 @@ Your final team deliverable will include:
 * A continuous integration (CI) pipeline
 * Project Plan as GitHub Projects
 * A report that describes how to use your new feature and what was completed vs proposed
-* A poster and/or demo
+* A poster/flier and/or demo
     
 Accompanying the final team deliverable will be an *individual reflection*, which every student must submit on their own which will include your reflections on the evolution of your project concept, on the software engineering processes you used, and on your team's dynamics and collaboration.
 
@@ -45,16 +45,20 @@ We will provide instructions for CI/CD pipeline setup separately.
 
 Each team is required to use a project management tool (e.g., JIRA, Trello, notion or Github Projects) to track the list of all essential and desirable tasks. In your team's repo on GitHub you must have a link to your tasks and a status update (how much completed).  
 
-#### Project Poster
-Each team **MUST** submit a poster. Your poster will be a single-page PDF document, that will include the following aspects:
+#### Project Poster/Flier
+Each team **MUST** submit a poster or flier. Your flier will be a single-page 8.5x11 color PDF document, that will include the following aspects:
 
+* Team name
+* Team members
 * Short description of the project (OK to reuse text from the project plan/report)
-* Link to public demo site, link to source repo (OK to make the repo public now, or OK to leave as private)
+* Clickable link to public demo site, clickable link to source repo (OK to make the repo public once the project is submitted, also OK to leave as private)
 * Short description of the technology stack and overall design decisions
-* Short description of future work that could build on your project - additional features that you think could be interesting, or ideas for refactoring the code.
+* Short “what’s next” section describing future work that could build on your project - additional features that you think could be interesting, or ideas for refactoring the code.
 * Screenshots of the feature, visually demonstrating the main functionality that you implemented.
 
-We've created a [sample poster for the "Conversation Areas" feature of Covey.Town]({{ site.baseurl }}{% link Examples/conversation-areas-poster.pdf %}), which you might find useful in deciding how to format your poster. It's fine to use a different aspect ratio (e.g. portrait instead of landscape), and there are no specific requirements for font size or amount of text. Please try to create a document that you feel represents your project, imagine your target audience as a recruiter for a software engineering role: your goal is to demonstrate that you have some experience working on some non-trivial software engineering project. **Each Poster must include your group number, names of team members and click-able links to your project repo and hosted app**. Create a PDF of your poster and rename it to include your project name and group number. A physical poster (or printed version) is not needed. **Posters will be submitted on Canvas**, under the assignment "Project: Poster / Demo".
+Here's an [example flier from Summer 2025]({{ site.baseurl }}{% link Examples/TeamSwanna_Flier.pdf %}), but your flier doesn't need to be this highly illustrated. Imagine it as a physical artifact you are giving to the the recruiters or investors as you present your final presentation: your goal is to demonstrate that you have some experience working on some software engineering project that is both technically non-trivial and interesting. There are no specific requirements for font size or amount of text. 
+
+**Each flier/poster must include your group number, names of team members and click-able links to your project repo and hosted app**. Create a PDF of your flier/poster and rename it to include your project name and group number. A physical flier/poster (or printed version) is not needed. **Fliers/posters will be submitted on Canvas**, under the assignment "Project: Poster / Demo".
 
 #### Project Demo/Presentation
 In addition to the poster, some sections will have live (in-person) presentations or demos. Details for project demos or presentations will be provided separately by each instructor on the grading rubric page (and may vary from section to section). **Copies of presentations used in demos will be submitted on Canvas**, under the assignment "Project: Poster / Demo" (if required by your instructor).

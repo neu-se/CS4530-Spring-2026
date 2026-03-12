@@ -12,7 +12,7 @@ Each group will present a live demo to show the feature that they have added for
 Please note:
 - The live demo must be from the *deployed site*, **not** from localhost. 
 - Attendance is REQUIRED for these demos. Please email the instructor if you have extenuating circumstances.
-- Each group will be required to submit copy of presentation (along with poster) on Canvas.
+- Each group will be required to submit copy of presentation (along with poster/flier) on Canvas.
 - Each group will also be required to submit an evaluation of demos from other groups and provide these to the instructor.
 
 Your presentation should include the following:
@@ -26,9 +26,9 @@ Your presentation should include the following:
 You might want to include your email address and other related info (i.e., github repo link, pictures, hosted site link, etc). You will also **submit** a copy of your presentation (pptx/pdf file, not link) on Canvas under "Project: Poster/Demo" assignment.
 
 # Grading Rubric:
-Your final Poster and Presentation are worth 4% of the overall course grade. 
+Your final Poster/Flier and Presentation are worth 4% of the overall course grade. 
 
-Poster will be worth 1% and will be graded based on whether you submitted it on time or not.
+Poster/flier will be worth 1% and will be graded based on whether you submitted it on time or not.
 
 Presentation (which includes demo) will be worth 3%. This will be based on:
  - The presentation includes all the required aspects
