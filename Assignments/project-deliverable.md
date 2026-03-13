@@ -56,12 +56,12 @@ Each team **MUST** submit a poster or flier. Your flier will be a single-page 8.
 * Short “what’s next” section describing future work that could build on your project - additional features that you think could be interesting, or ideas for refactoring the code.
 * Screenshots of the feature, visually demonstrating the main functionality that you implemented.
 
-Here's an [example flier from Summer 2025]({{ site.baseurl }}{% link Examples/TeamSwanna_Flier.pdf %}), but your flier doesn't need to be this highly illustrated. Imagine it as a physical artifact you are giving to the the recruiters or investors as you present your final presentation: your goal is to demonstrate that you have some experience working on some software engineering project that is both technically non-trivial and interesting. There are no specific requirements for font size or amount of text. 
+Here's an [example flier from Summer 2025]({{ site.baseurl }}{% link Examples/TeamSwanna_Flier.pdf %}) and an example [poster]({{ site.baseurl }}{% link Examples/conversation-areas-poster.pdf %}), but your poster/flier doesn't need to be this highly illustrated. Imagine it as a physical artifact you are giving to the the recruiters or investors as you present your final presentation: your goal is to demonstrate that you have some experience working on some software engineering project that is both technically non-trivial and interesting. There are no specific requirements for font size or amount of text. 
 
 **Each flier/poster must include your group number, names of team members and click-able links to your project repo and hosted app**. Create a PDF of your flier/poster and rename it to include your project name and group number. A physical flier/poster (or printed version) is not needed. **Fliers/posters will be submitted on Canvas**, under the assignment "Project: Poster / Demo".
 
 #### Project Demo/Presentation
-In addition to the poster, some sections will have live (in-person) presentations or demos. Details for project demos or presentations will be provided separately by each instructor on the grading rubric page (and may vary from section to section). **Copies of presentations used in demos will be submitted on Canvas**, under the assignment "Project: Poster / Demo" (if required by your instructor).
+In addition to the poster/flier, some sections will have live (in-person) presentations or demos. Details for project demos or presentations will be provided separately by each instructor on the grading rubric page (and may vary from section to section). **Copies of presentations used in demos will be submitted on Canvas**, under the assignment "Project: Poster / Demo" (if required by your instructor).
 
 #### Project Showcase
 We will create a project showcase page for this semester (similar to the one from [Spring 2025](https://neu-se.github.io/CS4530-Spring-2025/assignments/project-showcase) semester). You will be asked to indicate your preference (if you don't want your project to be posted there) by completing a survey (a link will be provided in Canvas assignment "Project: Withdraw Permission for Showcase Page"). By default all projects will be posted unless your preference says otherwise. We often direct recruiters to that page. 
@@ -73,7 +73,7 @@ Create a PDF of your reflection, and submit it to Canvas, under the assignment "
 Here are the deadlines for all of the project deliverables:
 * Final Implementation (deployed site and code with all tests): Friday April 10th at 6pm EST
 * Final Report: Friday April 10th at 6pm EST
-* Poster: The last day of your section's demos/presentations
+* Poster/Flier: The last day of your section's demos/presentations
 * Copy of Presentation/Demo: The last day of your section's demos/presentations 
 * Individual Reflection: Monday April 20th at 11am EST
 

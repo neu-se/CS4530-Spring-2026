@@ -29,7 +29,7 @@ From [Project Overview]({{ site.baseurl }}{% link Assignments/project-overview.m
   * 10% Test suite of your features.
 * Reports (20%)
   * 10% Final Report
-  * 10% Poster and Demo
+  * 10% Poster/Flier and Demo
 * Individual Reflection (required to receive an 'A')
 
 This adds up to 100%; this sum is worth 40% of the course grade.
@@ -141,8 +141,8 @@ The allocation of the 10% credit will be as follows: Overview and manual will be
 * It provides a summary of what was planned to happen in each sprint vs what actually happened, with a discussion of what was revised as a result. 
 * The document is at most 2 pages (fewer pages are absolutely acceptable, consider this a rough limit) 
 
-## Posters and Demo (10%)
-Each team is **required** to submit a poster. Details can be found on [Project Deliverables]({{ site.baseurl }}{% link Assignments/project-deliverable.md %}) page. 
+## Posters/Fliers and Demo (10%)
+Each team is **required** to submit a poster or Flier. Details can be found on [Project Deliverables]({{ site.baseurl }}{% link Assignments/project-deliverable.md %}) page. 
 
 In addition, some sections may have a demo (live in-person, via zoom or by recorded video). Each instructor has provided details regarding expectations for the demo and/or presentation below. The schedule and manner of these demos might also vary from section to section. The specifications for the different sections are listed below:
 * [Sections 1, 2, 3 - Prof. Bhutta]({{ site.baseurl }}{% link Assignments/demo-sec123.md %})
