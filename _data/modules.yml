@@ -59,7 +59,7 @@ advanced:
   name: Advanced Topics in SE
 opensource:
   name: Open Source
-  page: 
+  page: /modules/17-open-source
 dependency:
   name: Dependency Management
   page: 
