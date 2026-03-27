@@ -77,6 +77,8 @@ WOPMiniDemo:
   name: Work on Project / Mini-Demo
 WOPOptional:
   name: Work on Project (Optional)
+WOPtm:
+  name: Work on project / Team Meetings
 teamMeetings:
   name: Team Meetings
 oteamMeetings:
