@@ -54,7 +54,7 @@ mod15:
   page: /modules/15-ethics
 ai:
   name: Coding with AI  
-  page: 
+  page: /modules/16-ai
 advanced:
   name: Advanced Topics in SE
 opensource:
