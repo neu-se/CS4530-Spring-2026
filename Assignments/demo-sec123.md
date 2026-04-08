@@ -10,23 +10,23 @@ nav_order: 8
 Each group will present a live demo to show the feature that they have added for the final project. The schedule of these demos is provided on your section's calendars but the order of demos will be discussed/finalized during the lecture. You will have 9 minutes maximum (8 minutes to setup and present + 1 minute for questions and everything else). You will lose points if your demo goes over 8 minutes. Please rehearse it and time yourself (best to keep it to 7 minutes or less). 
 
 Please note:
-- The live demo must be from the deployed site, not from localhost. 
+- Your demo must be from the deployed site, not from localhost. It must be a live demo, not pre-recorded 
 - Attendance is REQUIRED for these demos. Please email the instructor if you have extenuating circumstances.
 - Each group will be required to submit copy of presentation (along with poster/flyer) on Canvas.
 - Each group will also be required to grade demos of other groups and send their grades to instructor.
 
 Your presentation should include the following slides:
-- {Required} Description of feature(s) or user stories implemented [no more than 1 slide]
-- {Required} Status of all conditions of satisfaction for your user stories (use percentages to show what was implemented vs what was proposed). Feel free to use a table from your project plan
-- {Required} Discuss any deviations from the proposed plan [no more than 1 slide]
-- {Required} If you did not complete any essential or desirable features, discuss why [no more than 1 slide]
-- {Optional} Discuss any challenges you faced and how did you resolve them [no more than 1 slide]
-- {Required} Short summary of overall contributions made by each member [no more than 1 slide with 1-2 sentences per member];
-- {Required} What percentage of overall contribution was made by each member and what are the estimated number of hours spent on the {overall} development work during the project excluding research tasks or time spent on project planning [no more than 1 slide]
+- {Required Slide} Description of feature(s) or user stories implemented [no more than 1 slide]
+- {Required Slide} Status of all conditions of satisfaction for your user stories (use percentages to show what was implemented vs what was proposed). Feel free to use a table from your project plan
+- {Required Slide} Discuss any deviations from the proposed plan, if any. [no more than 1 slide]
+- {Required Slide} If you did not complete any essential or desirable features, discuss why [no more than 1 slide]
+- {Optional Slide} Discuss any challenges you faced and how did you resolve them [no more than 1 slide]
+- {Required Slide} Short summary of overall contributions made by each member [no more than 1 slide with 1-2 sentences per member];
+- {Required Slide} What percentage of overall contribution was made by each member and what are the estimated number of hours spent on the {overall} development work during the project excluding research tasks or time spent on project planning [no more than 1 slide]
 
-During your presentation, you might want to consider the following order: quick introduction of project features (i.e., user stories) followed by live demo of your app, then present the remaining slides in the order listed above or in any order you find appropriate.
+During your presentation, you might want to consider the following order of presentation: quick introduction of project features (i.e., user stories) followed by live demo of your app, then present the remaining slides in the order listed above or in any order you find appropriate.
 
-You might want to include your email address and other related info (i.e., github repo link, pictures, hosted site link, etc) at the end of your slides. You will also **submit** a copy of your presentation (pptx/pdf file, not link) on Canvas under "Project: Poster/Demo" assignment.
+You might want to include your email address and other related info (i.e., clickable links for github repo and hosted site, perhaps your pictures, etc) at the end of your slides. You will also **submit** a copy of your presentation (pptx/pdf file, not link) on Canvas under "Project: Poster/Demo" assignment.
 
 # Grading Rubric:
 Your final Poster/Flyer and Demos are worth 4% of the overall course. 

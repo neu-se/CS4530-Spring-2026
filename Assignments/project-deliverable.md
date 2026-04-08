@@ -5,7 +5,7 @@ permalink: /assignments/project-deliverable
 parent: Assignments
 nav_order: 6
 ---
-# Project: Final Deliverable **Due Friday 4/10/2026 6pm (EST)**{: .label .label-red }
+# Project: Final Deliverable **Due Friday 4/10/2026 6pm (ET)**{: .label .label-red }
 The final project deliverable is the implementation, available in github and deployed on Render.com, and the documentation turned in to Canvas. It also includes poster/flier and/or demos. 
 
 ## Project Implementation and Documentation
@@ -71,11 +71,11 @@ Create a PDF of your reflection, and submit it to Canvas, under the assignment "
 
 #### Deadlines
 Here are the deadlines for all of the project deliverables:
-* Final Implementation (deployed site and code with all tests): Friday April 10th at 6pm EST
-* Final Report: Friday April 10th at 6pm EST
+* Final Implementation (deployed site and code with all tests): Friday April 10th at 6pm ET
+* Final Report: Friday April 10th at 6pm ET
 * Poster/Flier: The last day of your section's demos/presentations
 * Copy of Presentation/Demo: The last day of your section's demos/presentations 
-* Individual Reflection: Monday April 20th at 11am EST
+* Individual Reflection: Monday April 20th at 11am ET
 
 **Please note that the filenames for any group submission must include your group number (e.g., project_report_group101_SomeProjectName.pdf).**
 

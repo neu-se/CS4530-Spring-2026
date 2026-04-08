@@ -99,7 +99,7 @@ The allocation of the 10% credit will be as follows: Overview and manual will be
 ### * Feature Overview and User Manual
 
 #### Satisfactory:
-* The Feature section contains sufficient documentation for a user to build and interact with your updated version of FakeStackOverFlow.
+* The Feature section contains sufficient documentation for a user to build and interact with your updated version of GameNite.
   * The documentation covers all the steps that a user would need to build a working version of your project.
   * The documentation includes a link to the deployed version of your project
 * The documentation covers all steps that the user would need to take to exercise all of your user stories.
@@ -109,7 +109,7 @@ The allocation of the 10% credit will be as follows: Overview and manual will be
 * The section is at most 4 pages (roughly 2,000 words maximum), NOT including figures. Fewer pages are absolutely acceptable; consider this a rough limit
 
 #### Meets minimum requirements:
-* The Feature contains documentation for a user to interact with your updated version of FakeStackOverFlow, but perhaps does not fully describe how.
+* The Feature contains documentation for a user to interact with your updated version of GameNite, but perhaps does not fully describe how.
 * The documentation includes at least one or two screenshots, but screenshots do not capture interactions with all of the user stories.
 * The course staff were able to figure out how to use it through trial and error.
 * URL of the deployed app.
@@ -117,7 +117,7 @@ The allocation of the 10% credit will be as follows: Overview and manual will be
 
 ### * Technical Overview
 #### Satisfactory:
-* Technical Overview contains a description of any substantive changes to the existing FakeStackOverFlow codebase, and of the architecture of your new code.
+* Technical Overview contains a description of any substantive changes to the existing GameNite codebase, and of the architecture of your new code.
 * When appropriate, it uses diagrams and/or figures to illustrate a design (there is no requirement to use a specific tool or format for this - students often use lucidchart, draw.io, [mermaid](https://mermaid.live) or even hand-drawn diagrams).
 * It provides a well-reasoned rationale for why this is the "right" design. 
 * It provides a table showing the status of all proposed user stories and conditions of satisfaction (proposed vs completed). The status could be fully implemented, partially implementted (feel free to add percentages), not completed.
@@ -125,7 +125,7 @@ The allocation of the 10% credit will be as follows: Overview and manual will be
 * The document is at most 2 pages (fewer pages are absolutely acceptable, consider this a rough limit) excluding the table. 
 
 #### Meets minimum requirements:
-* Technical Overview includes a description of all major changes to the code compared to our existing FakeStackOverFlow codebase.
+* Technical Overview includes a description of all major changes to the code compared to our existing GameNite codebase.
 * It provides a table showing the status of all proposed user stories and conditions of satisfaction (proposed vs completed). The status could be fully implemented, partially implementted (feel free to add percentages), not completed.
 * It provides limited or no evidence of front end testing. 
 * The document is at most 2 pages (fewer pages are absolutely acceptable, consider this a rough limit) excluding the table.
