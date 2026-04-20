@@ -1,0 +1,620 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  <link rel="stylesheet" href="/CS4530-Spring-2026/assets/css/just-the-docs-default.css">
+
+  
+
+  
+    <script src="/CS4530-Spring-2026/assets/js/vendor/lunr.min.js"></script>
+  
+
+  <script src="/CS4530-Spring-2026/assets/js/just-the-docs.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  
+
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Individual Project 2 | CS4530, Spring 2026</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Individual Project 2" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Northeastern University CS 4530 “Fundamentals of Software Engineering”, Spring 2026. Professors Adeel Bhutta, Robert Simmons and Mitch Wand." />
+<meta property="og:description" content="Northeastern University CS 4530 “Fundamentals of Software Engineering”, Spring 2026. Professors Adeel Bhutta, Robert Simmons and Mitch Wand." />
+<link rel="canonical" href="https://neu-se.github.io/CS4530-Spring-2026/assignments/ip2" />
+<meta property="og:url" content="https://neu-se.github.io/CS4530-Spring-2026/assignments/ip2" />
+<meta property="og:site_name" content="CS4530, Spring 2026" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Individual Project 2" />
+<script type="application/ld+json">
+{"description":"Northeastern University CS 4530 “Fundamentals of Software Engineering”, Spring 2026. Professors Adeel Bhutta, Robert Simmons and Mitch Wand.","headline":"Individual Project 2","dateModified":"2026-04-20T17:08:53+00:00","url":"https://neu-se.github.io/CS4530-Spring-2026/assignments/ip2","@type":"WebPage","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+</head>
+
+<body>
+  <a class="skip-to-main" href="#main-content">Skip to main content</a>
+  <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+  <symbol id="svg-link" viewBox="0 0 24 24">
+  <title>Link</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link">
+    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+  </svg>
+</symbol>
+
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+  <title>Menu</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+    <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+  </svg>
+</symbol>
+
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+  <title>Expand</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+    <polyline points="9 18 15 12 9 6"></polyline>
+  </svg>
+</symbol>
+
+  <!-- Feather. MIT License: https://github.com/feathericons/feather/blob/master/LICENSE -->
+<symbol id="svg-external-link" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link">
+  <title id="svg-external-link-title">(external link)</title>
+  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line>
+</symbol>
+
+  
+    <symbol id="svg-doc" viewBox="0 0 24 24">
+  <title>Document</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+    <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline>
+  </svg>
+</symbol>
+
+    <symbol id="svg-search" viewBox="0 0 24 24">
+  <title>Search</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+    <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+  </svg>
+</symbol>
+
+  
+  
+    <!-- Bootstrap Icons. MIT License: https://github.com/twbs/icons/blob/main/LICENSE.md -->
+<symbol id="svg-copy" viewBox="0 0 16 16">
+  <title>Copy</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+  </svg>
+</symbol>
+<symbol id="svg-copied" viewBox="0 0 16 16">
+  <title>Copied</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check-fill" viewBox="0 0 16 16">
+    <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3Zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3Z"/>
+    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5v-1Zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708Z"/>
+  </svg>
+</symbol>
+
+  
+</svg>
+
+  <div class="side-bar">
+  <div class="site-header" role="banner">
+    <a href="/CS4530-Spring-2026/" class="site-title lh-tight">
+  CS4530, Spring 2026
+
+</a>
+    <button id="menu-button" class="site-button btn-reset" aria-label="Toggle menu" aria-pressed="false">
+      <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><use xlink:href="#svg-menu"></use></svg>
+    </a>
+  </div>
+  <nav aria-label="Main" id="site-nav" class="site-nav">
+    
+    
+      <ul class="nav-list"><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Calendar category" aria-pressed="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+        </button><a href="/CS4530-Spring-2026/calendar/" class="nav-list-link">Calendar</a><ul class="nav-list"><li class="nav-list-item "><a href="/CS4530-Spring-2026/calendar/s1" class="nav-list-link">Section 1 - Calendar</a></li><li class="nav-list-item "><a href="/CS4530-Spring-2026/calendar/s2" class="nav-list-link">Section 2 - Calendar</a></li><li class="nav-list-item "><a href="/CS4530-Spring-2026/calendar/s3" class="nav-list-link">Section 3 - Calendar</a></li><li class="nav-list-item "><a href="/CS4530-Spring-2026/calendar/s4" class="nav-list-link">Section 4 - Calendar</a></li><li class="nav-list-item "><a href="/CS4530-Spring-2026/calendar/s5" class="nav-list-link">Section 5 - Calendar</a></li><li class="nav-list-item "><a href="/CS4530-Spring-2026/calendar/s6" class="nav-list-link">Section 6 - Calendar</a></li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Modules category" aria-pressed="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+        </button><a href="/CS4530-Spring-2026/modules/" class="nav-list-link">Modules</a><ul class="nav-list"><li class="nav-list-item "><a href="/CS4530-Spring-2026/modules/1-user-stories" class="nav-list-link">1 - Orientation & User Stories</a></li><li class="nav-list-item "><a href="/CS4530-Spring-2026/modules/2-requirements-to-tests" class="nav-list-link">2 - From Requirements to Tests</a></li><li class="nav-list-item "><a href="/CS4530-Spring-2026/modules/3-test-adequacy" class="nav-list-link">3 - When Have I Written Enough Tests?</a></li><li class="nav-list-item "><a href="/CS4530-Spring-2026/modules/4-web-apps" class="nav-list-link">4 - Design Patterns for Web Applications</a></li><li class="nav-list-item "><a href="/CS4530-Spring-2026/modules/5-react" class="nav-list-link">5 - React</a></li><li class="nav-list-item "><a href="/CS4530-Spring-2026/modules/6-patterns-of-react" class="nav-list-link">6 - React Hooks</a></li><li class="nav-list-item "><a href="/CS4530-Spring-2026/modules/7-software-process" class="nav-list-link">7 - Software Process</a></li><li class="nav-list-item "><a href="/CS4530-Spring-2026/modules/8-code-level-design" class="nav-list-link">8 - Code-Level Design Principles</a></li><li class="nav-list-item "><a href="/CS4530-Spring-2026/modules/9-concurrency-patterns-in-typescript" class="nav-list-link">9 - Concurrency Patterns in Typescript</a></li><li class="nav-list-item "><a href="/CS4530-Spring-2026/modules/10-larger-tests" class="nav-list-link">10 - Tests With Larger Scope</a></li><li class="nav-list-item "><a href="/CS4530-Spring-2026/modules/11-app-patterns" class="nav-list-link">11 - Application Level Patterns</a></li><li class="nav-list-item "><a href="/CS4530-Spring-2026/modules/12-continuous-development" class="nav-list-link">12 - Continuous Development</a></li><li class="nav-list-item "><a href="/CS4530-Spring-2026/modules/13-security" class="nav-list-link">13 - Security</a></li><li class="nav-list-item "><a href="/CS4530-Spring-2026/modules/14-cloud-infrastructure" class="nav-list-link">14 - Cloud Infrastructure</a></li><li class="nav-list-item "><a href="/CS4530-Spring-2026/modules/15-ethics" class="nav-list-link">15 - Ethics and Equity in SE</a></li><li class="nav-list-item "><a href="/CS4530-Spring-2026/modules/16-ai" class="nav-list-link">16 - Coding with AI</a></li><li class="nav-list-item "><a href="/CS4530-Spring-2026/modules/17-open-source" class="nav-list-link">17 - Open Source</a></li></ul></li><li class="nav-list-item active"><button class="nav-list-expander btn-reset" aria-label="toggle items in Assignments category" aria-pressed="true">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+        </button><a href="/CS4530-Spring-2026/assignments/" class="nav-list-link">Assignments</a><ul class="nav-list"><li class="nav-list-item "><a href="/CS4530-Spring-2026/assignments/ip1" class="nav-list-link">Individual Project 1</a></li><li class="nav-list-item  active"><a href="/CS4530-Spring-2026/assignments/ip2" class="nav-list-link active">Individual Project 2</a></li><li class="nav-list-item "><a href="/CS4530-Spring-2026/assignments/project-overview" class="nav-list-link">Project Overview</a></li><li class="nav-list-item "><a href="/CS4530-Spring-2026/assignments/ip3" class="nav-list-link">Individual Project 3</a></li><li class="nav-list-item "><a href="/CS4530-Spring-2026/assignments/project-plan" class="nav-list-link">Preliminary Project Plan</a></li><li class="nav-list-item "><a href="/CS4530-Spring-2026/assignments/revised-project-plan" class="nav-list-link">Revised Project Plan</a></li><li class="nav-list-item "><a href="/CS4530-Spring-2026/assignments/project-deliverable" class="nav-list-link">Project Final Deliverable</a></li><li class="nav-list-item "><a href="/CS4530-Spring-2026/assignments/project-grading" class="nav-list-link">Final Project Grading</a></li><li class="nav-list-item "><a href="/CS4530-Spring-2026/assignments/project-showcase" class="nav-list-link">Project Showcase</a></li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Tutorials category" aria-pressed="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+        </button><a href="/CS4530-Spring-2026/tutorials/" class="nav-list-link">Tutorials</a><ul class="nav-list"><li class="nav-list-item "><a href="/CS4530-Spring-2026/tutorials/week1-getting-started" class="nav-list-link">Installing a Development Environment</a></li><li class="nav-list-item "><a href="/CS4530-Spring-2026/tutorials/week1-typescript-basics" class="nav-list-link">TypeScript Basics</a></li><li class="nav-list-item "><a href="/CS4530-Spring-2026/tutorials/week1-unit-testing" class="nav-list-link">Unit Testing with Vitest</a></li><li class="nav-list-item "><a href="/CS4530-Spring-2026/tutorials/week1-apirequests-postman" class="nav-list-link">Guide to API Requests and Installing Postman</a></li><li class="nav-list-item "><a href="/CS4530-Spring-2026/tutorials/week2-socketio-basics" class="nav-list-link">Socket.IO Tutorial</a></li><li class="nav-list-item "><a href="/CS4530-Spring-2026/tutorials/week3-react-basics" class="nav-list-link">React Tutorial</a></li><li class="nav-list-item "><a href="/CS4530-Spring-2026/tutorials/week5-keyv" class="nav-list-link">Simple Storage with Keyv</a></li><li class="nav-list-item "><a href="/CS4530-Spring-2026/tutorials/week5-uitesting" class="nav-list-link">UI Testing with Playwright</a></li></ul></li><li class="nav-list-item"><a href="/CS4530-Spring-2026/textbooks/" class="nav-list-link">Textbooks</a></li><li class="nav-list-item"><a href="/CS4530-Spring-2026/staff/" class="nav-list-link">Staff</a></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Policies category" aria-pressed="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+        </button><a href="/CS4530-Spring-2026/policies/" class="nav-list-link">Policies</a><ul class="nav-list"><li class="nav-list-item "><a href="/CS4530-Spring-2026/policies/ai" class="nav-list-link">Policy on Use of AI</a></li><li class="nav-list-item "><a href="/CS4530-Spring-2026/policies/style/" class="nav-list-link">Code Style</a></li><li class="nav-list-item "><a href="/CS4530-Spring-2026/policies/debugging/" class="nav-list-link">Debugging</a></li></ul></li><li class="nav-list-item"><a href="/CS4530-Spring-2026/resources/" class="nav-list-link">Other Resources</a></li></ul>
+
+    
+  </nav>
+
+  
+  
+    <footer class="site-footer">
+      This site uses <a href="https://github.com/just-the-docs/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
+    </footer>
+  
+</div>
+
+  <div class="main" id="top">
+    <div id="main-header" class="main-header">
+  
+    
+
+<div class="search" role="search">
+  <div class="search-input-wrap">
+    <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search CS4530, Spring 2026" aria-label="Search CS4530, Spring 2026" autocomplete="off">
+    <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label>
+  </div>
+  <div id="search-results" class="search-results"></div>
+</div>
+
+  
+  
+  
+</div>
+
+    <div id="main-content-wrap" class="main-content-wrap">
+      <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+  <ol class="breadcrumb-nav-list">
+  
+    <li class="breadcrumb-nav-list-item"><a href="/CS4530-Spring-2026/assignments/">Assignments</a></li>
+  <li class="breadcrumb-nav-list-item"><span>Individual Project 2</span></li>
+  </ol>
+</nav>
+      <div id="main-content" class="main-content">
+        <main>
+          
+            <h2 class="fs-6" id="individual-project-2">
+  
+  
+    <a href="#individual-project-2" class="anchor-heading" aria-labelledby="individual-project-2"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 
+    
+    Individual Project 2
+    
+    <strong class="label label-red">Due Wednesday February 4, 2026 11:00am (EST)</strong>
+
+  
+  
+</h2>
+    
+
+
+<p>Welcome back to the Game Nite team! In this second deliverable, you will be implementing new and exciting features to enhance the frontend interface and bring the web application to life. This assignment builds on the foundation you laid in the first project and will deepen your skills in frontend development with TypeScript and React.</p>
+
+<p>The objectives of this assignment are to:</p>
+
+<ul>
+  <li>Investigate and understand a large, existing codebase</li>
+  <li>Implement interactive web applications with the React library</li>
+</ul>
+<h2 id="changelog">
+  
+  
+    <a href="#changelog" class="anchor-heading" aria-labelledby="changelog"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Changelog
+  
+  
+</h2>
+    
+
+<ul>
+  <li>2026-01-22: Correction to submission instructions, only the URL of your GitHub repository is needed.</li>
+  <li>2026-01-26: Corrections: there’s no “(Display name) left chat” message, and there are only two things to change in Task 3, not three.</li>
+  <li>2026-01-27: Correction: the upper-right corner of a 5x7 grid was described previously as <code class="language-plaintext highlighter-rouge">[6,0]</code>, and is now described correctly as <code class="language-plaintext highlighter-rouge">[0,6]</code>.</li>
+  <li>2026-01-28: Correction: in task 2, “view your own profile and editing other people’s profiles” was exactly backwards. You edit your own profile and view other people’s profiles.</li>
+  <li>2026-01-31: Clarification to task 5: added the text “and the code you authored in Task 4.” You are expected to only change code you wrote in Task 4, but if you added additional files in Task 4, you can certainly modify them in Task 5.</li>
+  <li>2026-02-03: Clarification to task 5: 4 of the 8 points will be assigned based on <strong>us</strong> testing your implementation. You’re not required to write tests for your React code for this assignment.</li>
+</ul>
+<h2 id="1-getting-started">
+  
+  
+    <a href="#1-getting-started" class="anchor-heading" aria-labelledby="1-getting-started"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1. Getting Started
+  
+  
+</h2>
+    
+
+<p>Start by accepting our <a href="https://classroom.github.com/a/2qFol7Uh">GitHub Classroom Invitation</a>. It will create a Github repository for you which will include the starter code for this assignment. Run <code class="language-plaintext highlighter-rouge">npm install</code> in the root directory to fetch all dependencies for the <code class="language-plaintext highlighter-rouge">client</code>, <code class="language-plaintext highlighter-rouge">server</code>, and <code class="language-plaintext highlighter-rouge">shared</code> folders.</p>
+<h3 id="11-optional-but-highly-recommended-mongodb">
+  
+  
+    <a href="#11-optional-but-highly-recommended-mongodb" class="anchor-heading" aria-labelledby="11-optional-but-highly-recommended-mongodb"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.1 Optional but Highly Recommended: MongoDB
+  
+  
+</h3>
+    
+
+<p>It’s much easier to work on the application if restarting the server doesn’t reset the entire application to an initial state.</p>
+
+<p>Your starter code uses a proper repository layer, which connects to MongoDB through an adapter library called <a href="https://keyv.org/docs/keyv/">Keyv</a>. You can install MongoDB on your local machine.</p>
+
+<ol>
+  <li>Follow the <a href="https://www.mongodb.com/docs/manual/administration/install-community/">instructions in the official MongoDB documentation</a> to install the free community edition.</li>
+  <li>Choose ‘Install on Linux’, ‘Install on macOS’, or ‘Install on Windows’, depending on your system. (the following steps are for Windows)</li>
+  <li>Scroll down to the section labeled ‘Install MongoDB Community Edition.’ and click on <a href="https://www.mongodb.com/try/download/community?tck=docs_server">MongoDB Download Center</a>.</li>
+  <li>For Windows, in the Package dropdown, select <code class="language-plaintext highlighter-rouge">msi</code>. Then download and run the installer.</li>
+  <li>On Windows, select the <em>“Install MongoDB as a Service”</em> checkbox and install. This will start MongoDB as a background service.</li>
+  <li>Install “MongoDB Compass” if prompted.</li>
+  <li>Verify if the MongoDB server is running using the Windows Services app.</li>
+</ol>
+
+<p>Mongo offers several methods of interacting with your Mongo databases.</p>
+
+<ul>
+  <li>
+    <p>MongoDB Compass is an interactive application for creating, modifying, and querying MongoDB connections. It should be started as part of the installation process, showing a connection to <code class="language-plaintext highlighter-rouge">mongodb://localhost:27017/</code>.</p>
+
+    <p>For Windows, install MongoDB Compass using the instructions above.</p>
+
+    <p>For Mac:</p>
+    <ul>
+      <li>Download the dmg file from <a href="https://www.mongodb.com/try/download/compass">here</a>. Once the application starts:
+        <ol>
+          <li>Click on “Add new connection” in the left sidebar.</li>
+          <li>Make sure the URI field contains <code class="language-plaintext highlighter-rouge">mongodb://localhost:27017</code></li>
+          <li>Click on “Connect” - MongoDB will need to be running as a macOS service</li>
+        </ol>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Mongo shell (<em>mongosh</em>) provides a command-line interface that can be used to interact with databases in MongoDB.</p>
+
+    <p>For Windows:</p>
+    <ul>
+      <li>Download it <a href="https://www.mongodb.com/try/download/shell">here</a> using the msi package. You can also use <em>mongosh</em> to see if the MongoDB server is running. Try the MongoDB Community Edition and the command <code class="language-plaintext highlighter-rouge">show dbs</code>; you should see a list of existing databases in your local instance.</li>
+    </ul>
+
+    <p>For Mac:</p>
+    <ul>
+      <li>Mongo shell is automatically installed with MongoDB through the Mac installation instructions. To use it, make sure MongoDB is running as a macOS service, then type <code class="language-plaintext highlighter-rouge">mongosh</code> into the terminal.</li>
+    </ul>
+  </li>
+</ul>
+<h3 id="12-setting-up-the-server-to-use-mongodb">
+  
+  
+    <a href="#12-setting-up-the-server-to-use-mongodb" class="anchor-heading" aria-labelledby="12-setting-up-the-server-to-use-mongodb"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.2 Setting Up the Server To Use MongoDB
+  
+  
+</h3>
+    
+
+<p>Create a file called <code class="language-plaintext highlighter-rouge">server/.env</code> — the dot before the “env” is important! Include the following text:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MONGO_STR=mongodb://127.0.0.1:27017
+MONGO_DB_NAME=GameNiteLocalDev
+</code></pre></div></div>
+
+<p>This tells your server how to connect to the local MongoDB instance that you got running in the previous step. Now, you can start the application as before: in one terminal, run:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ip2-me $&gt; npm run dev -w=server
+</code></pre></div></div>
+
+<p>Leaving that running, open another terminal and run:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ip2-me $&gt; npm run dev -w=client
+</code></pre></div></div>
+
+<p>The application should work as before, but any changes you make in the application should survive restarting the server.</p>
+<h2 id="2-recommendations-when-working-on-the-project">
+  
+  
+    <a href="#2-recommendations-when-working-on-the-project" class="anchor-heading" aria-labelledby="2-recommendations-when-working-on-the-project"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2. Recommendations When Working on the Project
+  
+  
+</h2>
+    
+
+<ol>
+  <li>Have the frontend and backend running, and have the project open in your browser, while you are working. It’s very useful to have the website update as you make changes.</li>
+  <li>Frequently add and commit changes with git. This saves your changes and makes it easy to go back to a state where most tasks were complete. The first three tasks are cumulative, as are the last three tasks, and if you run into trouble with Task 5, you will want to be able to backtrack to a working implementation of Task 4.</li>
+  <li>Do not wait until the last minute to run <code class="language-plaintext highlighter-rouge">npm run lint</code> and <code class="language-plaintext highlighter-rouge">npm run check</code> to check for linter and typescript errors!</li>
+  <li>Follow the <a href="/CS4530-Spring-2026/policies/debugging/">debugging policy</a> to help in the debugging process.</li>
+  <li>Task 6 is more challenging than the other tasks, but is only worth 20% of credit. Don’t wait until the last minute to attempt this task if you intend to complete all parts of the assignment.</li>
+</ol>
+<h2 id="3-project-submission">
+  
+  
+    <a href="#3-project-submission" class="anchor-heading" aria-labelledby="3-project-submission"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 3. Project Submission
+  
+  
+</h2>
+    
+
+<p>You will submit your code by pushing the final version into your repository (add/commit/push). <strong>All commits must be visible on the main branch on GitHub classroom to receive credit.</strong> Be sure to check if the correct version is submitted before the deadline.</p>
+
+<p>On Gradescope, you will submit a plain <code class="language-plaintext highlighter-rouge">.txt</code> file containing a link to your project’s GitHub repo (e.g. <code class="language-plaintext highlighter-rouge">https://github.com/neu-cs4530/ip2-robsimmons</code>).</p>
+
+<p>We will grade your code on GitHub by using the “Feedback” PR that is automatically created when the assignment is. The Feedback PR can be found under the “Pull requests” menu, like this:</p>
+
+<p><img src="/CS4530-Spring-2026/Assignments/ip1/github-pr.png" alt="image" /></p>
+
+<p>If you don’t see your Feedback PR for the assignment, let us know on Piazza (be sure to include your GitHub username in your post).</p>
+
+<p>Grades will be assigned on Gradescope and synced to the Canvas Gradebook.</p>
+<h3 id="typescript-eslint-vitest-and-configuration-files">
+  
+  
+    <a href="#typescript-eslint-vitest-and-configuration-files" class="anchor-heading" aria-labelledby="typescript-eslint-vitest-and-configuration-files"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> TypeScript ESLint, Vitest, and Configuration Files
+  
+  
+</h3>
+    
+
+<p>The GitHub project contains a number of configuration files you <strong>may not modify</strong>. The files <code class="language-plaintext highlighter-rouge">package.json</code>, <code class="language-plaintext highlighter-rouge">.prettierrc</code>, <code class="language-plaintext highlighter-rouge">tsconfig.json</code>, <code class="language-plaintext highlighter-rouge">vitest.config.mjs</code>, and <code class="language-plaintext highlighter-rouge">vite.config.mjs</code> are examples of configuration files, as is everything in the <code class="language-plaintext highlighter-rouge">.github</code> directory. If you change any of these files, take care to change them back; the list of changes in the feedback PR should not show any changes to these files. You also may not include <code class="language-plaintext highlighter-rouge">eslint-disable</code> commands to disable ESLint’s checks in your final submission.</p>
+
+<p>The code you submit must pass GitHub’s automatic checks, which mostly just amount to the TypeScript typechecker, the ESLint linter, and the tests. You can run these yourself like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ip1-me $&gt; npm run prettier --workspaces
+ip1-me $&gt; npm run check --workspaces
+ip1-me $&gt; npm run lint --workspaces
+ip1-me $&gt; npm run test --workspaces
+</code></pre></div></div>
+
+<p>When you push your code to GitHub, you can see the status icon for your most recent submission. It’s initially a yellow circle, like this:</p>
+
+<p><img src="/CS4530-Spring-2026/Assignments/ip1/github-ci.png" alt="image" /></p>
+
+<p>After the tests run, this will turn into a red ❌ or a green ✅. Clicking on the icon will let you see details of the tests we ran.</p>
+
+<p>The Actions tab on GitHub has the results of previous runs.</p>
+
+<p><img src="/CS4530-Spring-2026/Assignments/ip1/ActionsTab.png" alt="image" /></p>
+
+<p><strong>Up to 25% of your total grade on the assignment may be deducted for CI failures (5% for Prettier failures, 10% for TypeScript failures, and 10% for ESLint failures). In severe cases we may decline to grade your assignment entirely. Give yourself sufficient time to find and fix any errors.</strong> ESLint <em>warnings</em> do not cause CI to fail and will not automatically lead to a deduction, but it is bad practice to have lots of console statements in your code, and this can lead to a point deduction if it makes it hard for a TA to understand your code.</p>
+<h2 id="4-implementation-tasks">
+  
+  
+    <a href="#4-implementation-tasks" class="anchor-heading" aria-labelledby="4-implementation-tasks"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4. Implementation Tasks
+  
+  
+</h2>
+    
+<h3 id="task-1-navigating-to-other-profiles">
+  
+  
+    <a href="#task-1-navigating-to-other-profiles" class="anchor-heading" aria-labelledby="task-1-navigating-to-other-profiles"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Task 1: Navigating to Other Profiles
+  
+  
+</h3>
+    
+
+<p>Currently, going to the “Profile” link at the top of your page takes you to the path <code class="language-plaintext highlighter-rouge">/profile/&lt;yourusername&gt;</code>. Change <code class="language-plaintext highlighter-rouge">client/src/components/MessageList.tsx</code> so that clicking on the users’ display name in chat takes you to the path <code class="language-plaintext highlighter-rouge">/profile/&lt;theirusername&gt;</code>. For example, if you are logged in as <code class="language-plaintext highlighter-rouge">user0</code> and you see a chat message from “Yāo” (the display name for <code class="language-plaintext highlighter-rouge">user1</code>), that should be a <code class="language-plaintext highlighter-rouge">&lt;NavLink&gt;</code> that takes you to <code class="language-plaintext highlighter-rouge">/profile/user1</code>.</p>
+
+<p>This task is worth 10 points, based on checking that chat navigation works as expected.</p>
+<h3 id="task-2-viewing-other-profiles">
+  
+  
+    <a href="#task-2-viewing-other-profiles" class="anchor-heading" aria-labelledby="task-2-viewing-other-profiles"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Task 2: Viewing Other Profiles
+  
+  
+</h3>
+    
+
+<p>Change <code class="language-plaintext highlighter-rouge">client/src/pages/Profile.tsx</code> so that, if you are logged in as <code class="language-plaintext highlighter-rouge">user0</code> and navigate to <code class="language-plaintext highlighter-rouge">/profile/user1</code>, you see a page that allows you to see <em>but not edit</em> that user’s username, display name, and when their account was created.</p>
+
+<p>You may want to split this file into two or three new files, since the route to profile pages is now being used for two different purposes: viewing and editing your own profile, and viewing other profiles. Check <code class="language-plaintext highlighter-rouge">client/src/services/userService.ts</code> for a useful helper function.</p>
+
+<p>This task is worth 25 points:</p>
+
+<ul>
+  <li>10 points will be based on functionality.</li>
+  <li>15 points will be based on appropriately refactoring your code into multiple files with appropriate <a href="/CS4530-Spring-2026/policies/style/">code style</a>.</li>
+</ul>
+<h3 id="task-3-more-profile-navigation">
+  
+  
+    <a href="#task-3-more-profile-navigation" class="anchor-heading" aria-labelledby="task-3-more-profile-navigation"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Task 3: More Profile Navigation
+  
+  
+</h3>
+    
+
+<p>The code you changed in Task 1 was only one place where user display names were referenced. Here are some others:</p>
+
+<ul>
+  <li>The “(DisplayName) entered chat” messages in chat</li>
+  <li>The “Player #2 is (DisplayName)” messages in the game panel</li>
+  <li>“Posted by (DisplayName)” in forum messages</li>
+  <li>“Reply by (DisplayName)” in forum comments</li>
+  <li>“(Display name) created 1 day ago” on the home page and the game list and forum list pages</li>
+</ul>
+
+<p>For this task, you’ll make <del>three</del><strong>two</strong> changes to all display name locations:</p>
+
+<ul>
+  <li>Consistently refer to the current logged-in user by the second-person pronoun “you,” instead of by their display name. (The exception is the “signed in as (DisplayName)” message in the header — leave that alone.)</li>
+  <li>Consistently link other users’ usernames to their profile. References to the current user (“you”) should not link to the current user’s profile.</li>
+</ul>
+
+<p>This task is worth 15 points:</p>
+
+<ul>
+  <li>1 point for each of the 2 changes in each of the 5 places where display names occur.</li>
+  <li>5 points for style and organizing your code in a way that minimizes duplication.</li>
+</ul>
+<h3 id="task-4-mine-finder">
+  
+  
+    <a href="#task-4-mine-finder" class="anchor-heading" aria-labelledby="task-4-mine-finder"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Task 4: Mine Finder
+  
+  
+</h3>
+    
+
+<p>The backend has been implemented for Mine Finder, a game with a strong but legally-permissible resemblance to Microsoft’s <a href="https://apps.microsoft.com/detail/9wzdncrfhwcn?hl=en-US&amp;gl=US">Minesweeper</a> game.</p>
+
+<p><img src="/CS4530-Spring-2026/Assignments/ip2/beforeafter.png" alt="image" /></p>
+
+<p>(You do <strong>not</strong> need to use CSS to match the exact style shown here, you just need show a grid that allows the game to be played or watched successfully. The only required CSS properties are described in the conditions of satisfaction below.)</p>
+
+<p>In Mine Finder, your game starts with a 6x6 or 5x7 grid containing five randomly-placed mines. Clicking on a grid position sweeps it, revealing how many of the eight adjacent grid positions contain mines — or exploding and ending the game if there is a mine in that grid position! When a grid position is revealed to have zero mines, all eight adjacent grid positions are automatically swept.</p>
+
+<p>The backend logic for Mine Finder is implemented, and you can read the description of types in <code class="language-plaintext highlighter-rouge">shared/src/games/minefinder.types.ts</code>, the implementation in <code class="language-plaintext highlighter-rouge">server/src/games/minefinder.ts</code>, and the tests in <code class="language-plaintext highlighter-rouge">server/tests/games/minefinder.spec.ts</code>. The frontend implementation in <code class="language-plaintext highlighter-rouge">client/src/games/MineFinderGame.tsx</code> is the only part that is completely missing, and you will implement the game’s frontend in React for this task.</p>
+
+<p>The task is worth 22 points, two points for meeting each of the following conditions of satisfaction:</p>
+
+<ol>
+  <li>Unswept grid positions should contain a question mark <code class="language-plaintext highlighter-rouge">❓</code>, unless the game has been won (<code class="language-plaintext highlighter-rouge">view.state === 'won'</code>), in which case they should contain a <code class="language-plaintext highlighter-rouge">🎉</code> emoji. (Mines are not revealed on loss.)</li>
+  <li>Swept grid positions with no neighboring mines should appear empty.</li>
+  <li>Swept grid positions with neighboring mines should contain the number of neighboring mines (unless the grid position itself contains a mine).</li>
+  <li>Swept grid positions revealing a mine should contain a <code class="language-plaintext highlighter-rouge">💥</code> emoji.</li>
+  <li>Swept grid positions should have the <code class="language-plaintext highlighter-rouge">cursor: default</code> CSS property set.</li>
+  <li>Non-players should always see all grid positions with the <code class="language-plaintext highlighter-rouge">cursor: default</code> CSS property set, and clicking anywhere on the grid should never send a message or make a move.</li>
+  <li>If the game is not over (<code class="language-plaintext highlighter-rouge">view.state === 'playing'</code>), the player of the game should see <strong>unswept</strong> grid positions with the <code class="language-plaintext highlighter-rouge">cursor: pointer</code> CSS property set.</li>
+  <li>If the game is not over, the player of the game should be able to “sweep” a grid position by clicking on it: clicking on the upper-right grid position of a 5x7 grid should submit the game move <code class="language-plaintext highlighter-rouge">[0,6]</code> (moves are described by row first, column second).</li>
+  <li>If the game is over (<code class="language-plaintext highlighter-rouge">view.state !== 'playing'</code>), the player of the game should see all grid positions with the <code class="language-plaintext highlighter-rouge">cursor: default</code> CSS property set, and clicking anywhere on the grid should never send a message or make a move.</li>
+  <li>If the game is over, the player of the game should see the message “You won” or “You lost”, as appropriate, below the game grid.</li>
+  <li>If the game is over, non-players should see “(DisplayName) won” or “(DisplayName) lost”, as appropriate, below the game grid, where “(DisplayName)” is replaced by the player’s display name. The display name need not link to the player’s profile.</li>
+</ol>
+
+<p>Your implementation does not need to look like the example image above. It must be possible for a TA to effectively test a conditions of satisfaction in order to award points.</p>
+<h3 id="task-5-marking-mines">
+  
+  
+    <a href="#task-5-marking-mines" class="anchor-heading" aria-labelledby="task-5-marking-mines"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Task 5: Marking Mines
+  
+  
+</h3>
+    
+
+<p>For this task, you will <strong>not</strong> change the Mine Finder logic on the server or anything else outside of <code class="language-plaintext highlighter-rouge">MineFinderGame.tsx</code> and the code you authored in Task 4; the goal is to use React state to implement a feature.</p>
+
+<p>It’s very helpful to be able to flag a grid position as a known mine while playing Mine Finder. Without giving the backend any support for flagging grid positions, you can use React state to record and add flags. Storing flags in React state attached to the <code class="language-plaintext highlighter-rouge">MineFinder</code> React component has some drawbacks: only the player can see flags, and if a player navigates away and returns, all their flags will be gone. That is fine for the purposes of this task.</p>
+
+<p>When a player <em>right</em>-clicks on a grid position with a <code class="language-plaintext highlighter-rouge">❓</code> in it, that question mark should be replaced with a flag <code class="language-plaintext highlighter-rouge">⛳</code>. Left-clicking a flagged grid position should have no effect — a flag should keep you from accidentally setting off a mine. Right-clicking a grid position with a flag should unflag the grid position, returning it to a <code class="language-plaintext highlighter-rouge">❓</code> and making it clickable again.</p>
+
+<p>Winning the game should cause all remaining cells to display <code class="language-plaintext highlighter-rouge">🎉</code> regardless of whether they had previously been flagged.</p>
+
+<p>You can capture right clicks by adding an <a href="https://react.dev/reference/react-dom/components/common#common-props"><code class="language-plaintext highlighter-rouge">onContextMenu</code></a> property alongside the <code class="language-plaintext highlighter-rouge">onClick</code> handler you added in the last part. Because the default behavior of a right-click is to open a context menu, you’ll need to call <code class="language-plaintext highlighter-rouge">preventDefault</code> on the event (this was demonstrated in lecture for preventing a button click from submitting a form). Here’s a very simple example of using <code class="language-plaintext highlighter-rouge">preventDefault</code> with <code class="language-plaintext highlighter-rouge">onContextMenu</code>: <a href="https://codepen.io/Ishika-Reddy/pen/XJKgWqK">https://codepen.io/Ishika-Reddy/pen/XJKgWqK</a>.</p>
+
+<p>This task is worth 8 points. 4 points will be assigned based on our manual testing of your implementation, and 4 points will be assigned by looking at your code and verifying that you are using React state appropriately.</p>
+<h3 id="task-6-mine-difficulty">
+  
+  
+    <a href="#task-6-mine-difficulty" class="anchor-heading" aria-labelledby="task-6-mine-difficulty"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Task 6: Mine Difficulty
+  
+  
+</h3>
+    
+
+<p>GameNite’s user researchers come to you with two different user stories they discovered when testing the new game:</p>
+
+<blockquote>
+  <p>As a novice mine finder, I want access to easier and more forgiving puzzles, so that I can develop my skills without getting discouraged.</p>
+</blockquote>
+
+<blockquote>
+  <p>As an expert mine finder, I want access to more challenging puzzles, so that I can show off my advanced logical skills.</p>
+</blockquote>
+
+<p>In this task, you’ll meet the needs of these users by modifying the Mine Finder game to allow for an initial difficulty selection. This task will require substantial changes to all the parts of your project: the server, the client, the shared code and Zod validation logic for moves, and the tests.</p>
+
+<p>When a new single-player game of Mine Finder begins, the user should be shown a <a href="https://react.dev/reference/react-dom/components/select">drop down menu</a> with three choices, “Easy”, “Standard”, and “Hard”, and the “Standard” button should be selected by default. There should be a submit button that sends a move that is just the string “easy”, “standard”, or “hard”. Sending that move should trigger the backend’s Mine Finder logic to generate a board and start a game.</p>
+
+<p>You can decide what “easy” and “difficult” actually mean, within reason and the following constraints:</p>
+
+<ul>
+  <li>An “Easy” difficulty game must have no more than 36 positions arranged in a rectangular grid, and at most 5 mines. Exposing <em>one</em> mine in an “easy” game shouldn’t be an automatic loss: players only lose when two mines are exposed.</li>
+  <li>The “Standard” difficulty game should work like the version of the game you implemented in the previous tasks: a randomly chosen 6x6 or 5x7 grid with 5 mines.</li>
+  <li>A “Hard” difficulty game must have at least 40 grid positions arranged in a rectangular grid, and more than 1/6 of the positions should be mines.</li>
+</ul>
+
+<p>While playing, the difficulty level should be visible somewhere for both the player and for spectators.</p>
+
+<p><strong>Hint:</strong> you will likely want to transform both the <code class="language-plaintext highlighter-rouge">MineFinderState</code> and <code class="language-plaintext highlighter-rouge">MineFinderView</code> types so that the game can exist in different states: not started, and started. In the starter code, <code class="language-plaintext highlighter-rouge">MineFinderState</code> looks like this:</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">export</span> <span class="kr">interface</span> <span class="nx">MineFinderState</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
+  <span class="nl">board</span><span class="p">:</span> <span class="nx">boolean</span><span class="p">[][];</span> <span class="c1">// each array is one row</span>
+  <span class="nl">clicked</span><span class="p">:</span> <span class="nx">boolean</span><span class="p">[][];</span> <span class="c1">// each array is one row</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>However, in the modified game, it will no longer be possible for the <code class="language-plaintext highlighter-rouge">start()</code> function to initialize a board: <code class="language-plaintext highlighter-rouge">start()</code> gets called before difficulty is selected, and <code class="language-plaintext highlighter-rouge">width</code> and <code class="language-plaintext highlighter-rouge">height</code> are dependent on the difficulty level.</p>
+
+<p>Therefore, the new state should be some sort of a <a href="https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes-func.html#discriminated-unions">discriminated union</a>, perhaps something like this:</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">export</span> <span class="kd">type</span> <span class="nx">MineFinderState</span> <span class="o">=</span>
+  <span class="o">|</span> <span class="p">{</span> <span class="na">state</span><span class="p">:</span> <span class="dl">"</span><span class="s2">waiting</span><span class="dl">"</span> <span class="p">}</span>
+  <span class="o">|</span> <span class="p">{</span>
+      <span class="na">state</span><span class="p">:</span> <span class="dl">"</span><span class="s2">started</span><span class="dl">"</span><span class="p">;</span>
+      <span class="nl">width</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
+      <span class="nl">height</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
+      <span class="nl">board</span><span class="p">:</span> <span class="nx">boolean</span><span class="p">[][];</span> <span class="c1">// each array is one row</span>
+      <span class="nl">clicked</span><span class="p">:</span> <span class="nx">boolean</span><span class="p">[][];</span> <span class="c1">// each array is one row</span>
+    <span class="p">};</span>
+</code></pre></div></div>
+
+<p>You are not required to use precisely this type; part of the task is figuring out what your <code class="language-plaintext highlighter-rouge">MineFinderState</code> type needs to be. Part of the challenge of this assignment is developing reasonable solutions to behaviors we haven’t specified: for example, what do you think spectators should see while the player is choosing a difficulty? This should be reasonable and not obviously broken, but the details are up to you.</p>
+
+<p>This task is worth 20 points:</p>
+
+<ul>
+  <li>4 points for implementing difficulty selection</li>
+  <li>4 points for implementing hard mode</li>
+  <li>4 points for implementing easy mode (ironically, because you are allowed to explode one mine and still win the game, easy mode is harder to implement than hard mode)</li>
+  <li>4 points for fixing existing tests and having &gt;=95% line and branch coverage for <code class="language-plaintext highlighter-rouge">shared/src/games/minefinder.ts</code>, adding new tests as appropriate</li>
+  <li>4 points for <a href="/CS4530-Spring-2026/policies/style/">code style</a> and appropriate documentation of helper functions.</li>
+</ul>
+<h2 id="5-grading-summary">
+  
+  
+    <a href="#5-grading-summary" class="anchor-heading" aria-labelledby="5-grading-summary"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 5. Grading Summary
+  
+  
+</h2>
+    
+
+<p>The assignment as a whole is worth 100 points.</p>
+
+<ul>
+  <li>Task 1: 10 points</li>
+  <li>Task 2: 25 points</li>
+  <li>Task 3: 15 points</li>
+  <li>Task 4: 22 points</li>
+  <li>Task 5: 8 points</li>
+  <li>Task 6: 20 points</li>
+</ul>
+
+          
+
+          
+        </main>
+        
+
+  <hr>
+  <footer>
+    
+
+    <p class="text-small text-grey-dk-100 mb-0">&copy; 2025-26 Adeel Bhutta, Robert Simmons and Mitch Wand. Released under the <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a> license</p>
+
+    
+  </footer>
+
+
+      </div>
+    </div>
+    
+      
+
+<div class="search-overlay"></div>
+
+    
+  </div>
+
+  
+</body>
+</html>
+
